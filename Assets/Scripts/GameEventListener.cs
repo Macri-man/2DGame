@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+[System.Serializable]
 public class GameEventListener : MonoBehaviour {
     
-    public GameEvent gameEvent; // 2
+    public GameEvent gameEvent; 
     [SerializeField]
-    public UnityEvent response; // 3
+    public UnityEvent response; 
+    public Items items;
 
-    private void OnEnable() // 4
+    private void OnEnable() 
     {
         gameEvent.RegisterListener(this);
     }
 
-    private void OnDisable() // 5
+    private void OnDisable() 
     {
         gameEvent.UnregisterListener(this);
     }
 
-    public void OnEventRaised() // 6
+    public void OnEventRaised() 
     {
         response.Invoke();
     }

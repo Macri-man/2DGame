@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed;
+	public float speed = 30;
     private Rigidbody2D rb;
 
 	// Use this for initialization
@@ -17,17 +17,15 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        //float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveVertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        //Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         //rb.MovePosition(new Vector3(moveHorizontal, 0.0f, moveVertical));
-        Vector2 dirVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        Vector2 dirVector = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed).normalized;
         rb.MovePosition(new Vector2(transform.position.x,transform.position.y) + dirVector * Time.deltaTime);
-		
 	}
-
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		//other.gameObject.

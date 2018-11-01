@@ -7,7 +7,12 @@ public class LevelGenerator : MonoBehaviour {
 	public Texture2D map;
 	public PrefabColors[] colors;
 
+	void Start() {
+		GenerateLevel();
+	}
+
 	void GenerateLevel(){
+		Debug.Log(map.width);
 		for (int i = 0; i < map.width; i++){
             for (int j = 0; j < map.height; j++)
             {
@@ -25,6 +30,7 @@ public class LevelGenerator : MonoBehaviour {
 		foreach (PrefabColors mapping in colors)
 		{
 			if(mapping.color.Equals(pixelColor)){
+				Debug.Log("Hello");
 				Vector2 position = new Vector2(xCoord,yCoord);
 				Instantiate(mapping.prefab,position,Quaternion.identity,transform);
 			}
