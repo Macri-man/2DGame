@@ -1,1 +1,1 @@
-# CoronaGame
+# 2DGame
