@@ -9,15 +9,15 @@ public class Clicked : MonoBehaviour {
     [SerializeField]
     private ClickableObject clickedData;
 	[SerializeField]
-    private GameEvent[] events;
+    private GameEvent events;
 
-    [SerializeField]
-    private EventsGame secondevent;
-
-	public int state = 0;
+	public int stat = 0;
 
 	public void clicking(){
-		Debug.Log(this.gameObject.name);
+		//Debug.Log(this.gameObject.name);
+        //Debug.Log(this.events.name);
+        //Debug.Log("Clicked");
+
 		this.gameObject.GetComponent<SpriteRenderer>().color = Color.magenta;
 
     }
@@ -27,10 +27,7 @@ public class Clicked : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("Event Execute");
-		Debug.Log(state);
-		events[state].Raise();
-        state++;
-    }
+		events.Raise();
+	}
 
 }
