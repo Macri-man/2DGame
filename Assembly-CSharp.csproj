@@ -118,7 +118,6 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PrefabColors.cs" />
      <Compile Include="Assets\Scripts\turrets.cs" />
-     <Compile Include="Assets\SpritesArchers\Scripts\Change_Sprite.cs" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\Sci Fi Assets\PostProcessing\Resources\Shaders\Fog.shader" />
