@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
-
+/*
 public class EventTest : MonoBehaviour
 {
     void Awake()
@@ -40,3 +40,4 @@ public class EventTest : MonoBehaviour
         Debug.Log("Some Third Function was called!");
     }
 }
+*/
