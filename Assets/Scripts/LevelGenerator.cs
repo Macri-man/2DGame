@@ -97,11 +97,11 @@ public class LevelGenerator : MonoBehaviour {
 			if(CompareColours(mapping.color, pixelColor))
 			{
 				//Debug.LogError("pixelColor="+pixelColor.r+","+pixelColor.g+","+pixelColor.b);
-				//Vector2 position = new Vector2(xCoord,yCoord);
-				Vector3Int position3 = new Vector3Int(xCoord,yCoord,0);
-				TilemapSet[tileLayer].SetTile(position3,customTileSets[tileLayer][mapping.tileArrayIndex]);
-				//GameObject tempObject0 = backgroundTileSets[tileLayer][mapping.tileArrayIndex];
-				//Instantiate(tempObject0, position, Quaternion.identity,transform);
+				Vector2 position = new Vector2(xCoord,yCoord);
+				//Vector3Int position3 = new Vector3Int(xCoord,yCoord,0);
+				//TilemapSet[tileLayer].SetTile(position3,customTileSets[tileLayer][mapping.tileArrayIndex]);
+				GameObject tempObject0 = backgroundTileSets[tileLayer][mapping.tileArrayIndex];
+				Instantiate(tempObject0, position, Quaternion.identity,transform);
 			}
 		}
 	}
