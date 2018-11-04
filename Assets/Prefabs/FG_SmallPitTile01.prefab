@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4916856604016832}
   - component: {fileID: 212629585065908126}
   - component: {fileID: 61464574276427620}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: FG_SmallPitTile01
   m_TagString: Foreground
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -380337961
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300080, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

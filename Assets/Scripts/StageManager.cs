@@ -7,20 +7,6 @@ using Random = UnityEngine.Random;
 
 public class StageManager : MonoBehaviour
 {
-	//might not need this, actually!
-	[Serializable]
-	public class Count
-	{
-		public int minimum;
-		public int maximum;
-
-		public Count(int min, int max)
-		{
-			minimum = min;
-			maximum = max;
-		}
-	}
-
 	public int[,] levelData0 = {
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -80,7 +66,7 @@ public class StageManager : MonoBehaviour
 			for(int iX = 0; iX < 8; iX++)
 			{
 				GameObject tempObject0 = background1Tiles[(levelData0[iY,iX])];
-				
+
 				gmMapTile tempTile = gmMapTileArray[(levelData0[iY,iX])];
 				if(tempTile == null) Debug.LogError("Wha?");
 				if(tileMap_Background1 == null) Debug.LogError("Uh?");

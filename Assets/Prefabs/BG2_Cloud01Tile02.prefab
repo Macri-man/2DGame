@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4871574802238280}
   - component: {fileID: 212882227354047886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BG2_Cloud01Tile02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 35019941
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300014, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
