@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class playermovement : MonoBehaviour {
 
@@ -11,6 +12,18 @@ public class playermovement : MonoBehaviour {
     bool crouch = false;
     public Animator animate;
     // Use this for initialization
+
+    [System.Serializable]
+    public class StringEvent : UnityEvent<string> { }
+
+    public StringEvent OnInputEvent;
+
+    void Awake()
+    {
+        if (OnInputEvent == null)
+            OnInputEvent = new StringEvent();
+    }
+
     void Start () {
 		
 	}
@@ -30,6 +43,20 @@ public class playermovement : MonoBehaviour {
         }
 
         animate.SetFloat("speed", Mathf.Abs(horizontalMove));
+
+
+        switch (Input.inputString){
+            case "1":
+                Debug.Log("Pressed One");
+                OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "2":
+                OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "3":
+                OnInputEvent.Invoke(Input.inputString);
+                break;
+        }
     }
     
     public void OnCrouching(bool isCrouching){

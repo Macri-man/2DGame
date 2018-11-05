@@ -22,11 +22,6 @@ public class turrets : MonoBehaviour {
 	void Update () {
 
 		
-		
-        Quaternion lookAtRotation = Quaternion.LookRotation(target.transform.position - transform.position);
-        lookAtRotation.SetFromToRotation(this.transform.position,target.transform.position);
-		Debug.Log(lookAtRotation.eulerAngles);
-        Debug.Log(this.transform.rotation.eulerAngles);
 
         Vector3 direct = target.transform.position - this.transform.position;
 

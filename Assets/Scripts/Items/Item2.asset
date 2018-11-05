@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689806dd973dc43d4b9c1f45242c244f, type: 3}
   m_Name: Item2
   m_EditorClassIdentifier: 
-  name: SecondItem
+  name: ROCK
+  key: 2
   description: 
-  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}

@@ -9,9 +9,6 @@ public class Clicked2 : MonoBehaviour {
     [SerializeField]
     private GameEvent[] events;
 
-    [SerializeField]
-    private EventsGame secondevent;
-
     public int state = 0;
 
     public void clicking()
