@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 	void InitGame()
 	{
 		//stageScript.SetupScene(level);
-		levelScript.GenerateLevel();
+		//levelScript.GenerateLevel();
 	}
 
 	// Update is called once per frame
