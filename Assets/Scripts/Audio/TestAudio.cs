@@ -14,7 +14,7 @@ public class TestAudio : MonoBehaviour {
     {
         if (OnHitEvent == null){
             OnHitEvent = new StringEvent();
-		}
+		        }
     }
 
 	void OnTriggerEnter2D(Collider2D other) {

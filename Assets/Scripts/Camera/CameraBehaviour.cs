@@ -21,13 +21,15 @@ public class CameraBehaviour : MonoBehaviour {
         {
             Debug.LogError("CameraBehaviour: No mainCamera instance set");
         }
-       
+
 	}
 
 	void Update () {
 
 		Vector3 desiredPosition = target.position + offset;
-		Vector3 smoothPosition = Vector3.Lerp(transform.position,desiredPosition,smoothing  * Time.deltaTime);
+		Vector3 smoothPosition = Vector3.Lerp(transform.position,
+																					new Vector3(desiredPosition.x,desiredPosition.y,transform.position.z),
+																					(smoothing*Time.deltaTime));
 		transform.position = smoothPosition;
 	}
 }
