@@ -113,8 +113,10 @@
      <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Audio\PlaySounds.cs" />
      <Compile Include="Assets\Scripts\Audio\Sounding.cs" />
+     <Compile Include="Assets\Scripts\Audio\SoundTrigger.cs" />
      <Compile Include="Assets\Scripts\Audio\TestAudio.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Climbing.cs" />
      <Compile Include="Assets\Scripts\Events\ClickableObject.cs" />
      <Compile Include="Assets\Scripts\Events\Clicked.cs" />
      <Compile Include="Assets\Scripts\Events\Clicked2.cs" />
@@ -123,12 +125,14 @@
      <Compile Include="Assets\Scripts\Events\EventTest.cs" />
      <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
      <Compile Include="Assets\Scripts\Events\GameEventListener.cs" />
+     <Compile Include="Assets\Scripts\Interactables\LogMovement.cs" />
      <Compile Include="Assets\Scripts\Items\InteractHUB.cs" />
      <Compile Include="Assets\Scripts\Items\Items.cs" />
      <Compile Include="Assets\Scripts\Level\GameManager.cs" />
      <Compile Include="Assets\Scripts\Level\gmMapTile.cs" />
      <Compile Include="Assets\Scripts\Level\LevelGenerator.cs" />
      <Compile Include="Assets\Scripts\Level\Loader.cs" />
+     <Compile Include="Assets\Scripts\Level\ParallaxControl.cs" />
      <Compile Include="Assets\Scripts\Level\PrefabColors.cs" />
      <Compile Include="Assets\Scripts\Level\StageManager.cs" />
      <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />

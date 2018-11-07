@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour {
 			Debug.LogError("Need PauseMenu");
 		}
 		pauseUI.SetActive(false);
-        Resume();
+        //Resume();
 	}
 
 	void Start() {

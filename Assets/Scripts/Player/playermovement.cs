@@ -12,6 +12,7 @@ public class playermovement : MonoBehaviour {
     bool crouch = false;
     public Animator animate;
     // Use this for initialization
+    public int item = 0;
 
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
@@ -48,12 +49,15 @@ public class playermovement : MonoBehaviour {
         switch (Input.inputString){
             case "1":
                 Debug.Log("Pressed One");
+                item = 1;
                 OnInputEvent.Invoke(Input.inputString);
                 break;
             case "2":
+                item = 2;
                 OnInputEvent.Invoke(Input.inputString);
                 break;
             case "3":
+                item = 3;
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
