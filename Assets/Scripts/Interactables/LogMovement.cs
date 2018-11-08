@@ -6,7 +6,7 @@ public class LogMovement : MonoBehaviour {
 
 	public Transform startPoint;
 	public Transform endPoint;
-	public float rotateSpeed = 0.0005f;
+	public float rotateSpeed = 10f;
 
     public SoundTrigger triggers;
     private bool clicked = false;

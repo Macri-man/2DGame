@@ -23,7 +23,7 @@ public class ParallaxControl : MonoBehaviour {
 		parallaxScales = new float[scrollTargets.Length];
 		for (int i = 0; i < scrollTargets.Length; i++)
 		{
-			parallaxScales[i] = i*-10;//scrollTargets[i].position.z*-1;
+			parallaxScales[i] = i*-15;//scrollTargets[i].position.z*-1;
 		}
 	}
 	// Update is called once per frame
