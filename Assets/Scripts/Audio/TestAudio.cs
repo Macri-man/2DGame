@@ -26,7 +26,7 @@ public class TestAudio : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log(other.gameObject.name);
+		//Debug.Log(other.gameObject.name);
         //if(other.gameObject.name == "Rogue_01"){
         //    
         //}

@@ -19,6 +19,10 @@ public class playermovement : MonoBehaviour {
 
     public StringEvent OnInputEvent;
 
+    public Vector3 checkPoint;
+
+    public Vector3 startPosition;
+
     void Awake()
     {
         if (OnInputEvent == null)
@@ -26,6 +30,7 @@ public class playermovement : MonoBehaviour {
     }
 
     void Start () {
+        startPosition = this.transform.position;
 		
 	}
 	
@@ -60,6 +65,14 @@ public class playermovement : MonoBehaviour {
                 item = 3;
                 OnInputEvent.Invoke(Input.inputString);
                 break;
+        }
+    }
+
+    public void death(){
+        if(checkPoint == null){
+            this.transform.position = this.startPosition;
+        }else{
+            this.startPosition = checkPoint;
         }
     }
     
