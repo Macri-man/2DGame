@@ -81,6 +81,14 @@ TextureImporter:
     21300152: CS6341-Asg4-TilesTest0_76
     21300154: CS6341-Asg4-TilesTest0_77
     21300156: CS6341-Asg4-TilesTest0_78
+    21300158: CS6341-Asg4-TilesTest0_79
+    21300160: CS6341-Asg4-TilesTest0_80
+    21300162: CS6341-Asg4-TilesTest0_81
+    21300164: CS6341-Asg4-TilesTest0_82
+    21300166: CS6341-Asg4-TilesTest0_83
+    21300168: CS6341-Asg4-TilesTest0_84
+    21300170: CS6341-Asg4-TilesTest0_85
+    21300172: CS6341-Asg4-TilesTest0_86
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -189,7 +197,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -199,7 +207,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eb47a1d0e00e7f4fb2479babe49a81b
+      spriteID: 5e006e752dd7c8a4a860ce3a0e4d038a
       vertices: []
       indices: 
       edges: []
@@ -209,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 67
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -219,7 +227,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48de5a72599345749a537933152700ff
+      spriteID: 758089fe2d442674aa663ceabd7ac960
       vertices: []
       indices: 
       edges: []
@@ -229,7 +237,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 133
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -239,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d794df7f0f0f7c84a8fca4bd906909a4
+      spriteID: 153cbe270f02135478be6a576161ef79
       vertices: []
       indices: 
       edges: []
@@ -249,7 +257,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -259,7 +267,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14837b053dcd65b478429646e4bb4655
+      spriteID: 9b30c552bc27aab42abe499a16646d62
       vertices: []
       indices: 
       edges: []
@@ -269,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -279,7 +287,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b1e90ec8780db43b210f25d29ce603
+      spriteID: 44838120302da7240acde485c8fc9b48
       vertices: []
       indices: 
       edges: []
@@ -289,7 +297,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 331
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -299,7 +307,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46d66e33603c9c1438c6c82da765c6d3
+      spriteID: 51755a0af308e7e44a88e375fa3273af
       vertices: []
       indices: 
       edges: []
@@ -309,7 +317,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 397
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -319,7 +327,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a9ba2aacbe7ae847a6aab8c0c9b5ed0
+      spriteID: ed26dc9f70bf7be4cae5a27f14719b7d
       vertices: []
       indices: 
       edges: []
@@ -329,7 +337,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 463
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -339,7 +347,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596337cd090769b40954aa19bad67143
+      spriteID: 89541f9f6c804ed4c85874c93c393fbb
       vertices: []
       indices: 
       edges: []
@@ -349,7 +357,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 529
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -359,7 +367,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cdd4af3d5409d64c818a5d3b728c30e
+      spriteID: 44710fd412d1e544f9c21478a56f86b6
       vertices: []
       indices: 
       edges: []
@@ -369,7 +377,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 595
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -379,7 +387,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2cb2a3dfde847547819bdde43fc1487
+      spriteID: d573fcdd654b13746a4ac348be80789b
       vertices: []
       indices: 
       edges: []
@@ -389,7 +397,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 661
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -399,7 +407,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fe190a518e37604eb49de26f9886832
+      spriteID: 34443ee93efa53740a094aacb21c9f00
       vertices: []
       indices: 
       edges: []
@@ -409,7 +417,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 727
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -419,7 +427,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7007e3799c2e0fd4b95f205244f1ecca
+      spriteID: 7ab0794a98c88ba44b144f86826e28d4
       vertices: []
       indices: 
       edges: []
@@ -429,7 +437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 793
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -439,7 +447,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f471beb3089656439a38da367e47088
+      spriteID: a76bc78d6716ed647933c1edbdba884d
       vertices: []
       indices: 
       edges: []
@@ -449,7 +457,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 859
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -459,7 +467,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 708de1296f19be349b3a89e1a0a9361d
+      spriteID: 1293e3e5c4bde5044b5096f5083af341
       vertices: []
       indices: 
       edges: []
@@ -469,7 +477,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 925
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -479,7 +487,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d76ca99b6b58424cbe2bc2dc55ca1fe
+      spriteID: 9d8c67aaa6a80684e89ad46704d37b53
       vertices: []
       indices: 
       edges: []
@@ -489,7 +497,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 991
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -499,7 +507,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b78b6b0600419804bb4f064a02f54524
+      spriteID: caa91de4491b63a45b47f5b42fe6822f
       vertices: []
       indices: 
       edges: []
@@ -509,7 +517,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1057
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -519,7 +527,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7033a2a7f4f3c74697517ae4310b6bf
+      spriteID: 5f46230ceeee2b340bb30f5dbcdb64a3
       vertices: []
       indices: 
       edges: []
@@ -529,7 +537,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1123
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -539,7 +547,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b5f37f0dc91494bb2b262108ef6811
+      spriteID: 4c516fb47f757524a8f9bdd034d82354
       vertices: []
       indices: 
       edges: []
@@ -549,7 +557,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1189
-        y: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -559,7 +567,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6641e58c213c234fb22adfd450b25d6
+      spriteID: 6f708af2d5d829b4da0057a55bdf21fc
       vertices: []
       indices: 
       edges: []
@@ -569,6 +577,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1255
+        y: 265
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32dcc3aee4210342928c5d75cb685df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_20
+      rect:
+        serializedVersion: 2
+        x: 1
         y: 199
         width: 64
         height: 64
@@ -579,27 +607,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aca2c010b6ebc24287a13e769a5b5d5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_20
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 133
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55935b14da29ded468d906261ef5ca73
+      spriteID: fd1bbb62f035db549920d926fd1d6cff
       vertices: []
       indices: 
       edges: []
@@ -609,7 +617,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 67
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -619,7 +627,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 314bec0047bb24242be4e95bea5de56e
+      spriteID: a996481582421c344bfb75e923ae7b69
       vertices: []
       indices: 
       edges: []
@@ -629,7 +637,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 133
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -639,7 +647,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d641f3100550f54182afe85b22b5536
+      spriteID: 2e4a17bef26670a44897f7941b7ded0e
       vertices: []
       indices: 
       edges: []
@@ -649,7 +657,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -659,7 +667,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc28068521a0cf429bc5803f1dbac23
+      spriteID: 4a23d68bd65ec5047a224e2d232249f6
       vertices: []
       indices: 
       edges: []
@@ -669,7 +677,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -679,7 +687,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45e920e2f68727d4d88dece962dee15c
+      spriteID: d777cee83be0931408e39f8fef53530c
       vertices: []
       indices: 
       edges: []
@@ -689,7 +697,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 331
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -699,7 +707,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a6a3be224aeb6f41a548a9408f41473
+      spriteID: ce58bc3325c67914fa8424253b18c9ea
       vertices: []
       indices: 
       edges: []
@@ -709,7 +717,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 397
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -719,7 +727,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9381e9d32447dc345a9911e47c4f1875
+      spriteID: 7f3fd3f3efc289d4f987a8a4f6b90e9e
       vertices: []
       indices: 
       edges: []
@@ -729,7 +737,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 463
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -739,7 +747,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b47fb725a0e7be4681ce6df748ce088
+      spriteID: 6efb35b696da5c14c8b36e54f97b13ae
       vertices: []
       indices: 
       edges: []
@@ -749,7 +757,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 529
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -759,7 +767,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5354e7519380ddb47a4e13b5facaa3ed
+      spriteID: 6ecf340f2b204174f9178001608f6f19
       vertices: []
       indices: 
       edges: []
@@ -769,7 +777,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 595
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -779,7 +787,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca6f61f4ca642a64aa54a0dc92563d7c
+      spriteID: a1520c61b29e15841b809c0b6218d6e6
       vertices: []
       indices: 
       edges: []
@@ -789,7 +797,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 661
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -799,7 +807,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e0499dfe0cd538419c2dcac6f6e71dd
+      spriteID: 6492ac403f687cf41a14d96e233d2b6c
       vertices: []
       indices: 
       edges: []
@@ -809,7 +817,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 727
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -819,7 +827,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114c51b7df6149e45b3d64219585fcee
+      spriteID: 8de85471d6d94444996034a473595ded
       vertices: []
       indices: 
       edges: []
@@ -829,7 +837,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 793
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -839,7 +847,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfabc4900feb7ed45aa5a6b9cd0880af
+      spriteID: d82dfd2052410f44da1a52ec37cfcbf8
       vertices: []
       indices: 
       edges: []
@@ -849,7 +857,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 859
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -859,7 +867,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04af1b6b47eb8c14ba50e08190d5aade
+      spriteID: 55bd5742367c74a4fa7bc37314611e6a
       vertices: []
       indices: 
       edges: []
@@ -869,7 +877,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 925
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -879,7 +887,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbbd85fd5ca24d5489c52936268b04ce
+      spriteID: d347ac725b924504f9c8d888df1fd269
       vertices: []
       indices: 
       edges: []
@@ -889,7 +897,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 991
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -899,7 +907,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc9ddd52bdeac1b42b6aced9665537dc
+      spriteID: 70dc099a6bf6cd742bdb4c67954a3eb4
       vertices: []
       indices: 
       edges: []
@@ -909,7 +917,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1057
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -919,7 +927,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8aa4066cc33bd4e82cad41b0f26ffb
+      spriteID: 445a923925f03fa418edea98e02dff35
       vertices: []
       indices: 
       edges: []
@@ -929,7 +937,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1123
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -939,7 +947,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44443ef481889a140bd4187caf046663
+      spriteID: 75995fc3f02727c48a4e0ce96cd5c233
       vertices: []
       indices: 
       edges: []
@@ -949,7 +957,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1189
-        y: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -959,7 +967,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d0fc87fa1fc59c4490e837ef177e60f
+      spriteID: fb3b3292d69101842bbbdfe3740b0de1
       vertices: []
       indices: 
       edges: []
@@ -969,6 +977,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1255
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee61f287b2ef9b84890572cdfa294d73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_40
+      rect:
+        serializedVersion: 2
+        x: 1
         y: 133
         width: 64
         height: 64
@@ -979,13 +1007,393 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2a9dbc706b53343bc776e2f83ea0d1
+      spriteID: 5639a854e8530dd4ebbb97013adf55a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_40
+      name: CS6341-Asg4-TilesTest0_41
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec1295844135ab4cad178cdac5d356c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_42
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc89e0610e1283f4b877da67b2113ef2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_43
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fba03d4210c4d4d8d458d94cd8689a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_44
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd80ab8edb8ec742bbd772b2b9953df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_45
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60aaa48e3557de04da160fe4dd0664cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_46
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44016abb9a6408488e095d08f9705a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_47
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d10014dc86e7845b58433119e70922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_48
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4a31db0f6b88343a3a1fe961b7151e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_49
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eaa8a5dc781f7f4dba37c4eaf3f7cde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_50
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ad3f71109cce24790a38884c9b9148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_51
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9ccdea7a7ebf545923eae21a270799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_52
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2736a38fbf06144f8a8211a04c6a86a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_53
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecbda2cd23d87548bf69f5e5bc7ad72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_54
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7332a20c1977da47b3856724962e25e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_55
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928ab1a13ef07cd459134b996b0f563f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_56
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab1cc6770effee4898d44abe16eb3a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_57
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a0a72bfc606ed49ba9dc7d43619a68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_58
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebec65a50e85b64db9ed1ecdfcd59a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_59
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed05bbe0a72bc484d88c5cfe8012c035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CS6341-Asg4-TilesTest0_60
       rect:
         serializedVersion: 2
         x: 1
@@ -999,13 +1407,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e404896d23637c4894c89139b76f844
+      spriteID: 94318f8db15d60b47b862f081a0ba0b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_41
+      name: CS6341-Asg4-TilesTest0_61
       rect:
         serializedVersion: 2
         x: 67
@@ -1019,13 +1427,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a5ae29b22fb287468b2aa2157b09f66
+      spriteID: b0a4b5681bf42af42a15ee59ac49c8b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_42
+      name: CS6341-Asg4-TilesTest0_62
       rect:
         serializedVersion: 2
         x: 133
@@ -1039,13 +1447,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff2708cad08d74843a5e84db5d44aec2
+      spriteID: 988f1c17671643149bb51b8cf1cbc40e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_43
+      name: CS6341-Asg4-TilesTest0_63
       rect:
         serializedVersion: 2
         x: 199
@@ -1059,13 +1467,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4126191c26fc6543b6b000fc883ba94
+      spriteID: 0302c108013f7bf448226874e65b11da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_44
+      name: CS6341-Asg4-TilesTest0_64
       rect:
         serializedVersion: 2
         x: 265
@@ -1079,13 +1487,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc6682676fcc92489b04da694286721
+      spriteID: 29bbbe783d4ece54f95fc50950d1d1d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_45
+      name: CS6341-Asg4-TilesTest0_65
       rect:
         serializedVersion: 2
         x: 331
@@ -1099,13 +1507,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa8b789c7d68f854a86793790f58c4b3
+      spriteID: 3836b3aac64a0004f97b1e0abe1cefdf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_46
+      name: CS6341-Asg4-TilesTest0_66
       rect:
         serializedVersion: 2
         x: 397
@@ -1119,13 +1527,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b179386ca83c1464286da6132c50eb39
+      spriteID: 1ff5002957761c04ab69927a409e53bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_47
+      name: CS6341-Asg4-TilesTest0_67
       rect:
         serializedVersion: 2
         x: 463
@@ -1139,13 +1547,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 054b386f0599e14419c6dcb195051620
+      spriteID: e7b12ce7fabb50a4f8da00d988c1d61d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_48
+      name: CS6341-Asg4-TilesTest0_68
       rect:
         serializedVersion: 2
         x: 529
@@ -1159,13 +1567,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91046ec91aceb274b8357c2b768c49c7
+      spriteID: d1dfb381fc5569942907108c4ca868aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_49
+      name: CS6341-Asg4-TilesTest0_69
       rect:
         serializedVersion: 2
         x: 595
@@ -1179,13 +1587,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8e70aa6c4bd1534ca4d000d9c4d71d8
+      spriteID: 83919eb9ff6bd0a4787a4545444b5dca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_50
+      name: CS6341-Asg4-TilesTest0_70
       rect:
         serializedVersion: 2
         x: 661
@@ -1199,13 +1607,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fff6031de980eb4b91dd2d81e744a54
+      spriteID: 4ef7aa6613fb550449b846a6dfcdd885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_51
+      name: CS6341-Asg4-TilesTest0_71
       rect:
         serializedVersion: 2
         x: 727
@@ -1219,13 +1627,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9498866535d7e1a4da5cfd6447d2b9a1
+      spriteID: c497f23630437184d9c2092c6c02908f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_52
+      name: CS6341-Asg4-TilesTest0_72
       rect:
         serializedVersion: 2
         x: 793
@@ -1239,13 +1647,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f044e2390fcc3845add073b38776cca
+      spriteID: d6f6f6d3c438a43459fa5a4d6758f148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_53
+      name: CS6341-Asg4-TilesTest0_73
       rect:
         serializedVersion: 2
         x: 859
@@ -1259,13 +1667,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a4f225619435804c8bd162c556e7ec1
+      spriteID: 405d6b7499296e8439c732b32972d4e1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_54
+      name: CS6341-Asg4-TilesTest0_74
       rect:
         serializedVersion: 2
         x: 925
@@ -1279,13 +1687,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364a10df15beb0643b289134521e8723
+      spriteID: 6f7feab16b90849418697cc3df05052a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_55
+      name: CS6341-Asg4-TilesTest0_75
       rect:
         serializedVersion: 2
         x: 991
@@ -1299,13 +1707,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef763209bfc23ee4e98862b7464cf24a
+      spriteID: 84d658876bc9d854e86247e1124a3f79
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_56
+      name: CS6341-Asg4-TilesTest0_76
       rect:
         serializedVersion: 2
         x: 1057
@@ -1319,13 +1727,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a080f3aabb0a14287d443936f89b45
+      spriteID: a93fc929e79e170499012b216465f3e0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_57
+      name: CS6341-Asg4-TilesTest0_77
       rect:
         serializedVersion: 2
         x: 1123
@@ -1339,13 +1747,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a95da7e27beb0e4a9609faeb7c05c76
+      spriteID: 9857c4d6c32ddac4583b8e21d6a1a9f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_58
+      name: CS6341-Asg4-TilesTest0_78
       rect:
         serializedVersion: 2
         x: 1189
@@ -1359,13 +1767,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3ec7442c82653243aa57d63a155d77a
+      spriteID: 11bc88e99edc4a84da067b28110e25b5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_59
+      name: CS6341-Asg4-TilesTest0_79
       rect:
         serializedVersion: 2
         x: 1255
@@ -1379,13 +1787,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbc572369fb1bdd42b514944eb7804bb
+      spriteID: 132393cf2e5ec5b4abc6f085dd912a88
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_60
+      name: CS6341-Asg4-TilesTest0_80
       rect:
         serializedVersion: 2
         x: 1
@@ -1399,13 +1807,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1db1a164f4cf649acb733827000f55
+      spriteID: 447526ec9013256448767018204a4fa6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_61
+      name: CS6341-Asg4-TilesTest0_81
       rect:
         serializedVersion: 2
         x: 67
@@ -1419,13 +1827,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf45576a24e99b498b6a24975e4c980
+      spriteID: ee0c5b8a2df62b345b41966319e3e531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_62
+      name: CS6341-Asg4-TilesTest0_82
       rect:
         serializedVersion: 2
         x: 133
@@ -1439,13 +1847,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc787523231b8c45839b9bd62c1bf37
+      spriteID: 34c7a25a6ee9387439073034411b3848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_63
+      name: CS6341-Asg4-TilesTest0_83
       rect:
         serializedVersion: 2
         x: 199
@@ -1459,13 +1867,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc34b46241e579f4da8978c298d9f4ec
+      spriteID: 69ffd2834248a7d47a92c1669864c7ad
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_64
+      name: CS6341-Asg4-TilesTest0_84
       rect:
         serializedVersion: 2
         x: 265
@@ -1479,13 +1887,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9016f5364c73a9343ba0503f49472a20
+      spriteID: e6677b7a9f5b8a84f982c5de3051f0a0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_65
+      name: CS6341-Asg4-TilesTest0_85
       rect:
         serializedVersion: 2
         x: 331
@@ -1499,13 +1907,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8483127de16f06f4f935b9019c53cf90
+      spriteID: 8f58be318c72f0148beca165c2f4839f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_66
+      name: CS6341-Asg4-TilesTest0_86
       rect:
         serializedVersion: 2
         x: 397
@@ -1519,247 +1927,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b5a2db988a54b47b7f8ccb7225c89f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_67
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2a6bd2c436079e498ec930515e41126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_68
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6234c35fb7ed044ba9709e4182aa0cd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_69
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4b20ac65a0e5384c9da59940301a11d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_70
-      rect:
-        serializedVersion: 2
-        x: 661
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab519476c521c094abcb8c092f58f4fc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_71
-      rect:
-        serializedVersion: 2
-        x: 727
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6657ad5fa8757634a94be3c4e76295fd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_72
-      rect:
-        serializedVersion: 2
-        x: 793
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3f9276f681277e439f377ff992a2f2b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_73
-      rect:
-        serializedVersion: 2
-        x: 859
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dd4910c31cba944ea6ecc154e32a807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_74
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14dd3a5a1386e49448e6c7c237201313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_75
-      rect:
-        serializedVersion: 2
-        x: 991
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04595fa7e334a794f85202fedaa1e718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_76
-      rect:
-        serializedVersion: 2
-        x: 1057
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff54dfbb686cd774da5d0d79697296ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_77
-      rect:
-        serializedVersion: 2
-        x: 1123
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd394c58b4357e94fb90bf9605185fd8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CS6341-Asg4-TilesTest0_78
-      rect:
-        serializedVersion: 2
-        x: 1189
-        y: 1
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e30bb21087d472e43a62a6241409a7b9
+      spriteID: 10519c7b3be82eb4c9754d74a14686d3
       vertices: []
       indices: 
       edges: []
