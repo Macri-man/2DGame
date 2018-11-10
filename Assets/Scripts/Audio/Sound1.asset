@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sound1
   m_EditorClassIdentifier: 
   name: S1
-  clip: {fileID: 8300000, guid: 4fe2ddcbba42a41378df4cda72b92492, type: 3}
+  clip: {fileID: 8300000, guid: c776300d9df292549b54000e4218d2b1, type: 3}
   volume: 1
   pitch: 1
   loop: 0
