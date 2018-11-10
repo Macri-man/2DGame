@@ -96,12 +96,20 @@ public class Climbing : MonoBehaviour {
 	}
     void OnTriggerExit2D(Collider2D other)
     {
+			if(other.gameObject == null)
+			{
+				return;
+			}
         if (other.gameObject.name == "Rogue_01")
         {
             climb = false;
 						postClimb = false;
-						objectplayer.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
-						objectplayer = null;
+						//if-statement needed until reason for null pointer reference found 
+						if(objectplayer != null)
+						{
+							objectplayer.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
+							objectplayer = null;
+						}
         }
     }
 }
