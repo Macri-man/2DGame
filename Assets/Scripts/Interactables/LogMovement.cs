@@ -96,15 +96,4 @@ public class LogMovement : MonoBehaviour {
 			}
         }
     }
-
-    public IEnumerator Rotatelog(Quaternion rotate){
-        while (transform.rotation != rotate){
-			Debug.Log(transform.rotation != rotate);
-            Debug.Log(transform.rotation.eulerAngles);
-            Debug.Log(rotate.eulerAngles);
-            //this.transform.rotation = Quaternion.Slerp(transform.rotation, rotate, rotateSpeed * Time.deltaTime);
-            transform.RotateAround(startPoint.position, new Vector3(0f, 0f, -1f), rotateSpeed * Time.deltaTime);
-            yield return null;
-        }
-    }
 }
