@@ -7,6 +7,9 @@ Library/
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+Packages/
+ProjectSettings/
+
 # Visual Studio cache directory
 .vs/
 .vscode/
