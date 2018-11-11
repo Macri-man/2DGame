@@ -66,6 +66,12 @@ public class playermovement : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            animate.SetTrigger("isthrow");
+        }
+        else { animate.ResetTrigger("isthrow"); }
     }
 
     public void death(){
