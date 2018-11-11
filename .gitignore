@@ -7,7 +7,6 @@ Library/
 [Bb]uilds/
 Assets/AssetStoreTools*
 
-Packages/
 Assembly-CSharp.csproj
 Assembly-CSharp-Editor.csproj
 
