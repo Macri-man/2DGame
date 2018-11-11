@@ -9,6 +9,8 @@ Assets/AssetStoreTools*
 
 Packages/
 ProjectSettings/
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
 
 # Visual Studio cache directory
 .vs/
