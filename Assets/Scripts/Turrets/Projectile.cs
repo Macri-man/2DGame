@@ -7,16 +7,17 @@ public class Projectile : MonoBehaviour {
     public SoundTrigger HitSound;
 	public float speed = 1f;
 
-
+	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
-		
+		rb = this.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += this.transform.right * speed * Time.deltaTime;
+		//this.transform.position += this.transform.right * speed * Time.deltaTime;
+		rb.velocity = this.transform.up * speed;
 		
 	}
 

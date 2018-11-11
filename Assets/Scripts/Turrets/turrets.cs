@@ -8,16 +8,17 @@ public class turrets : MonoBehaviour {
     public SoundTrigger SwitchedOffSound;
     public SoundTrigger GettingHitSound;
 
-    public GameObject target;
+    private GameObject target;
 
 	public Transform spawnBullets;
+    public Transform BarrelTurret;
 	public Projectile projectile;
 
     private float timeCount = 0.0f;
 
 	public float rateOfFire = 1f;
 
-	public float speed = 2;
+	public float speedTurn = 2;
 	private bool enterZone;
 
 	public ParticleSystem flameThrower;
@@ -25,6 +26,7 @@ public class turrets : MonoBehaviour {
     Vector3 direct;
     float angle;
     float angle2;
+	float rotateAmount;
     Quaternion rotate;
 
 	bool fire = false;
@@ -39,21 +41,30 @@ public class turrets : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update(){
 		if(enterZone){
         	direct = target.transform.position - this.transform.position; 
+			direct.Normalize();
+			rotateAmount = Vector3.Cross(direct,transform.up).z;
         	angle = Mathf.Atan2(direct.y,direct.x) * Mathf.Rad2Deg; 
-            angle2 = AngleBetweenVector2(transform.up, direct); 
-			//Debug.Log(angle2);
-            Debug.DrawLine((Vector2)this.transform.position, (Vector2)target.transform.position, Color.black, 200f);
-            Debug.DrawRay((Vector2)this.transform.position, direct, Color.red, 200f);
+            angle2 = AngleBetweenVector2(transform.up, direct);
+            Vector2 vec1Rotated90 = new Vector2(-transform.up.y, transform.up.x);
+            float sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
+            Debug.DrawLine((Vector2)this.transform.position, (Vector2)target.transform.position, Color.black, 200f); 
+            Debug.DrawRay((Vector2)this.transform.position, direct, Color.red, 200f); 
             Debug.DrawRay((Vector2)this.transform.position, transform.up, Color.blue, 200f);
-			rotate = Quaternion.AngleAxis(angle,Vector3.forward); 
-			this.transform.rotation = Quaternion.Slerp(transform.rotation,rotate,speed*Time.deltaTime);
-			if(withinThreshold(5f) && (Time.time > timeStamp)){
+            Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
+            rotate = Quaternion.AngleAxis(angle,Vector3.forward);
+            Debug.Log(rotate.eulerAngles);
+
+
+            //this.BarrelTurret.transform.rotation = Quaternion.Slerp(transform.rotation, rotate, -rotateAmount * speedTurn * Time.deltaTime); 
+            //this.BarrelTurret.transform.RotateAround(this.BarrelTurret.transform.position,new Vector3(0,0,1), -rotateAmount * speedTurn * Time.deltaTime);
+            //this.BarrelTurret.transform.rotation = Quaternion.Euler(0, 0, this.BarrelTurret.transform.rotation.z + sign * speedTurn * Time.deltaTime);
+            //this.transform.rotation = Quaternion.Euler(0,0,Mathf.Clamp(this.transform.rotation.z,0,180)); 
+            if(withinThreshold(5f) && (Time.time > timeStamp)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");
-				
                 timeStamp += Time.time;
 				if(flameThrower == null){ 	
                     Instantiate(projectile, spawnBullets.position, spawnBullets.rotation); 
