@@ -12,7 +12,7 @@ public class turrets : MonoBehaviour {
 
 	public Transform spawnBullets;
     public Transform BarrelTurret;
-	public Projectile projectile;
+	public GameObject projectile;
 
     private float timeCount = 0.0f;
 
@@ -27,6 +27,7 @@ public class turrets : MonoBehaviour {
     float angle;
     float angle2;
 	float rotateAmount;
+    float angleOfTurret = 0;
     Quaternion rotate;
 
 	bool fire = false;
@@ -43,31 +44,49 @@ public class turrets : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 		if(enterZone){
-        	direct = target.transform.position - this.transform.position; 
+        	direct = target.transform.position - this.BarrelTurret.transform.position;
 			direct.Normalize();
-			rotateAmount = Vector3.Cross(direct,transform.up).z;
-        	angle = Mathf.Atan2(direct.y,direct.x) * Mathf.Rad2Deg; 
-            angle2 = AngleBetweenVector2(transform.up, direct);
-            Vector2 vec1Rotated90 = new Vector2(-transform.up.y, transform.up.x);
+			rotateAmount = Vector3.Cross(direct,this.BarrelTurret.transform.up).z;
+        	angle = Mathf.Atan2(direct.y,direct.x) * Mathf.Rad2Deg;
+            angle2 = AngleBetweenVector2(this.BarrelTurret.transform.up, direct);
+            Vector2 vec1Rotated90 = new Vector2(-this.BarrelTurret.transform.up.y, this.BarrelTurret.transform.up.x);
             float sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
-            Debug.DrawLine((Vector2)this.transform.position, (Vector2)target.transform.position, Color.black, 200f); 
-            Debug.DrawRay((Vector2)this.transform.position, direct, Color.red, 200f); 
-            Debug.DrawRay((Vector2)this.transform.position, transform.up, Color.blue, 200f);
-            Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
+            Debug.DrawLine((Vector2)this.BarrelTurret.transform.position, (Vector2)target.transform.position, Color.black, 200f);
+            Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, direct, Color.red, 200f);
+            Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, this.BarrelTurret.transform.up, Color.blue, 200f);
+            //Debug.Log(rotateAmount);
+            //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
             rotate = Quaternion.AngleAxis(angle,Vector3.forward);
-            Debug.Log(rotate.eulerAngles);
+            //Debug.Log(rotate.eulerAngles);
+            rotate = Quaternion.AngleAxis(angle2, Vector3.forward);
+            //Debug.Log(rotate.eulerAngles);
+            //Debug.Log(Quaternion.Euler(0,0,this.BarrelTurret.transform.rotation.z + -rotateAmount * speedTurn * Time.deltaTime).eulerAngles);
 
-
-            //this.BarrelTurret.transform.rotation = Quaternion.Slerp(transform.rotation, rotate, -rotateAmount * speedTurn * Time.deltaTime); 
+            //this.BarrelTurret.transform.rotation = Quaternion.Euler(0, 0, this.BarrelTurret.transform.rotation.z + -rotateAmount * speedTurn * Time.deltaTime);
+            this.BarrelTurret.transform.RotateAround(this.BarrelTurret.transform.position, new Vector3(0f, 0f, 1f), -rotateAmount * speedTurn * Time.deltaTime);
+            //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
+            //this.BarrelTurret.transform.rotation = Quaternion.Slerp(transform.rotation, rotate, -rotateAmount * speedTurn * Time.deltaTime);
+            //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
+            
             //this.BarrelTurret.transform.RotateAround(this.BarrelTurret.transform.position,new Vector3(0,0,1), -rotateAmount * speedTurn * Time.deltaTime);
             //this.BarrelTurret.transform.rotation = Quaternion.Euler(0, 0, this.BarrelTurret.transform.rotation.z + sign * speedTurn * Time.deltaTime);
             //this.transform.rotation = Quaternion.Euler(0,0,Mathf.Clamp(this.transform.rotation.z,0,180)); 
-            if(withinThreshold(5f) && (Time.time > timeStamp)){ 
+            //withinBounds(230,310);
+
+            //Debug.Log(sign * speedTurn * Time.deltaTime);
+
+            //angleOfTurret += sign * speedTurn * Time.deltaTime;
+            //Debug.Log(angleOfTurret);
+
+            //this.BarrelTurret.transform.rotation = Quaternion.Euler(0,0,angleOfTurret);
+            if(withinThreshold(2) && (Time.time > timeStamp)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");
                 timeStamp += Time.time;
-				if(flameThrower == null){ 	
-                    Instantiate(projectile, spawnBullets.position, spawnBullets.rotation); 
+				if(flameThrower == null){
+                    GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
+                    bullets.GetComponent<Projectile>().setLocalScale();
+                    bullets.GetComponent<Projectile>().speed = 1;
 				}else{
 					flameThrower.Play();
 				}
@@ -79,7 +98,27 @@ public class turrets : MonoBehaviour {
 		}
     }
 
-   
+    void withinBounds(float boundLeft, float boundRight){
+        //return withinThreshold(boundLeft) && withinThreshold(boundrRght);
+        //return (transform.rotation.eulerAngles.z >= boundLeft) && (transform.rotation.eulerAngles.z <= boundRight);
+        if((transform.rotation.eulerAngles.z >= boundLeft) && (transform.rotation.eulerAngles.z <= boundRight)){
+            if(Mathf.Abs(transform.rotation.eulerAngles.z-boundLeft) >= Mathf.Abs(transform.rotation.eulerAngles.z - boundRight)) {
+                transform.rotation = Quaternion.Euler(0, 0, boundRight);
+            }else{
+                transform.rotation = Quaternion.Euler(0, 0, boundLeft);
+            }
+        }
+        /* 
+        if (boundLeft - transform.rotation.eulerAngles.z <= 0){
+            transform.rotation = Quaternion.Euler(0, 0, boundLeft);
+        }else if (transform.rotation.eulerAngles.z <= boundRight){
+            transform.rotation = Quaternion.Euler(0, 0, boundRight);
+        }else{
+
+        }
+        */
+    }
+
 
     bool withinThreshold(float threshold){
         return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));

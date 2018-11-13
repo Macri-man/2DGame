@@ -10,6 +10,10 @@ public class playermovement : MonoBehaviour {
     public float runSpeed = 40f;
     bool jump = false;
     bool crouch = false;
+    bool throws = false;
+    bool hammer = false;
+    bool fist = false;
+
     public Animator animate;
     // Use this for initialization
     public int item = 0;
@@ -18,10 +22,12 @@ public class playermovement : MonoBehaviour {
     public class StringEvent : UnityEvent<string> { }
 
     public StringEvent OnInputEvent;
+    public UnityEvent changeCurser;
 
     public Vector3 checkPoint;
 
     public Vector3 startPosition;
+
 
     void Awake()
     {
@@ -41,7 +47,6 @@ public class playermovement : MonoBehaviour {
         if (Input.GetButtonDown("Jump")){
             jump = true;
         }
-
         if (Input.GetButtonDown("crouch")){
             crouch = true;
         }else if (Input.GetButtonUp("crouch")){
@@ -49,6 +54,10 @@ public class playermovement : MonoBehaviour {
         }
 
         animate.SetFloat("speed", Mathf.Abs(horizontalMove));
+
+        if (Input.GetMouseButtonDown(0) &&  item == 1){
+            //Instantiate();
+        }
 
 
         switch (Input.inputString){
@@ -69,10 +78,15 @@ public class playermovement : MonoBehaviour {
     }
 
     public void death(){
+        Debug.Log("Death");
         if(checkPoint == null){
+            Debug.Log("no checkpoint");
+            Debug.Log(this.gameObject.name);
             this.transform.position = this.startPosition;
         }else{
-            this.startPosition = checkPoint;
+            Debug.Log("checkpoint");
+            Debug.Log(this.gameObject.name);
+            this.transform.position = checkPoint;
         }
     }
     

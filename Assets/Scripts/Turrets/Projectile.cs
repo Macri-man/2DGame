@@ -5,7 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     public SoundTrigger HitSound;
-	public float speed = 1f;
+	public float speed = 1;
+
+	public bool tiny;
 
 	private Rigidbody2D rb;
 
@@ -16,21 +18,28 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//this.transform.position += this.transform.right * speed * Time.deltaTime;
-		rb.velocity = this.transform.up * speed;
+		this.transform.position += this.transform.up * speed * Time.deltaTime;
+		//rb.velocity = this.transform.up * speed;
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+    public void setLocalScale(){
+        Vector3 theScale = transform.localScale;
+        theScale /= 2;
+        transform.localScale = theScale;
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":
 				other.gameObject.GetComponent<playermovement>().death();
                 //HitSound.PlaySound();
-				Destroy(this);
+				Destroy(this.gameObject);
 			break;
 			default:
                 //HitSound.PlaySound();
-                Destroy(this);
+                //Destroy(this.gameObject);
 			break;
 
 		}

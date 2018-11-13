@@ -12,6 +12,8 @@ public class LogMovement : MonoBehaviour {
     float angle = 0;
     float angle2 = 0;
 
+    float sign;
+
     public SoundTrigger triggers;
     private bool clicked = false;
 
@@ -31,21 +33,22 @@ public class LogMovement : MonoBehaviour {
         rotateAmount = Vector3.Cross(direct,transform.up).z;
         angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
         angle2 = AngleBetweenVector2(transform.up, direct);
+        Vector2 vec1Rotated90 = new Vector2(-transform.up.y, transform.up.x);
+        sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
         //Debug.Log(rotateSpeed);
-        //Debug.Log(rotateAmount*rotateSpeed);
+        //Debug.Log(rotateAmount * rotateSpeed);
         //Debug.Log(rotateAmount);
-        //Debug.Log(angle* rotateSpeed);
-        //Debug.Log(angle);
+        Debug.Log(angle);
         rotate = Quaternion.AngleAxis(rotateAmount, new Vector3(0f, 0f, 1f));
         //Debug.Log(rotate.eulerAngles);
         rotate = Quaternion.AngleAxis(angle, new Vector3(0f, 0f, 1f));
-        //Debug.Log(rotate.eulerAngles);
+        Debug.Log(rotate.eulerAngles);
         rotate = Quaternion.AngleAxis(angle2, new Vector3(0f, 0f, 1f));
-        //Debug.Log(rotate.eulerAngles);
+        Debug.Log(rotate.eulerAngles);
         Debug.DrawLine((Vector2)startPoint.position, (Vector2)endPoint.position, Color.black, 200f);
         Debug.DrawRay((Vector2)startPoint.position, direct, Color.red, 200f);
         Debug.DrawRay((Vector2)startPoint.position, transform.up, Color.blue, 200f);
-        //Debug.Log(AngleBetweenVector2(transform.up, direct));
+        Debug.Log(AngleBetweenVector2(transform.up, direct));
         //Debug.Log(AngleBetweenVector21(transform.up, direct));
         //Debug.Log(Vector2.Angle(transform.up,direct));
 	}
@@ -70,17 +73,22 @@ public class LogMovement : MonoBehaviour {
     }
 	void Update() {
 		if(moveLog){
-            transform.RotateAround(startPoint.position, new Vector3(0f, 0f, 1f), -rotateSpeed * Time.deltaTime);
+            transform.RotateAround(startPoint.position, new Vector3(0f, 0f, 1f), sign * rotateSpeed * Time.deltaTime);
             //Debug.Log(transform.rotation.eulerAngles);
             //Debug.Log(rotate.eulerAngles);
             //Debug.Log(transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + 5) && transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z + -5));
             //Debug.Log(transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + 5));
-            //Debug.Log(transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - 5));
-			if(withinThreshold(5f)){
+            //Debug.Log(transform.rotation.eulerAngles.z <= rotate.eulerAngles.z);
+			if(withinThreshold2(sign)){
 				moveLog = false;
 			}
         }
 	}
+
+    bool withinThreshold2(float sign){
+        return (sign == -1.0)?(transform.rotation.eulerAngles.z >= rotate.eulerAngles.z) : (transform.rotation.eulerAngles.z <= rotate.eulerAngles.z);
+        //return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
+    }
 
     bool withinThreshold(float threshold){
         return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
@@ -89,7 +97,7 @@ public class LogMovement : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player"){
-            Debug.Log(clicked);
+            //Debug.Log(clicked);
 			if(other.gameObject.GetComponent<playermovement>().item == 1 && clicked){
             	triggers.PlaySound();
 				moveLog = true;
