@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706540524262284}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: InteractableLogObject1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 61106099932546214}
   - component: {fileID: 50270865418909510}
   - component: {fileID: 255279417318211980}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: InteractableLog01
   m_TagString: InteractableLog
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4251042754054972}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 212409299685791440}
   - component: {fileID: 61417631939729320}
   - component: {fileID: 50465798051836918}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: InteractableLog02
   m_TagString: InteractableLog
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 50439521137734618}
   - component: {fileID: 255462878549278514}
   - component: {fileID: 114297949805558862}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Log_TriggerBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4985295290993846}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

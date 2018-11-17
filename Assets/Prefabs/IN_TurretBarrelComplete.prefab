@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212866830592899450}
   - component: {fileID: 50236267775804270}
   - component: {fileID: 61100082378345370}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 212248733017626770}
   - component: {fileID: 50226593021863180}
   - component: {fileID: 61223143634752894}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4911964535860020}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrelComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -20,10 +20,10 @@ TagManager:
   - Background1
   - Background2
   - Background3
+  - Background4
   - Foreground
   - Interactables
   - Characters
-  - 
   - 
   - 
   - 
@@ -54,12 +54,18 @@ TagManager:
   - name: Background3
     uniqueID: 1597603497
     locked: 0
-  - name: Foreground
+  - name: Background4
     uniqueID: 1661785505
     locked: 0
-  - name: Interactables
+  - name: Foreground
     uniqueID: 2551375353
     locked: 0
-  - name: Characters
+  - name: Interactables
     uniqueID: 220616117
+    locked: 0
+  - name: Characters
+    uniqueID: 3320604245
+    locked: 0
+  - name: HUD
+    uniqueID: 3113415071
     locked: 0

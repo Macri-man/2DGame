@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95015794179854078}
   - component: {fileID: 61946948817049774}
   - component: {fileID: 50524271882161910}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Enemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,8 +138,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 376460875
-  m_SortingLayer: 4
+  m_SortingLayerID: 220616117
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

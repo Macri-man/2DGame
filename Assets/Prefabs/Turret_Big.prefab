@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4965770994281910}
   - component: {fileID: 114793755163599868}
   - component: {fileID: 61509582670776852}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Turret_Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4776741653486590}
   - component: {fileID: 58737650146053938}
   - component: {fileID: 50742994061136080}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: TurretBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4111641840615676}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrelComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 212378164979446826}
   - component: {fileID: 50863224958027642}
   - component: {fileID: 61170141945075054}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretMuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305801831483564}
   - component: {fileID: 212313363484543442}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseTL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 212678865734958580}
   - component: {fileID: 50879171921194258}
   - component: {fileID: 61163999705296224}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427564647586854}
   - component: {fileID: 212788889167380808}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4255774675860836}
   - component: {fileID: 212114540356953304}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseTR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813105331681508}
   - component: {fileID: 212641129317180110}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 212426427892675780}
   - component: {fileID: 50280933780336540}
   - component: {fileID: 61795261712065974}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

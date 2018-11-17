@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212482454182493122}
   - component: {fileID: 50119043924950562}
   - component: {fileID: 61247854904170226}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4523080306535196}
   - component: {fileID: 212960599656101946}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 212598677193738766}
   - component: {fileID: 50322998547318962}
   - component: {fileID: 61166290988299186}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrel0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 212728305661797456}
   - component: {fileID: 50018619787599558}
   - component: {fileID: 61994898578389266}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretMuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4590950517895292}
   - component: {fileID: 212737902888582424}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseTL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4422025555382210}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBarrelComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 114683209101730602}
   - component: {fileID: 61395860600939978}
   - component: {fileID: 50968093947591536}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Turret_Tiny
   m_TagString: TinyTurret
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4931544970678012}
   - component: {fileID: 58712195896531826}
   - component: {fileID: 50735662648555720}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: TurretBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4221687391640446}
   - component: {fileID: 212433819717898766}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseTR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4659512726244898}
   - component: {fileID: 212214725664688872}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: IN_TurretBaseBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

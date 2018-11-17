@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4243730967245526}
   - component: {fileID: 212147731911922194}
   - component: {fileID: 61532906446352140}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: FG_GrassCornerTileTL01
   m_TagString: Foreground
   m_Icon: {fileID: 0}
@@ -98,8 +98,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -380337961
-  m_SortingLayer: 0
+  m_SortingLayerID: -1743591943
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300078, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
