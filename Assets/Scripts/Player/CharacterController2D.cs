@@ -53,6 +53,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
+				//Debug.Log("Floor detected.");
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
@@ -61,7 +62,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool crouch, bool jump, float moveY)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -70,6 +71,7 @@ public class CharacterController2D : MonoBehaviour
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
 				crouch = true;
+				//Debug.Log("Ceiling detected.");
 			}
 		}
 
@@ -105,10 +107,27 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 
+      float desiredY = (moveY == 0)?(m_Rigidbody2D.velocity.y):(moveY * 15f);
+
 			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+			Vector3 targetVelocity = new Vector2(move * 10f, desiredY);//m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+
+			if(moveY != 0)
+			{
+				//Debug.Log("moveX="+move+", moveY="+moveY+", velocity.y="+m_Rigidbody2D.velocity.y);
+				//m_Rigidbody2D.MovePosition(new Vector2(m_Rigidbody2D.position.x,m_Rigidbody2D.position.y+(moveY*10f)));
+				//m_Rigidbody2D.transform.Translate(new Vector3(m_Rigidbody2D.position.x,(moveY*1f),0f));
+			}
+			/*
+			else
+			{
+				if(m_Rigidbody2D.velocity.x != 0)
+				{
+					Debug.Log("velocity.x="+m_Rigidbody2D.velocity.x);
+				}
+			}*/
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
@@ -132,6 +151,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	public bool isGrounded() { return	m_Grounded; }
 
 	private void Flip()
 	{

@@ -7,8 +7,12 @@ public class playermovement : MonoBehaviour {
 
     public CharacterController2D controller;
     float horizontalMove = 0f;
+    float verticalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
+    public bool climbingMode = false;
+    private bool startedClimbing = false;
+    private float playerGravity;
     bool crouch = false;
     bool throws = false;
     bool hammer = false;
@@ -37,19 +41,65 @@ public class playermovement : MonoBehaviour {
 
     void Start () {
         startPosition = this.transform.position;
-		
+        playerGravity = this.gameObject.GetComponent<Rigidbody2D>().gravityScale;
+
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+  {
+    verticalMove = 0f;
+    this.gameObject.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
+    if(!climbingMode)
+    {
+      //Debug.Log("Climbing?");
+      animate.SetBool("climbingOn", false);
+    }
+    if (Input.GetAxisRaw("Vertical") != 0f)
+    {
+      if(climbingMode && this.item == 3)
+      {
+          //Debug.Log("Climbing?");
+          verticalMove = (Input.GetAxisRaw("Vertical") );// > 0f)?(1f):(-1f);
+          if(verticalMove < 0f && controller.isGrounded())
+          {
+            //Debug.Log("Downward Move attempted while on ground.");
+            //verticalMove = 0f;
+          }
+          //animate.SetFloat("speed", Mathf.Abs(verticalMove));
+      }
+      else
+      {
+        verticalMove = 0f;
+      }
+      if(verticalMove != 0f)
+      {
+        //Debug.Log("Climbing 2?");
+        if(!startedClimbing)
+        {
+          animate.SetBool("climbingOn", true);
+          startedClimbing = true;
+        }
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
+      }
+      else
+      {
+        if(startedClimbing)
+        {
+          animate.SetBool("climbingOn", false);
+          startedClimbing = false;
+        }
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
+      }
+    }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") && !climbingMode){
             jump = true;
         }
-        if (Input.GetButtonDown("crouch")){
+        if (Input.GetButtonDown("crouch") && !climbingMode){
             crouch = true;
-        }else if (Input.GetButtonUp("crouch")){
+        } else if (Input.GetButtonUp("crouch")){
             crouch = false;
         }
 
@@ -76,7 +126,7 @@ public class playermovement : MonoBehaviour {
                 break;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !climbingMode)
         {
             animate.SetTrigger("isthrow");
         }
@@ -95,13 +145,13 @@ public class playermovement : MonoBehaviour {
             this.transform.position = checkPoint;
         }
     }
-    
+
     public void OnCrouching(bool isCrouching){
         animate.SetBool("IsCrouching", isCrouching);
     }
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump, verticalMove * Time.fixedDeltaTime);
         jump = false;
     }
 }
