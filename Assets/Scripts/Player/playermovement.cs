@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class playermovement : MonoBehaviour {
 
     public CharacterController2D controller;
+    public Camera mainCamera;
     float horizontalMove = 0f;
     float verticalMove = 0f;
     public float runSpeed = 40f;
@@ -31,6 +32,9 @@ public class playermovement : MonoBehaviour {
     public Vector3 checkPoint;
 
     public Vector3 startPosition;
+
+    public GameObject throwObject;
+    public Transform throwPosition; 
 
 
     void Awake()
@@ -126,8 +130,15 @@ public class playermovement : MonoBehaviour {
                 break;
         }
 
-        if (Input.GetMouseButtonDown(0) && !climbingMode)
+        if (Input.GetMouseButtonDown(0) && !climbingMode && item == 2)
         {
+            Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            mouse.z = 0;
+            Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
+            float angle = Mathf.Atan2(directon.y,directon.x) * Mathf.Rad2Deg;
+            //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward); 
+            GameObject rock = Instantiate(throwObject,throwPosition.position,Quaternion.identity);
+            rock.GetComponent<Rigidbody2D>().AddForce(directon * 140);
             animate.SetTrigger("isthrow");
         }
         else { animate.ResetTrigger("isthrow"); }
@@ -136,12 +147,8 @@ public class playermovement : MonoBehaviour {
     public void death(){
         Debug.Log("Death");
         if(checkPoint == null){
-            Debug.Log("no checkpoint");
-            Debug.Log(this.gameObject.name);
             this.transform.position = this.startPosition;
         }else{
-            Debug.Log("checkpoint");
-            Debug.Log(this.gameObject.name);
             this.transform.position = checkPoint;
         }
     }

@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)){
-            Debug.Log("ESCAPE");
+            //Debug.Log("ESCAPE");
 			if(isPaused){
 				Resume();
 			}else{
@@ -35,14 +35,14 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void Resume(){
-        Debug.Log("RESUME");
+        //Debug.Log("RESUME");
         pauseUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
 	}
 
 	void Pause(){
-		Debug.Log("PAUSE");
+		//Debug.Log("PAUSE");
         pauseUI.SetActive(true);
 		Time.timeScale = 0;
 		isPaused = true;
