@@ -57854,11 +57854,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 112.05
+      value: 107.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 23.25
+      value: 23.18
       objectReference: {fileID: 0}
     - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -113807,6 +113807,9 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   runSpeed: 20
   climbingMode: 0
+  startedClimbing: 0
+  climbingMid: 0
+  climbingSpeed: 35
   animate: {fileID: 1661782847}
   item: 0
   OnInputEvent:

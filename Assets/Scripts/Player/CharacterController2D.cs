@@ -107,7 +107,7 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 
-      float desiredY = (moveY == 0)?(m_Rigidbody2D.velocity.y):(moveY * 15f);
+      float desiredY = (moveY == 0)?(m_Rigidbody2D.velocity.y):(moveY * m_Rigidbody2D.gameObject.GetComponent<playermovement>().climbingSpeed); //35f);
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, desiredY);//m_Rigidbody2D.velocity.y);

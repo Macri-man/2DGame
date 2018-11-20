@@ -11,8 +11,15 @@ public class playermovement : MonoBehaviour {
     float verticalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
+
+    [HideInInspector]
     public bool climbingMode = false;
-    private bool startedClimbing = false;
+    [HideInInspector]
+    public bool startedClimbing = false;
+    [HideInInspector]
+    public bool climbingMid = false;
+
+    public float climbingSpeed = 35f;
     private float playerGravity;
     bool crouch = false;
     bool throws = false;
@@ -34,7 +41,7 @@ public class playermovement : MonoBehaviour {
     public Vector3 startPosition;
 
     public GameObject throwObject;
-    public Transform throwPosition; 
+    public Transform throwPosition;
 
 
     void Awake()
@@ -79,29 +86,35 @@ public class playermovement : MonoBehaviour {
       if(verticalMove != 0f)
       {
         //Debug.Log("Climbing 2?");
-        if(!startedClimbing)
+        if(!startedClimbing && !climbingMid)
         {
           animate.SetBool("climbingOn", true);
           startedClimbing = true;
+        }
+        else if(startedClimbing && !climbingMid)
+        {
+          startedClimbing = false;
+          climbingMid = true;
         }
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
       }
       else
       {
-        if(startedClimbing)
+        if(startedClimbing || climbingMid)
         {
           animate.SetBool("climbingOn", false);
           startedClimbing = false;
+          climbingMid = false;
         }
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
       }
     }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump") && !climbingMode){
+        if (Input.GetButtonDown("Jump") && !(climbingMode && climbingMid)){
             jump = true;
         }
-        if (Input.GetButtonDown("crouch") && !climbingMode){
+        if (Input.GetButtonDown("crouch") && !(climbingMode && climbingMid)){
             crouch = true;
         } else if (Input.GetButtonUp("crouch")){
             crouch = false;
@@ -136,7 +149,7 @@ public class playermovement : MonoBehaviour {
             mouse.z = 0;
             Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
             float angle = Mathf.Atan2(directon.y,directon.x) * Mathf.Rad2Deg;
-            //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward); 
+            //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
             GameObject rock = Instantiate(throwObject,throwPosition.position,Quaternion.identity);
             rock.GetComponent<Rigidbody2D>().AddForce(directon * 140);
             animate.SetTrigger("isthrow");

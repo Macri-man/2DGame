@@ -8,7 +8,7 @@ public class Climbing : MonoBehaviour {
 	public Transform endClimbPoint;
 	public Transform endMovePoint;
 
-	public float speed = 0.5f;
+	//public float speed = 0.5f;
 	public float apexPushForce = 1f;
 
 
@@ -43,7 +43,8 @@ public class Climbing : MonoBehaviour {
 		if(objectplayer.GetComponent<playermovement>().climbingMode)
 		{
 			//Debug.Log("Update: coords check: "+objectplayer.transform.position.y+", "+endClimbPoint.position.y);
-			if(objectplayer.transform.position.y >= endClimbPoint.position.y)
+			if(objectplayer.transform.position.y >= endClimbPoint.position.y &&
+			   objectplayer.GetComponent<playermovement>().climbingMid)
 			{
 				//Debug.Log("And I at least get to here...");
 				objectplayer.GetComponent<Rigidbody2D>().AddForce(
@@ -106,6 +107,7 @@ public class Climbing : MonoBehaviour {
             //climb = true;
             objectplayer = other.gameObject;
 						objectplayer.GetComponent<playermovement>().climbingMode = true;
+						//objectplayer.GetComponent<playermovement>().climbingSpeed = speed;
 						//playerGravity = objectplayer.GetComponent<Rigidbody2D>().gravityScale;
 						//objectplayer.GetComponent<Rigidbody2D>().gravityScale = 0f;
             //if (other.gameObject.GetComponent<playermovement>().item == 3 && clicked){
