@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50646e12fe25540f5a839a9b977bedce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leverSound: {fileID: 11400000, guid: d20c27bd38a5d486a96e6cc86c9a503e, type: 2}
   OnInputEvent:
     m_PersistentCalls:
       m_Calls:

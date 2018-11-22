@@ -14,6 +14,4 @@ public class CharacterControllerAnimator : MonoBehaviour {
 	void Update () {
 		
 	}
-
-	 
 }

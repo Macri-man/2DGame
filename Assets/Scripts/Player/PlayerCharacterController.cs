@@ -12,7 +12,8 @@ public class PlayerCharacterController : MonoBehaviour {
     public List<Sprite> weaponSprite;
     [HideInInspector]
     public Weapons item;
-	float horizontalMove = 0;
+	float horizontalMove = 0f;
+    public float runSpeed = 40f;
 	public Animator animate;
 
     [System.Serializable]
@@ -34,6 +35,8 @@ public class PlayerCharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
         switch (Input.inputString){
             case "1":
                 item = Weapons.Hammer;
@@ -43,6 +46,7 @@ public class PlayerCharacterController : MonoBehaviour {
             case "2":
                 item = Weapons.Rock;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponSprite[1];
+                animate.SetTrigger("");
                 OnInputEvent.Invoke(Input.inputString);
                 break;
             case "3":
@@ -53,8 +57,9 @@ public class PlayerCharacterController : MonoBehaviour {
 
 
         //animate.SetFloat("Vertical",);
-        //animate.SetFloat("Horizontal",);
+        animate.SetFloat("Horizontal",Mathf.Abs(horizontalMove));
 
+        //controller.UpdateAnimator(horizontalMove * Time.fixedDeltaTime, climb, jump, verticalMove * Time.fixedDeltaTime);
 		
 	}
 
@@ -69,8 +74,7 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void FixedUpdate(){
-        //controller.UpdateAnimator(horizontalMove * Time.fixedDeltaTime, climb, jump, verticalMove * Time.fixedDeltaTime);
-        //jump = false;
+       
     }
 
 }

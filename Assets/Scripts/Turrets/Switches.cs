@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Switches : MonoBehaviour {
+    public SoundTrigger leverSound;
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
@@ -44,6 +45,7 @@ public class Switches : MonoBehaviour {
 		if(OnInputEvent != null){
             timeStamp = Time.time;
             switchesOn = !switchesOn;
+            leverSound.PlaySound();
             OnInputEvent.Invoke(switchesOn);
 			Orb.GetComponent<SpriteRenderer>().color = Color.black;
 		}else{
