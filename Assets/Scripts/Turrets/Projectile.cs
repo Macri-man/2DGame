@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Projectile : MonoBehaviour {
 
-    public SoundTrigger HitSound;
-	public float speed = 1;
-
-	public bool tiny;
+    public SoundTrigger HitGround;
+    public SoundTrigger HitTurret;
+	public float speed;
 
 	private Rigidbody2D rb;
 
@@ -20,7 +20,6 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 		this.transform.position += this.transform.up * speed * Time.deltaTime;
 		//rb.velocity = this.transform.up * speed;
-		
 	}
 
     public void setLocalScale(){
@@ -37,6 +36,10 @@ public class Projectile : MonoBehaviour {
                 //HitSound.PlaySound();
 				Destroy(this.gameObject);
 			break;
+            case "Ground":
+                HitGround.PlaySound();
+                Destroy(this.gameObject);
+                break;
 			default:
                 //HitSound.PlaySound();
                 //Destroy(this.gameObject);

@@ -8,6 +8,8 @@ TagManager:
   - InteractableLog
   - TinyTurret
   - BigTurret
+  - Ground
+  - Tower
   layers:
   - Default
   - TransparentFX

@@ -26,16 +26,17 @@ public class TestAudio : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-		//Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
         //if(other.gameObject.name == "Rogue_01"){
         //    
         //}
-        
+        /* 
         if (other.gameObject.name == "Rogue_01" && other.gameObject.GetComponent<playermovement>().item == 1 && clicked)
         {
             //OnHitEvent.Invoke("S1");
             triggers.PlaySound();
         }
-	}
+        */
+    }
 
 }

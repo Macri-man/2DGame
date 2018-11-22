@@ -4,53 +4,28 @@ using UnityEngine;
 
 public class LogMovement : MonoBehaviour {
 
-	public Transform startPoint;
 	public Transform endPoint;
 	public float rotateSpeed = 1f;
-
-    float rotateAmount = 0;
-    float angle = 0;
     float angle2 = 0;
-
-    float sign;
 
     public SoundTrigger triggers;
     private bool clicked = false;
 
-	private bool entered = false;
     private bool moveLog = false;
 
-    [Range(-1,1)]
-    public int direction = 0;
-
-
+    Quaternion end = Quaternion.identity;
 
     Quaternion rotate;
 
 	void Start() {
-        Vector2 direct = (Vector2)endPoint.position - (Vector2)startPoint.position;
+        Vector2 direct = (Vector2)endPoint.position - (Vector2)this.transform.position;
 		direct.Normalize();
-        rotateAmount = Vector3.Cross(direct,transform.up).z;
-        angle = Mathf.Atan2(direct.y, direct.x) * Mathf.Rad2Deg;
         angle2 = AngleBetweenVector2(transform.up, direct);
-        Vector2 vec1Rotated90 = new Vector2(-transform.up.y, transform.up.x);
-        sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
-        //Debug.Log(rotateSpeed);
-        //Debug.Log(rotateAmount * rotateSpeed);
-        //Debug.Log(rotateAmount);
-        Debug.Log(angle);
-        rotate = Quaternion.AngleAxis(rotateAmount, new Vector3(0f, 0f, 1f));
-        //Debug.Log(rotate.eulerAngles);
-        rotate = Quaternion.AngleAxis(angle, new Vector3(0f, 0f, 1f));
-        Debug.Log(rotate.eulerAngles);
-        rotate = Quaternion.AngleAxis(angle2, new Vector3(0f, 0f, 1f));
-        Debug.Log(rotate.eulerAngles);
-        Debug.DrawLine((Vector2)startPoint.position, (Vector2)endPoint.position, Color.black, 200f);
-        Debug.DrawRay((Vector2)startPoint.position, direct, Color.red, 200f);
-        Debug.DrawRay((Vector2)startPoint.position, transform.up, Color.blue, 200f);
+        Debug.DrawRay((Vector2)this.transform.position, direct, Color.blue, 200f);
+        Debug.DrawRay((Vector2)this.transform.position, this.transform.right, Color.red, 200f);
+        Debug.DrawRay((Vector2)this.transform.position, this.transform.up, Color.cyan, 200f);
         Debug.Log(AngleBetweenVector2(transform.up, direct));
-        //Debug.Log(AngleBetweenVector21(transform.up, direct));
-        //Debug.Log(Vector2.Angle(transform.up,direct));
+        end = Quaternion.Euler(0,0,endPoint.transform.rotation.z + angle2);
 	}
 
     void OnMouseDown(){
@@ -72,33 +47,17 @@ public class LogMovement : MonoBehaviour {
         return Vector2.Angle(vec1, vec2) * sign;
     }
 	void Update() {
-		if(moveLog){
-            transform.RotateAround(startPoint.position, new Vector3(0f, 0f, 1f), sign * rotateSpeed * Time.deltaTime);
-            //Debug.Log(transform.rotation.eulerAngles);
-            //Debug.Log(rotate.eulerAngles);
-            //Debug.Log(transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + 5) && transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z + -5));
-            //Debug.Log(transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + 5));
-            //Debug.Log(transform.rotation.eulerAngles.z <= rotate.eulerAngles.z);
-			if(withinThreshold2(sign)){
-				moveLog = false;
-			}
+        if(moveLog){
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, end, Time.deltaTime * rotateSpeed);
         }
 	}
-
-    bool withinThreshold2(float sign){
-        return (sign == -1.0)?(transform.rotation.eulerAngles.z >= rotate.eulerAngles.z) : (transform.rotation.eulerAngles.z <= rotate.eulerAngles.z);
-        //return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
-    }
-
-    bool withinThreshold(float threshold){
-        return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
-    }
 
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player"){
-            //Debug.Log(clicked);
-			if(other.gameObject.GetComponent<playermovement>().item == 1 && clicked){
+            Debug.Log(clicked);
+            Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
+			if(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer && clicked){
             	triggers.PlaySound();
 				moveLog = true;
 			}

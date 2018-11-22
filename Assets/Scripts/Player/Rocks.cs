@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Rocks : MonoBehaviour {
 
+    public SoundTrigger HitGround;
+    public SoundTrigger HitTurret;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,19 +16,25 @@ public class Rocks : MonoBehaviour {
 	void Update () {
 		
 	}
-
 	
     void OnTriggerEnter2D(Collider2D other) {
 
-		Debug.Log(other.gameObject.name);
+		Debug.Log(other.gameObject.tag);
 		switch(other.gameObject.tag){
 			case "Player":
                 //HitSound.PlaySound();
 			break;
+            case "Tower":
+                HitTurret.PlaySound();
+                Destroy(this.gameObject);
+                break;
+            case "Ground":
+                HitGround.PlaySound();
+                Destroy(this.gameObject);
+                break;
 			default:
                 //HitSound.PlaySound();
-				Debug.Log(other.gameObject.name);
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
 			break;
 
 		}

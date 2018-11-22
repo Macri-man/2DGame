@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212256760516806624}
   - component: {fileID: 58404918831257896}
   - component: {fileID: 50011427677238026}
+  - component: {fileID: 114354970403049098}
   m_Layer: 14
   m_Name: ROCK
   m_TagString: Untagged
@@ -71,12 +72,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.4
+--- !u!114 &114354970403049098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583059653076166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab5b2da30fd53e4aa82c8d43bc045db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitGround: {fileID: 11400000, guid: ad9d2038c9e9f4dfb8245d81bf216d4b, type: 2}
+  HitTurret: {fileID: 11400000, guid: a6db6aeebf67449af9c4ce8700ce2ddb, type: 2}
 --- !u!212 &212256760516806624
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,9 +123,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 220616117
-  m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingLayerID: -1743591943
+  m_SortingLayer: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
