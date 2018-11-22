@@ -8,12 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ed406ff2bc74a018934e8a7382a51c, type: 3}
-  m_Name: Sound2
+  m_Script: {fileID: 11500000, guid: fec8712e35efe4a799cc35d277938e9c, type: 3}
+  m_Name: HitsGroundTrigger
   m_EditorClassIdentifier: 
-  name: S2
-  clip: {fileID: 8300000, guid: a5b6a5b5e9e584c588d3a2f00de0baaf, type: 3}
-  volume: 0.83
-  pitch: 0.49
-  loop: 0
-  source: {fileID: 0}
+  nameOfSound: HitGround

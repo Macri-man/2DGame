@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61509582670776852}
   m_Layer: 13
   m_Name: Turret_Big
-  m_TagString: Untagged
+  m_TagString: BigTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,10 +471,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4205418, y: 0.45823908}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -485,7 +485,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.234013, y: 8.148537}
+  m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
 --- !u!61 &61795261712065974
 BoxCollider2D:
@@ -523,15 +523,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c86bc48240b147878735f4c06ccd5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireSound: {fileID: 0}
+  FireSound: {fileID: 11400000, guid: 6875c2a49edb44176b2a632c6c5f328e, type: 2}
   SwitchedOffSound: {fileID: 0}
   GettingHitSound: {fileID: 0}
   spawnBullets: {fileID: 4115482908924352}
   BarrelTurret: {fileID: 4111641840615676}
-  projectile: {fileID: 114727111083192584, guid: abb5ca868b1cd5f44b1d4f45d16e7206,
-    type: 2}
+  projectile: {fileID: 1728441293551240, guid: b88870706e7174f8590618ccac3d2f8d, type: 2}
   rateOfFire: 1
-  speedTurn: 2
+  speedTurn: 200
   flameThrower: {fileID: 0}
 --- !u!212 &212114540356953304
 SpriteRenderer:
@@ -567,7 +566,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743591943
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300164, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -613,7 +612,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743591943
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300162, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -751,7 +750,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743591943
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300160, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -843,7 +842,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743591943
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300158, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

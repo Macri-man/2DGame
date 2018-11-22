@@ -22,7 +22,6 @@ public class turrets : MonoBehaviour {
 	private bool enterZone;
 
 	public ParticleSystem flameThrower;
-
     Vector3 direct;
     float angle;
     float angle2;
@@ -34,6 +33,7 @@ public class turrets : MonoBehaviour {
 
     float timeStamp;
 
+    bool switches = false;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +43,7 @@ public class turrets : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
-		if(enterZone){
+		if(enterZone && !switches){
         	direct = target.transform.position - this.BarrelTurret.transform.position;
 			direct.Normalize();
 			rotateAmount = Vector3.Cross(direct,this.BarrelTurret.transform.up).z;
@@ -85,8 +85,11 @@ public class turrets : MonoBehaviour {
                 timeStamp += Time.time;
 				if(flameThrower == null){
                     GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
-                    bullets.GetComponent<Projectile>().setLocalScale();
-                    bullets.GetComponent<Projectile>().speed = 1;
+                    FireSound.PlaySound();
+                    if(this.gameObject.tag == "TinyTurret"){
+                        bullets.GetComponent<Projectile>().setLocalScale();
+                    }
+                    //bullets.GetComponent<Projectile>().speed = 1;
 				}else{
 					flameThrower.Play();
 				}
@@ -119,6 +122,9 @@ public class turrets : MonoBehaviour {
         */
     }
 
+    public void flipSwitch(bool switchOn){
+        switches = switchOn;
+    }
 
     bool withinThreshold(float threshold){
         return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
@@ -127,7 +133,6 @@ public class turrets : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":
-				Debug.Log("Entered");
 				enterZone = true;
 				target = other.gameObject;
 			break;

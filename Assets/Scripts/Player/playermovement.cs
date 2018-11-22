@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum Weapons { Hammer = 1, Rock, Fist };
+
 public class playermovement : MonoBehaviour {
+
+    public SoundTrigger deathSound;
 
     public CharacterController2D controller;
     public Camera mainCamera;
@@ -28,7 +32,7 @@ public class playermovement : MonoBehaviour {
 
     public Animator animate;
     // Use this for initialization
-    public int item = 0;
+    public Weapons item;
 
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
@@ -42,6 +46,9 @@ public class playermovement : MonoBehaviour {
 
     public GameObject throwObject;
     public Transform throwPosition;
+
+    public GameObject weapon;
+    public List<Sprite> weaponSprite;
 
 
     void Awake()
@@ -68,7 +75,7 @@ public class playermovement : MonoBehaviour {
     }
     if (Input.GetAxisRaw("Vertical") != 0f)
     {
-      if(climbingMode && this.item == 3)
+      if(climbingMode && this.item == Weapons.Fist)
       {
           //Debug.Log("Climbing?");
           verticalMove = (Input.GetAxisRaw("Vertical") );// > 0f)?(1f):(-1f);
@@ -122,28 +129,29 @@ public class playermovement : MonoBehaviour {
 
         animate.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetMouseButtonDown(0) &&  item == 1){
+        if (Input.GetMouseButtonDown(0) &&  item == Weapons.Hammer){
             //Instantiate();
         }
 
 
         switch (Input.inputString){
             case "1":
-                Debug.Log("Pressed One");
-                item = 1;
+                item = Weapons.Hammer;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponSprite[0];
                 OnInputEvent.Invoke(Input.inputString);
                 break;
             case "2":
-                item = 2;
+                item = Weapons.Rock;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponSprite[1];
                 OnInputEvent.Invoke(Input.inputString);
                 break;
             case "3":
-                item = 3;
+                item = Weapons.Fist;
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
 
-        if (Input.GetMouseButtonDown(0) && !climbingMode && item == 2)
+        if (Input.GetMouseButtonDown(0) && !climbingMode && item == Weapons.Rock)
         {
             Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             mouse.z = 0;
@@ -159,6 +167,7 @@ public class playermovement : MonoBehaviour {
 
     public void death(){
         Debug.Log("Death");
+        deathSound.PlaySound();
         if(checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
@@ -168,6 +177,10 @@ public class playermovement : MonoBehaviour {
 
     public void OnCrouching(bool isCrouching){
         animate.SetBool("IsCrouching", isCrouching);
+    }
+
+    public bool compareWeapon(){
+        return true; 
     }
     void FixedUpdate()
     {

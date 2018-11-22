@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1580f7d5ad12a4d22b708c84d472293e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitSound: {fileID: 0}
-  speed: 20
-  tiny: 0
+  HitGround: {fileID: 11400000, guid: ad9d2038c9e9f4dfb8245d81bf216d4b, type: 2}
+  HitTurret: {fileID: 11400000, guid: a6db6aeebf67449af9c4ce8700ce2ddb, type: 2}
+  speed: 5
 --- !u!212 &212505003913585180
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743591943
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300172, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
