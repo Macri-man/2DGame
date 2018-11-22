@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum Weapons { Hammer = 1, Rock, Fist };
-
 public class playermovement : MonoBehaviour {
 
     public SoundTrigger deathSound;
