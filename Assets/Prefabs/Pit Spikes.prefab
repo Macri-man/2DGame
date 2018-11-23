@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114730455533742200}
   m_Layer: 13
   m_Name: Pit Spikes
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122581608932620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53, y: 1.42, z: 0.060417254}
+  m_LocalPosition: {x: 20.49, y: 1.5026636, z: 0.060417254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

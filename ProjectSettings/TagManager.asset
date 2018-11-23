@@ -10,6 +10,7 @@ TagManager:
   - BigTurret
   - Ground
   - Tower
+  - Spikes
   layers:
   - Default
   - TransparentFX
