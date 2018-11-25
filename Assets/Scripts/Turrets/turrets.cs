@@ -79,12 +79,12 @@ public class turrets : MonoBehaviour {
             //Debug.Log(angleOfTurret);
 
             //this.BarrelTurret.transform.rotation = Quaternion.Euler(0,0,angleOfTurret);
-            Debug.Log(timeStamp);
-            Debug.Log(Time.time);
-            Debug.Log(interval);
-            Debug.Log(withinThreshold(2));
-            Debug.Log((Time.time - timeStamp));
-            Debug.Log(((Time.time - timeStamp) > interval));
+            //Debug.Log(timeStamp);
+            //Debug.Log(Time.time);
+            //Debug.Log(interval);
+            //Debug.Log(withinThreshold(2));
+            //Debug.Log((Time.time - timeStamp));
+            //Debug.Log(((Time.time - timeStamp) > interval));
             if(withinThreshold(2) && ((Time.time - timeStamp) > interval)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");

@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 212863162469454784}
   - component: {fileID: 61479895356211674}
   - component: {fileID: 50979580291454456}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: InteractableLog02
   m_TagString: InteractableLog
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 212501548217748914}
   - component: {fileID: 61171606976829278}
   - component: {fileID: 50994539962555912}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: InteractableLog01
   m_TagString: InteractableLog
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821527828945146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.42, y: 1.97, z: 0}
+  m_LocalPosition: {x: 5.93, y: 1.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4962314705472972}
@@ -298,7 +298,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.8385463, y: 1.8500001}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0
 --- !u!114 &114675270301953660
 MonoBehaviour:
   m_ObjectHideFlags: 1
