@@ -38,7 +38,7 @@ public class playermovement : MonoBehaviour {
     public StringEvent OnInputEvent;
     public UnityEvent changeCurser;
 
-    public Vector3 checkPoint;
+    public GameObject checkPoint;
 
     public Vector3 startPosition;
 
@@ -169,7 +169,7 @@ public class playermovement : MonoBehaviour {
         if(checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
-            this.transform.position = checkPoint;
+            this.transform.position = checkPoint.transform.position;
         }
     }
 

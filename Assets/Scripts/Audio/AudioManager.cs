@@ -35,11 +35,11 @@ public class AudioManager : MonoBehaviour {
         if (s == null){
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
+        }else{
+            s.source.volume = s.volume;// * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+            s.source.pitch = s.pitch;// * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+            s.source.Play();
         }
-
-        s.source.volume = s.volume;// * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-        s.source.pitch = s.pitch;// * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-
-        s.source.Play();
     }
 }

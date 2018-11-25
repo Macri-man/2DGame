@@ -29,9 +29,11 @@ public class LogMovement : MonoBehaviour {
 	}
 
     void OnMouseDown(){
+        Debug.Log("Mouse Down");
         clicked = true;
     }
-	void OnMouseExit(){
+	void OnMouseUp(){
+        Debug.Log("Mouse up");
         clicked = false;
 	}
     private float AngleBetweenVector21(Vector2 vec1, Vector2 vec2)
@@ -55,8 +57,8 @@ public class LogMovement : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player"){
-            Debug.Log(clicked);
-            Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
+            //Debug.Log(clicked);
+            //Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
 			if(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer && clicked){
             	triggers.PlaySound();
 				moveLog = true;

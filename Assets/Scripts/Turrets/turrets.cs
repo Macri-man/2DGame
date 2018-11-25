@@ -20,8 +20,6 @@ public class turrets : MonoBehaviour {
 
 	public float speedTurn = 2;
 	private bool enterZone;
-
-	public ParticleSystem flameThrower;
     Vector3 direct;
     float angle;
     float angle2;
@@ -34,6 +32,8 @@ public class turrets : MonoBehaviour {
     float timeStamp;
 
     bool switches = false;
+
+    public float interval;
 
 	// Use this for initialization
 	void Start () {
@@ -79,24 +79,21 @@ public class turrets : MonoBehaviour {
             //Debug.Log(angleOfTurret);
 
             //this.BarrelTurret.transform.rotation = Quaternion.Euler(0,0,angleOfTurret);
-            if(withinThreshold(2) && (Time.time > timeStamp)){ 
+            Debug.Log(timeStamp);
+            Debug.Log(Time.time);
+            Debug.Log(interval);
+            Debug.Log(withinThreshold(2));
+            Debug.Log((Time.time - timeStamp));
+            Debug.Log(((Time.time - timeStamp) > interval));
+            if(withinThreshold(2) && ((Time.time - timeStamp) > interval)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");
-                timeStamp += Time.time;
-				if(flameThrower == null){
-                    GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
-                    FireSound.PlaySound();
-                    if(this.gameObject.tag == "TinyTurret"){
-                        bullets.GetComponent<Projectile>().setLocalScale();
-                    }
-                    //bullets.GetComponent<Projectile>().speed = 1;
-				}else{
-					flameThrower.Play();
-				}
-			}else{
-				if(flameThrower != null){
-                    flameThrower.Stop();
-				}
+                timeStamp = Time.time;
+                GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
+                FireSound.PlaySound();
+                if(this.gameObject.tag == "TinyTurret"){
+                    bullets.GetComponent<Projectile>().setLocalScale();
+                }
 			}
 		}
     }

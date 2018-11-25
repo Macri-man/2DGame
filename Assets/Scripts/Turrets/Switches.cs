@@ -34,7 +34,7 @@ public class Switches : MonoBehaviour {
 		}
 
 		if(switchesOn && ((Time.time - timeStamp) > interval)){
-            timeStamp += Time.time;
+            timeStamp = Time.time;
             Orb.GetComponent<SpriteRenderer>().color = Color.white;
             switchesOn = !switchesOn;
             OnInputEvent.Invoke(switchesOn);
