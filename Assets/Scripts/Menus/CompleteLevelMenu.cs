@@ -18,9 +18,7 @@ public class CompleteLevelMenu : MonoBehaviour {
 	}
 
 	void Start() {
-        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings){
 
-        }
 	}
 
 	void Update() {
@@ -28,8 +26,6 @@ public class CompleteLevelMenu : MonoBehaviour {
 	}
 
 	public void Continue(){
-        //Debug.Log(SceneManager.sceneCount);
-        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
 		if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}

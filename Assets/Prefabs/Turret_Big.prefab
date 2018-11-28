@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 4371603309287488}
   - component: {fileID: 114574304273552032}
   - component: {fileID: 61644196557927426}
-  m_Layer: 2
+  m_Layer: 13
   m_Name: Turret_Big
   m_TagString: BigTurret
   m_Icon: {fileID: 0}
@@ -811,7 +811,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.6434088, y: -0.5897925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -822,7 +822,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 15}
+  m_Size: {x: 7.7080326, y: 8.351444}
   m_EdgeRadius: 0
 --- !u!61 &61664297626629822
 BoxCollider2D:
@@ -868,7 +868,7 @@ MonoBehaviour:
   projectile: {fileID: 1728441293551240, guid: b88870706e7174f8590618ccac3d2f8d, type: 2}
   rateOfFire: 1
   speedTurn: 200
-  interval: 10
+  interval: 1
 --- !u!212 &212061530263685030
 SpriteRenderer:
   m_ObjectHideFlags: 1
