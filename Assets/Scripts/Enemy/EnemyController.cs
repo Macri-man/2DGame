@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    enum states {throws, idle, chase, patrol};
+    enum states {throws=1, idle=2, chase=3, patrol=4};
 
     states state;
 
@@ -56,7 +56,7 @@ public class EnemyController : MonoBehaviour {
                 }
             break;
             case states.chase:
-                rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, 10 * rb.velocity.y * Time.fixedDeltaTime);
                 break;
             case states.throws:
                 if ((Time.time - timeStamp) > turnAroundInterval){
@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour {
                 }
                 break;
             case states.patrol:
-                rb.velocity = new Vector2(sign * patrolSpeed * Time.fixedDeltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(sign * patrolSpeed * Time.fixedDeltaTime, 10 * rb.velocity.y * Time.fixedDeltaTime);
                 break;
         }
 	}
@@ -123,9 +123,6 @@ public class EnemyController : MonoBehaviour {
                 state = states.idle;
             }
             break;
-			case "Spikes":
-				Destroy(this);
-			break;
 		}
 	}
 

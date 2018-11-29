@@ -12,6 +12,8 @@ TagManager:
   - Tower
   - Spikes
   - PatrolPoints
+  - Rocks
+  - Enemy
   layers:
   - Default
   - TransparentFX

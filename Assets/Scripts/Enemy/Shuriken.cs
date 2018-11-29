@@ -30,7 +30,7 @@ public class Shuriken : MonoBehaviour {
             case "Player":
                 //HitSound.PlaySound();
 				other.gameObject.GetComponent<playermovement>().death();
-				Destroy(this);
+				Destroy(this.gameObject);
                 break;
             case "Tower":
                 //HitTurret.PlaySound();
