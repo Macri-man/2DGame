@@ -27,6 +27,9 @@ public class PitSpikes : MonoBehaviour {
 					//HitSound.PlaySound();
 				}
 			break;
+            case "Enemy":
+                Destroy(other.gameObject);
+                break;
 			default:
 								//HitSound.PlaySound();
 								//Destroy(this.gameObject);
