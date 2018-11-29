@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Tower
   - Spikes
+  - PatrolPoints
   layers:
   - Default
   - TransparentFX
