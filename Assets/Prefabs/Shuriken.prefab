@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 45
-  speed: 0.01
+  speed: 10
   shuriken: {fileID: 1812487774098032}
 --- !u!212 &212994065586086022
 SpriteRenderer:

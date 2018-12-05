@@ -17717,7 +17717,7 @@ Prefab:
     - target: {fileID: 114004307886332282, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
         type: 2}
       propertyPath: doesChase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114004307886332282, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
         type: 2}
@@ -17725,6 +17725,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: b8887bc0fc8f848089676464ced0417e,
         type: 2}
+    - target: {fileID: 114004307886332282, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
+        type: 2}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 2133209754}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ef59945f2a7ea499bbbe10a7d48f1a, type: 2}
   m_IsPrefabAsset: 0
@@ -132273,6 +132278,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062524455}
   m_CullTransparentMesh: 0
+--- !u!4 &2086495522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000013623690178, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 522899365}
 --- !u!1001 &2105558511
 Prefab:
   m_ObjectHideFlags: 0
@@ -132472,6 +132482,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77593fffcf7c08f419160ce1564ef6cb, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2133209753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2133209754}
+  m_Layer: 14
+  m_Name: weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2133209754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133209753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2086495522}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140340213
 Prefab:
   m_ObjectHideFlags: 0

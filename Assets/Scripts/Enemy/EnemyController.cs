@@ -58,11 +58,14 @@ public class EnemyController : MonoBehaviour {
             break;
             case states.throws:
                 if ((Time.time - timeStamp) > turnAroundInterval){
+                    Debug.Log("Throw");
                     timeStamp =  Time.time;
                     Vector3 temp = this.targetPoint.transform.position - this.transform.position;
                     temp.Normalize();
-                    GameObject throwObject = (GameObject)Instantiate(shuriken, weapon.position,
+                    GameObject kill = Instantiate(shuriken, weapon.position,
                     Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
+                    animate.SetTrigger("throw");
+                    Debug.Log(kill);
                 }
             break;
             case states.patrol:
@@ -75,6 +78,13 @@ public class EnemyController : MonoBehaviour {
                 break;
         }
 	}
+
+    void resTrigger(){
+        //Debug.Log("reseting Trigger");
+        timeStamp = Time.time;
+        animate.ResetTrigger("throw");
+        animate.Play("Idle");
+    }
 
     void turnAround(){
         sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)points[position].transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
@@ -97,8 +107,20 @@ public class EnemyController : MonoBehaviour {
     public void hitByRock(){
         rockhits++;
         if(rockhits == health){
-            deathSound.PlaySound();
-            Destroy(this.gameObject);
+            death();
+        }
+    }
+
+    public void death(){
+        deathSound.PlaySound();
+        Destroy(this.gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        switch (other.gameObject.tag){
+          case "Spikes":
+                death();
+            break;
         }
     }
 
@@ -111,13 +133,10 @@ public class EnemyController : MonoBehaviour {
                 if(doesChase){
                     state = states.chase;
                 }else{
+                    animate.SetTrigger("throw");
                     state = states.throws;
                 }
 			break;
-            case "Spikes":
-                deathSound.PlaySound();
-                Destroy(this.gameObject);
-            break;
 		}
 	}
 
