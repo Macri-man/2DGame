@@ -21,10 +21,10 @@ public class LogMovement : MonoBehaviour {
         Vector2 direct = (Vector2)endPoint.position - (Vector2)this.transform.position;
 		direct.Normalize();
         angle2 = AngleBetweenVector2(transform.up, direct);
-        Debug.DrawRay((Vector2)this.transform.position, direct, Color.blue, 200f);
-        Debug.DrawRay((Vector2)this.transform.position, this.transform.right, Color.red, 200f);
-        Debug.DrawRay((Vector2)this.transform.position, this.transform.up, Color.cyan, 200f);
-        Debug.Log(AngleBetweenVector2(transform.up, direct));
+        //Debug.DrawRay((Vector2)this.transform.position, direct, Color.blue, 200f);
+        //Debug.DrawRay((Vector2)this.transform.position, this.transform.right, Color.red, 200f);
+        //Debug.DrawRay((Vector2)this.transform.position, this.transform.up, Color.cyan, 200f);
+        //Debug.Log(AngleBetweenVector2(transform.up, direct));
         end = Quaternion.Euler(0,0,endPoint.transform.rotation.z + angle2);
 	}
 

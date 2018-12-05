@@ -33,8 +33,7 @@ public class Rocks : MonoBehaviour {
                 Destroy(this.gameObject);
                 break;
             case "Enemy":
-                HitGround.PlaySound();
-                Destroy(other.gameObject);
+                other.gameObject.GetComponent<EnemyController>().hitByRock();
                 break;
 			default:
                 //HitSound.PlaySound();

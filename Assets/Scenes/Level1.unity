@@ -740,6 +740,11 @@ MonoBehaviour:
   nameText: {fileID: 1484141528}
   image: {fileID: 1177926063}
   panel: {fileID: 440614992}
+--- !u!4 &340906878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000013221526974, guid: 722924ec8a0056f4a8fb443b2fb65ff9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1196792490}
 --- !u!1 &365704378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1133,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11192,6 +11197,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95000012403032898, guid: 722924ec8a0056f4a8fb443b2fb65ff9,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e379edeb3f88dbe4499f1df34f2e153d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
   m_IsPrefabAsset: 0
@@ -28892,13 +28902,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -974363051
   m_SortingLayer: 7
-  m_SortingOrder: 17
+  m_SortingOrder: 15
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -29055,7 +29065,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1661782846}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6e21a7f9453736a48990919cff695a36, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29070,7 +29080,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1661782846}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6e21a7f9453736a48990919cff695a36, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29113,7 +29123,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661782846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a9151eaee491c40a2f4871635eff8c, type: 3}
   m_Name: 
@@ -29155,7 +29165,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661782846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f41fd27b1ff38f14ca22713a1225bcf6, type: 3}
   m_Name: 
@@ -29222,6 +29232,68 @@ MonoBehaviour:
   weaponSprite:
   - {fileID: 21300140, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
+--- !u!114 &1661782854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661782846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5e61f1bd07d483bb0f52df3bf1e9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 11400000, guid: 94eb65c4a20b8f24d9633c9cf18caa3f, type: 2}
+  weapon: {fileID: 1591458358}
+  weaponsSprites:
+  - {fileID: 21300140, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
+  - {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
+  item: 3
+  runSpeed: 40
+  animate: {fileID: 1661782847}
+  OnInputEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2033544030}
+        m_MethodName: PressedKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1954443360}
+        m_MethodName: PressedKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 326031649}
+        m_MethodName: PressedKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: PlayerCharacterController+StringEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mainCamera: {fileID: 519420031}
+  throwPosition: {fileID: 340906878}
+  throwObject: {fileID: 1583059653076166, guid: a0d8f3fc91bba434881286322e58bba9,
+    type: 2}
+  throwForce: 20
 --- !u!1 &1701825575
 GameObject:
   m_ObjectHideFlags: 0
