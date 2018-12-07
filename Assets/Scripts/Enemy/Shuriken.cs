@@ -41,11 +41,11 @@ public class Shuriken : MonoBehaviour {
                 break;
             case "Tower":
                 //HitTurret.PlaySound();
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 break;
             case "Ground":
                 //HitGround.PlaySound();
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 break;
             default:
                 //HitSound.PlaySound();

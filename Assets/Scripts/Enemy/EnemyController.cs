@@ -46,10 +46,12 @@ public class EnemyController : MonoBehaviour {
 
         layerMask = LayerMask.GetMask("Foreground","Characters");
 	}
+	void Update() {
+        animate.SetInteger("State", (int)state);
+    }
 	
-	// Update is called once per frame
 	void FixedUpdate(){
-        animate.SetInteger("State",(int)state);
+        //animate.SetInteger("State",(int)state);
         Vector2 temp = this.targetPoint.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
@@ -57,7 +59,8 @@ public class EnemyController : MonoBehaviour {
         Debug.DrawRay(startpoint.position, temp * hit.distance, Color.red, 1);
 
         if(hit.collider != null){
-            if(hit.collider.tag == "Player" && (state != states.throws || state != states.chase)){
+            if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
+                Debug.Log("something");
                 hitDistances(hit);
             }
         }else{
@@ -65,7 +68,7 @@ public class EnemyController : MonoBehaviour {
                 state = states.patrol;
             }
         }
-        Debug.Log(state);
+        //Debug.Log(state);
         switch(state){
             case states.idle:
                 if ((Time.time - timeStamp) > turnAroundInterval){
@@ -78,7 +81,9 @@ public class EnemyController : MonoBehaviour {
                 rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, rb.velocity.y);
             break;
             case states.throws:
+                Debug.Log((Time.time - timeStamp));
                 if ((Time.time - timeStamp) > throwInterval){
+                    timeStamp = Time.time; 
                     Debug.Log("Throw");
                     animate.SetTrigger("throw");
                 }
@@ -107,9 +112,10 @@ public class EnemyController : MonoBehaviour {
             timeStamp = Time.time;
         }else{
             //turnAroundTarget();
-            Debug.Log("wtf");
             state = states.throws;
             timeStamp = Time.time;
+            animate.SetTrigger("throw");
+            animate.Play("Idle");
         }
     }
 

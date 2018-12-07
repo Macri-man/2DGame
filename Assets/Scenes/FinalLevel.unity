@@ -17939,6 +17939,11 @@ Prefab:
       propertyPath: distance
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114004307886332282, guid: 30ef59945f2a7ea499bbbe10a7d48f1a,
+        type: 2}
+      propertyPath: throwInterval
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ef59945f2a7ea499bbbe10a7d48f1a, type: 2}
   m_IsPrefabAsset: 0
