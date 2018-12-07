@@ -57,8 +57,8 @@ public class LogMovement : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player"){
-            //Debug.Log(clicked);
-            //Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
+            Debug.Log(clicked);
+            Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
 			if(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer && clicked){
             	triggers.PlaySound();
 				moveLog = true;

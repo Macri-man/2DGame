@@ -1156,7 +1156,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.21, y: 2, z: -10}
+  m_LocalPosition: {x: 5.65, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29248,6 +29248,7 @@ MonoBehaviour:
   weaponsSprites:
   - {fileID: 21300140, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
+  weaponsObjects: []
   item: 3
   runSpeed: 40
   animate: {fileID: 1661782847}

@@ -17,7 +17,7 @@ public class PlayerCharacterController : MonoBehaviour {
     [HideInInspector]
     public Weapons item;
 	float horizontalMove = 0f;
-    public float runSpeed = 1f;
+    public float runSpeed = 10f;
 	public Animator animate;
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
@@ -25,7 +25,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	Vector3 startPosition;
 	Vector3 checkPoint;
     Rigidbody2D rb;
-    float forceJump = 400f;
+    float forceJump = 200f;
     private bool grounded;
     private bool climbing;
     public Camera mainCamera;
@@ -34,7 +34,6 @@ public class PlayerCharacterController : MonoBehaviour {
     public int throwForce;
     private Vector2 velocity = Vector3.zero;
     float moveSmooth = .05f;
-
 
     void Awake(){
         if (OnInputEvent == null)
@@ -77,24 +76,25 @@ public class PlayerCharacterController : MonoBehaviour {
             Flip();
         }
 
-        if (Input.GetMouseButtonDown(0) && !climbing && item == Weapons.Rock){
-            Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            mouse.z = 0;
-            Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
-            float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
-            //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
-            GameObject rock = Instantiate(throwObject, throwPosition.position, Quaternion.identity);
-            rock.GetComponent<Rigidbody2D>().AddForce(directon * throwForce);
-            //animate.SetTrigger("isthrow");
+        if (Input.GetMouseButtonDown(0) && item == Weapons.Rock){
+            animate.SetTrigger("Throw");
         }
 
-        //Vector2 targetVelocity = new Vector2(horizontalMove * 5f, rb.velocity.y);
-        //rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
-        //Debug.Log(weapon.GetComponent<SpriteRenderer>().sprite);
-        Debug.Log(Mathf.Abs(horizontalMove));
+        if(Input.GetMouseButtonDown(0) && item == Weapons.Hammer){
+            animate.SetTrigger("Hammer");
+        }
+
+        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist){
+            animate.SetTrigger("PullLever");
+        }
+
+        
+
+        //Debug.Log(Mathf.Abs(horizontalMove));
         rb.velocity = new Vector2(horizontalMove,rb.velocity.y);
         animate.SetFloat("Horizontal",Mathf.Abs(horizontalMove));
 	}
+
     void FixedUpdate(){
         if (Input.GetButtonDown("Jump") && grounded){
             grounded = false;
@@ -120,6 +120,30 @@ public class PlayerCharacterController : MonoBehaviour {
             this.transform.position = checkPoint;
         }
     }
+
+    void climb(){
+        climbing = !climbing;
+    }
+
+    void onHammerHit(){
+
+    }
+
+    void onThrow(){
+        Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouse.z = 0;
+        Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
+        float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
+        //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
+        GameObject rock = Instantiate(throwObject, throwPosition.position, Quaternion.identity);
+        rock.GetComponent<Rigidbody2D>().AddForce(directon * throwForce);
+        weapon.GetComponent<SpriteRenderer>().sprite = null;
+    }
+
+    void exitThrow(){
+        weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
+    }
+
     void OnCollisionEnter2D(Collision2D other) {
         switch (other.gameObject.tag){
             case "Ground":

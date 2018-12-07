@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
@@ -29,6 +30,10 @@ public class EnemyController : MonoBehaviour {
     public int health;
     int rockhits = 0;
     public float threshold;
+    int layerMask;
+    int distance = 10;
+    public int radius; 
+    public Transform startpoint;
 
 	// Use this for initialization
 	void Start () {
@@ -39,11 +44,30 @@ public class EnemyController : MonoBehaviour {
         state = states.patrol;
         turnAround();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+
+        layerMask = LayerMask.GetMask("Foreground","Characters");
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate(){
         animate.SetInteger("State",(int)state);
+
+        RaycastHit2D hit =  Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
+        Vector2 temp = this.targetPoint.position - this.startpoint.position;
+        if(hit.collider.tag == "Player"){
+            if(doesChase){
+                state = states.chase;
+                timeStamp = Time.time;
+            }else{
+                state = states.throws;
+                timeStamp = Time.time;
+            }
+            Debug.DrawRay(startpoint.position, temp * hit.distance, Color.red);
+            Debug.Log("does hit");
+        }else{
+            Debug.DrawRay(startpoint.position, temp * 100, Color.black);
+            Debug.Log("does not hit: " + hit.distance);
+        }
         //Debug.Log(state);
         switch(state){
             case states.idle:
@@ -60,7 +84,7 @@ public class EnemyController : MonoBehaviour {
                 if ((Time.time - timeStamp) > turnAroundInterval){
                     Debug.Log("Throw");
                     timeStamp =  Time.time;
-                    Vector3 temp = this.targetPoint.transform.position - this.transform.position;
+                    temp = this.targetPoint.position - this.transform.position;
                     temp.Normalize();
                     GameObject kill = Instantiate(shuriken, weapon.position,
                     Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
@@ -70,16 +94,22 @@ public class EnemyController : MonoBehaviour {
             break;
             case states.patrol:
                 rb.velocity = new Vector2(sign * patrolSpeed * Time.fixedDeltaTime, rb.velocity.y);
-                if (Mathf.Abs(points[position].transform.position.x - this.transform.position.x) < threshold && targetPoint == null){
+                /*(Mathf.Abs(points[position].transform.position.x - this.transform.position.x) < threshold){
                     position = (position + 1) % points.Length;
                     timeStamp = Time.time;
                     state = states.idle;
-                }
+                } */
                 break;
         }
 	}
 
-    void resTrigger(){
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
+    void onThrow(){
         //Debug.Log("reseting Trigger");
         timeStamp = Time.time;
         animate.ResetTrigger("throw");
@@ -116,34 +146,24 @@ public class EnemyController : MonoBehaviour {
         Destroy(this.gameObject);
     }
 
-    void OnCollisionEnter2D(Collision2D other) {
-        switch (other.gameObject.tag){
-          case "Spikes":
+    void OnTriggerEnter2D(Collider2D other) {
+        switch(other.gameObject.tag){
+            case "Player":
+                other.gameObject.GetComponent<PlayerCharacterController>().death();
+                state = states.patrol;
+                turnAround();
+            break;
+            case "PatrolPoints":
+                if (points[position].gameObject == other.gameObject){
+                    position = (position + 1) % points.Length;
+                    timeStamp = Time.time;
+                    state = states.idle;
+                }
+            break;
+            case "Spikes":
                 death();
             break;
         }
-    }
-
-	void OnTriggerEnter2D(Collider2D other) {
-		switch(other.gameObject.tag){
-			case "Player":
-                targetPoint = other.gameObject.transform;
-                turnAroundTarget();
-                timeStamp = Time.time;
-                if(doesChase){
-                    state = states.chase;
-                }else{
-                    animate.SetTrigger("throw");
-                    state = states.throws;
-                }
-			break;
-		}
-	}
-
-    void OnTriggerExit2D(Collider2D other){
-        if (other.gameObject.tag == "Player"){
-            targetPoint = null;
-            state = states.patrol;
-        }
+        
     }
 }
