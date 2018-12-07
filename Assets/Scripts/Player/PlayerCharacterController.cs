@@ -47,7 +47,7 @@ public class PlayerCharacterController : MonoBehaviour {
         this.startPosition = this.transform.position;
         rb = GetComponent<Rigidbody2D>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
