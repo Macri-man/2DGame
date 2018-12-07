@@ -31,10 +31,10 @@ public class PlayerCharacterController : MonoBehaviour {
 	void Start () {
         this.startPosition = this.transform.position;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-
+				Time.timeScale = 2;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         switch (Input.inputString){
@@ -60,7 +60,7 @@ public class PlayerCharacterController : MonoBehaviour {
         animate.SetFloat("Horizontal",Mathf.Abs(horizontalMove));
 
         //controller.UpdateAnimator(horizontalMove * Time.fixedDeltaTime, climb, jump, verticalMove * Time.fixedDeltaTime);
-		
+
 	}
 
     public void death(){
@@ -74,7 +74,7 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void FixedUpdate(){
-       
+
     }
 
 }
