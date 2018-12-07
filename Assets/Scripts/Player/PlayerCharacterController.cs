@@ -35,6 +35,8 @@ public class PlayerCharacterController : MonoBehaviour {
     private Vector2 velocity = Vector3.zero;
     float moveSmooth = .05f;
 
+    GameObject log;
+
     void Awake(){
         if (OnInputEvent == null)
             OnInputEvent = new StringEvent();
@@ -48,6 +50,10 @@ public class PlayerCharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(climbing){
+            return;
+        }
 
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
@@ -88,8 +94,6 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("PullLever");
         }
 
-        
-
         //Debug.Log(Mathf.Abs(horizontalMove));
         rb.velocity = new Vector2(horizontalMove,rb.velocity.y);
         animate.SetFloat("Horizontal",Mathf.Abs(horizontalMove));
@@ -126,10 +130,26 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void onHammerHit(){
+        Debug.Log("Hit");
+        if(log != null){
+            log.GetComponent<LogMovement>().moveLog = true;
+        }
+    }
 
+    void OnTriggerEnter2D(Collider2D other){
+        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject);
+        log = other.gameObject;
+    }
+    
+    void OnTriggerExit2D(Collider2D other){
+        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject);
+        log = other.gameObject;
     }
 
     void onThrow(){
+        Debug.Log("Throw");
         Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouse.z = 0;
         Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
@@ -141,6 +161,7 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void exitThrow(){
+        Debug.Log("ExitThrow");
         weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
     }
 

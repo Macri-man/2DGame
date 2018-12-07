@@ -36844,6 +36844,10 @@ Prefab:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1387151394982030, guid: 561a6e5f26604478ca1814b26223a620, type: 2}
+      propertyPath: m_TagString
+      value: InteractableLog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 561a6e5f26604478ca1814b26223a620, type: 2}
   m_IsPrefabAsset: 0

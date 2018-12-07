@@ -11,7 +11,7 @@ public class LogMovement : MonoBehaviour {
     public SoundTrigger triggers;
     private bool clicked = false;
 
-    private bool moveLog = false;
+    public bool moveLog = false;
 
     Quaternion end = Quaternion.identity;
 
@@ -29,15 +29,14 @@ public class LogMovement : MonoBehaviour {
 	}
 
     void OnMouseDown(){
-        Debug.Log("Mouse Down");
+        //Debug.Log("Mouse Down");
         clicked = true;
     }
 	void OnMouseUp(){
-        Debug.Log("Mouse up");
+        //Debug.Log("Mouse up");
         clicked = false;
 	}
-    private float AngleBetweenVector21(Vector2 vec1, Vector2 vec2)
-    {
+    private float AngleBetweenVector21(Vector2 vec1, Vector2 vec2){
         Vector2 difference = vec2 - vec1;
         float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
         return Vector2.Angle(Vector2.right, difference) * sign;
@@ -57,12 +56,12 @@ public class LogMovement : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player"){
-            Debug.Log(clicked);
-            Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
-			if(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer && clicked){
-            	triggers.PlaySound();
-				moveLog = true;
-			}
+            //Debug.Log(clicked);
+            //Debug.Log(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer);
+			//if(other.gameObject.GetComponent<playermovement>().item == Weapons.Hammer && clicked){
+            //	triggers.PlaySound();
+			//	moveLog = true;
+			//}
         }
     }
 }
