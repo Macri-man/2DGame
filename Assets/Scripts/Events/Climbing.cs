@@ -70,7 +70,6 @@ public class Climbing : MonoBehaviour {
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climbingwall = null;
 				objectplayer = null;
-
             }
         }
 		//if(objectplayer == null)
