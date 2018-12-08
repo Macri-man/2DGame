@@ -52,8 +52,10 @@ public class Climbing : MonoBehaviour {
         //distCovered = (Time.time - startTime) * speed * Time.deltaTime;
 				distCovered += speed * Time.deltaTime;
 		if(startClimb){
-            fracJourney = 1 / journeyLength1;
-            objectplayer.transform.position = Vector2.LerpUnclamped(objectplayer.transform.position, endClimbPoint.position, fracJourney * Time.deltaTime);
+            fracJourney = (1 / journeyLength1) * distCovered;
+						Debug.Log(fracJourney);
+            objectplayer.transform.position = Vector2.Lerp(startClimbPoint.position, endClimbPoint.position, fracJourney * Time.deltaTime);
+						//startClimbPoint.position
 			Debug.Log(objectplayer.transform.position);
             Debug.Log(fracJourney);
             Debug.Log(endClimbPoint.position);
