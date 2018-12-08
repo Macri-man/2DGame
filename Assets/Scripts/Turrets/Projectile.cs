@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		this.transform.position += this.transform.up * speed * Time.deltaTime;
@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":
-				other.gameObject.GetComponent<playermovement>().death();
+				other.gameObject.GetComponent<PlayerCharacterController>().death();
                 //HitSound.PlaySound();
 				Destroy(this.gameObject);
 			break;

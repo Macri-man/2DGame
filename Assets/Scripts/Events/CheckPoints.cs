@@ -22,15 +22,15 @@ public class CheckPoints : MonoBehaviour {
         //Debug.Log(orb.name);
 		//Debug.Log(orb.GetComponent<SpriteRenderer>().color);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Player" && orb.GetComponent<SpriteRenderer>().color.a < 0.8){
-            other.gameObject.GetComponent<playermovement>().checkPoint = this.gameObject;
+            other.gameObject.GetComponent<PlayerCharacterController>().checkPoint = this.gameObject;
             orb.GetComponent<SpriteRenderer>().color += new Color(0,0,0,0.8f);
         }else if(other.gameObject.tag == "Player" && EndLevel){
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);

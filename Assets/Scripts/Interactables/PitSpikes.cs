@@ -21,7 +21,7 @@ public class PitSpikes : MonoBehaviour {
 		switch(other.gameObject.tag)
 		{
 			case "Player":
-				other.gameObject.GetComponent<playermovement>().death();
+				other.gameObject.GetComponent<PlayerCharacterController>().death();
 			break;
 			default:
 								//HitSound.PlaySound();

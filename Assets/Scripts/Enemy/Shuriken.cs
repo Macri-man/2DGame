@@ -15,7 +15,7 @@ public class Shuriken : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         //angle += rotateSpeed;
@@ -36,7 +36,7 @@ public class Shuriken : MonoBehaviour {
         {
             case "Player":
                 //HitSound.PlaySound();
-				other.gameObject.GetComponent<playermovement>().death();
+				other.gameObject.GetComponent<PlayerCharacterController>().death();
 				Destroy(this.gameObject);
                 break;
             case "Tower":
@@ -53,6 +53,6 @@ public class Shuriken : MonoBehaviour {
                 break;
 
         }
-		
+
 	}
 }

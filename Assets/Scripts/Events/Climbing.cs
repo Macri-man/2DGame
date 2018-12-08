@@ -24,7 +24,7 @@ public class Climbing : MonoBehaviour {
 
 	private bool finalJourneyDirectionIsRight;
 
-    public float speed = 1.0F;
+    public float speed;
 
     // Time when the movement started.
     private float startTime;
@@ -49,23 +49,27 @@ public class Climbing : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        distCovered = (Time.time - startTime) * speed;
+        //distCovered = (Time.time - startTime) * speed * Time.deltaTime;
+				distCovered += speed * Time.deltaTime;
 		if(startClimb){
-            fracJourney = distCovered / journeyLength1;
-            objectplayer.transform.position = Vector2.Lerp(startClimbPoint.position, endClimbPoint.position, fracJourney);
+            fracJourney = 1 / journeyLength1;
+            objectplayer.transform.position = Vector2.LerpUnclamped(objectplayer.transform.position, endClimbPoint.position, fracJourney * Time.deltaTime);
 			Debug.Log(objectplayer.transform.position);
             Debug.Log(fracJourney);
             Debug.Log(endClimbPoint.position);
-			Debug.Log(objectplayer.transform.position == endClimbPoint.position);
-			if(fracJourney > 1){
+			Debug.Log((objectplayer.transform.position - endClimbPoint.position).magnitude);
+			//if(fracJourney > 1){
+			if((objectplayer.transform.position - endClimbPoint.position).magnitude <= 0.5){
 				endClimb = true;
                 startTime = Time.time;
+								distCovered = 0;
 				startClimb = false;
 			}
 		}else if(endClimb){
-            fracJourney = distCovered / journeyLength2;
-            objectplayer.transform.position = Vector2.Lerp(endClimbPoint.position, endMovePoint.position, fracJourney);
-            if (fracJourney > 1){
+            fracJourney = 1 / journeyLength2;
+            objectplayer.transform.position = Vector2.Lerp(objectplayer.transform.position, endMovePoint.position, fracJourney * Time.deltaTime);
+						Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
+            if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.5){
                 endClimb = false;
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climbingwall = null;

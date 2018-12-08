@@ -23,7 +23,7 @@ public class PlayerCharacterController : MonoBehaviour {
     public class StringEvent : UnityEvent<string> { }
     public StringEvent OnInputEvent;
 	Vector3 startPosition;
-	Vector3 checkPoint;
+	public GameObject checkPoint;
     Rigidbody2D rb;
     float forceJump = 200f;
     private bool grounded;
@@ -95,6 +95,8 @@ public class PlayerCharacterController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
             animate.SetBool("Climb",true);
+            rb.velocity= new Vector2(0,0);
+            rb.gravityScale = 0;
             climbing = true;
             climbingwall.climb(this.transform);
         }
@@ -130,12 +132,13 @@ public class PlayerCharacterController : MonoBehaviour {
         if (checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
-            this.transform.position = checkPoint;
+            this.transform.position = checkPoint.transform.position;
         }
     }
 
     public void climb(){
         climbing = !climbing;
+        rb.gravityScale = 1;
         animate.SetBool("Climb",false);
     }
 
@@ -157,12 +160,12 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
-                rb.velocity= new Vector2(0,0);
+
             break;
         }
-        
+
     }
-    
+
     void OnTriggerExit2D(Collider2D other){
         switch (other.gameObject.tag){
             case "Log":
