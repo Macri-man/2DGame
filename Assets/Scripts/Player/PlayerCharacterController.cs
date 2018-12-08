@@ -28,12 +28,15 @@ public class PlayerCharacterController : MonoBehaviour {
     float forceJump = 200f;
     private bool grounded;
     private bool climbing;
+    private bool canClimb;
     public Camera mainCamera;
     public Transform throwPosition;
     public GameObject throwObject;
     public int throwForce;
     private Vector2 velocity = Vector3.zero;
     float moveSmooth = .05f;
+    [HideInInspector]
+    public Climbing climbingwall;
 
     GameObject log;
 
@@ -90,6 +93,12 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("Hammer");
         }
 
+        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
+            animate.SetBool("Climb",true);
+            climbing = true;
+            climbingwall.climb(this.transform);
+        }
+
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist){
             animate.SetTrigger("PullLever");
         }
@@ -125,8 +134,8 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
 
-    void climb(){
-        climbing = !climbing;
+    public void climb(){
+        canClimb = !canClimb;
     }
 
     void onHammerHit(){
@@ -137,19 +146,35 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log(other.gameObject.tag);
-        Debug.Log(other.gameObject);
-        log = other.gameObject;
+        //Debug.Log(other.gameObject.tag);
+        //Debug.Log(other.gameObject);
+
+        switch(other.gameObject.tag){
+            case "Log":
+                log = other.gameObject;
+            break;
+            case "Climb":
+                climbingwall = other.gameObject.GetComponent<Climbing>();
+                climbingwall.objectplayer = this.gameObject;
+            break;
+        }
+        
     }
     
     void OnTriggerExit2D(Collider2D other){
-        Debug.Log(other.gameObject.tag);
-        Debug.Log(other.gameObject);
-        log = other.gameObject;
+        switch (other.gameObject.tag){
+            case "Log":
+                log = null;
+                break;
+            case "Climb":
+                //climbingwall = other.gameObject.GetComponent<Climbing>();
+                //climbingwall.objectplayer = this.gameObject;
+            break;
+        }
     }
 
     void onThrow(){
-        Debug.Log("Throw");
+        //Debug.Log("Throw");
         Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouse.z = 0;
         Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
@@ -161,15 +186,18 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void exitThrow(){
-        Debug.Log("ExitThrow");
+        //Debug.Log("ExitThrow");
         weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
     }
 
     void OnCollisionEnter2D(Collision2D other) {
         switch (other.gameObject.tag){
             case "Ground":
-            grounded = true;
+                grounded = true;
             //rb.velocity = new Vector2(rb.velocity.x,0);
+            break;
+            case "Log":
+                grounded = true;
             break;
         }
     }
@@ -177,6 +205,9 @@ public class PlayerCharacterController : MonoBehaviour {
         switch(other.gameObject.tag){
             case "Ground":
             grounded = false;
+            break;
+            case "Log":
+                grounded = false;
             break;
         }
     }
