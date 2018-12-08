@@ -32,13 +32,15 @@ public class Climbing : MonoBehaviour {
     // Total distance between the markers.
     private float journeyLength1;
     private float journeyLength2;
+    float distCovered;
+    float fracJourney;
 
-	//private float startTime;
-	//private float journey1Length;
-	//private float journey2Length;
+    //private float startTime;
+    //private float journey1Length;
+    //private float journey2Length;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		//journey1Length = Vector3.Distance(startClimbPoint.position, endClimbPoint.position);
 		//journey1Length = Vector3.Distance(endClimbPoint.position, endMovePoint.position);
 		//finalJourneyDirectionIsRight = (endClimbPoint.position.x < endMovePoint.position.x)?(true):(false);
@@ -47,34 +49,30 @@ public class Climbing : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        float distCovered = (Time.time - startTime) * speed;
-		//Debug.Log(startClimb);
-        //Debug.Log(endClimb);
+        distCovered = (Time.time - startTime) * speed;
 		if(startClimb){
-            float fracJourney = distCovered / journeyLength1;
+            fracJourney = distCovered / journeyLength1;
             objectplayer.transform.position = Vector2.Lerp(startClimbPoint.position, endClimbPoint.position, fracJourney);
-			//Debug.Log(objectplayer.transform.position);
-            //Debug.Log(fracJourney);
-            //Debug.Log(endClimbPoint.position);
-			//Debug.Log(objectplayer.transform.position == endClimbPoint.position);
-			if(objectplayer.transform.position == endClimbPoint.position){
+			Debug.Log(objectplayer.transform.position);
+            Debug.Log(fracJourney);
+            Debug.Log(endClimbPoint.position);
+			Debug.Log(objectplayer.transform.position == endClimbPoint.position);
+			if(fracJourney > 1){
 				endClimb = true;
                 startTime = Time.time;
 				startClimb = false;
 			}
 		}else if(endClimb){
-            float fracJourney = distCovered / journeyLength2;
+            fracJourney = distCovered / journeyLength2;
             objectplayer.transform.position = Vector2.Lerp(endClimbPoint.position, endMovePoint.position, fracJourney);
-            if (objectplayer.transform.position == endMovePoint.position){
-                endClimb = true;
-                startTime = Time.time;
+            if (fracJourney > 1){
+                endClimb = false;
+                objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climbingwall = null;
 				objectplayer = null;
 
             }
-        }else{
-			//Debug.Log("not climbing");
-		}
+        }
 		//if(objectplayer == null)
 		//{
 		//	return;
@@ -128,6 +126,9 @@ public class Climbing : MonoBehaviour {
 		journeyLength1 = Vector2.Distance(startClimbPoint.position, endClimbPoint.position);
         journeyLength2 = Vector2.Distance(endClimbPoint.position, endMovePoint.position);
 		startClimb = true;
+		Debug.Log(startClimb);
+        Debug.Log(journeyLength1);
+        Debug.Log(journeyLength2);
 	}
     void OnMouseDown()
     {

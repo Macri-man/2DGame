@@ -135,7 +135,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     public void climb(){
-        canClimb = !canClimb;
+        climbing = !climbing;
+        animate.SetBool("Climb",false);
     }
 
     void onHammerHit(){
@@ -146,8 +147,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        //Debug.Log(other.gameObject.tag);
-        //Debug.Log(other.gameObject);
+        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject);
 
         switch(other.gameObject.tag){
             case "Log":
@@ -156,6 +157,7 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
+                rb.velocity= new Vector2(0,0);
             break;
         }
         
