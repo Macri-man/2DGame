@@ -4,55 +4,93 @@ using UnityEngine;
 
 public class Climbing : MonoBehaviour {
 
-	//public Transform startClimbPoint;
+	private Transform startClimbPoint;
 	public Transform endClimbPoint;
 	public Transform endMovePoint;
+
+	private bool startClimb;
+	private bool endClimb;
 
 	//public float speed = 0.5f;
 	public float apexPushForce = 1f;
 
-
-	private bool climb = false;
+	private bool climbs = false;
 	private bool postClimb = false;
 
 	private bool clicked = false;
 
-	private GameObject objectplayer;
+	public GameObject objectplayer;
 	//private float playerGravity;
 
 	private bool finalJourneyDirectionIsRight;
 
-	//private float startTime;
-	//private float journey1Length;
-	//private float journey2Length;
+    public float speed = 1.0F;
 
-	// Use this for initialization
-	void Start () {
+    // Time when the movement started.
+    private float startTime;
+
+    // Total distance between the markers.
+    private float journeyLength1;
+    private float journeyLength2;
+    float distCovered;
+    float fracJourney;
+
+    //private float startTime;
+    //private float journey1Length;
+    //private float journey2Length;
+
+    // Use this for initialization
+    void Start () {
 		//journey1Length = Vector3.Distance(startClimbPoint.position, endClimbPoint.position);
 		//journey1Length = Vector3.Distance(endClimbPoint.position, endMovePoint.position);
-		finalJourneyDirectionIsRight = (endClimbPoint.position.x < endMovePoint.position.x)?(true):(false);
+		//finalJourneyDirectionIsRight = (endClimbPoint.position.x < endMovePoint.position.x)?(true):(false);
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(objectplayer == null)
-		{
-			return;
-		}
-		//Debug.Log("Update: objectplayer not null");
-		if(objectplayer.GetComponent<playermovement>().climbingMode)
-		{
-			//Debug.Log("Update: coords check: "+objectplayer.transform.position.y+", "+endClimbPoint.position.y);
-			if(objectplayer.transform.position.y >= endClimbPoint.position.y &&
-			   objectplayer.GetComponent<playermovement>().climbingMid)
-			{
-				//Debug.Log("And I at least get to here...");
-				objectplayer.GetComponent<Rigidbody2D>().AddForce(
-						new Vector2(
-								(finalJourneyDirectionIsRight)?(apexPushForce):(0f-apexPushForce),
-								0f));
+
+        distCovered = (Time.time - startTime) * speed;
+		if(startClimb){
+            fracJourney = distCovered / journeyLength1;
+            objectplayer.transform.position = Vector2.Lerp(startClimbPoint.position, endClimbPoint.position, fracJourney);
+			Debug.Log(objectplayer.transform.position);
+            Debug.Log(fracJourney);
+            Debug.Log(endClimbPoint.position);
+			Debug.Log(objectplayer.transform.position == endClimbPoint.position);
+			if(fracJourney > 1){
+				endClimb = true;
+                startTime = Time.time;
+				startClimb = false;
 			}
-		}
+		}else if(endClimb){
+            fracJourney = distCovered / journeyLength2;
+            objectplayer.transform.position = Vector2.Lerp(endClimbPoint.position, endMovePoint.position, fracJourney);
+            if (fracJourney > 1){
+                endClimb = false;
+                objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
+                objectplayer.gameObject.GetComponent<PlayerCharacterController>().climbingwall = null;
+				objectplayer = null;
+
+            }
+        }
+		//if(objectplayer == null)
+		//{
+		//	return;
+		//}
+		//Debug.Log("Update: objectplayer not null");
+		//if(objectplayer.GetComponent<playermovement>().climbingMode)
+		//{
+			//Debug.Log("Update: coords check: "+objectplayer.transform.position.y+", "+endClimbPoint.position.y);
+		//	if(objectplayer.transform.position.y >= endClimbPoint.position.y &&
+		//	   objectplayer.GetComponent<playermovement>().climbingMid)
+		//	{
+				//Debug.Log("And I at least get to here...");
+		//		objectplayer.GetComponent<Rigidbody2D>().AddForce(
+		//				new Vector2(
+		//						(finalJourneyDirectionIsRight)?(apexPushForce):(0f-apexPushForce),
+		//						0f));
+		//	}
+		//}
 		/*if(climb)
 		{
 			if(Vector3.Distance(objectplayer.transform.position,endClimbPoint.position) < 0.01f)
@@ -80,9 +118,21 @@ public class Climbing : MonoBehaviour {
 			//}
 		}*/
 	}
+
+	public void climb(Transform position){
+		Debug.Log("Hello");
+		startTime = Time.time;
+        startClimbPoint = position;
+		journeyLength1 = Vector2.Distance(startClimbPoint.position, endClimbPoint.position);
+        journeyLength2 = Vector2.Distance(endClimbPoint.position, endMovePoint.position);
+		startClimb = true;
+		Debug.Log(startClimb);
+        Debug.Log(journeyLength1);
+        Debug.Log(journeyLength2);
+	}
     void OnMouseDown()
     {
-			clicked = true;
+			//clicked = true;
 			/*
 				if(objectplayer.GetComponent<playermovement>().item == 3){
             climb = true;
@@ -95,18 +145,22 @@ public class Climbing : MonoBehaviour {
 
     void OnMouseExit()
     {
-        clicked = false;
+        //clicked = false;
     }
 
 	void OnTriggerEnter2D(Collider2D other) {
 		//Debug.Log("Enter");
         //Debug.Log(other.gameObject.name);
-		if(other.gameObject.name == "Rogue_01"){
+		if(other.gameObject.tag == "Player"){
             //Debug.Log(other.gameObject.name);
             //Debug.Log(other.gameObject.GetComponent<playermovement>().item == 3);
             //climb = true;
-            objectplayer = other.gameObject;
-						objectplayer.GetComponent<playermovement>().climbingMode = true;
+			//objectplayer = other.gameObject;
+            //Debug.Log(other.gameObject);
+			//Debug.Log(other.gameObject.GetComponent<PlayerCharacterController>());
+            //other.gameObject.GetComponent<PlayerCharacterController>().climbingwall = this;
+            //objectplayer = other.gameObject;
+			//objectplayer.GetComponent<PlayerCharacterController>().climb();
 						//objectplayer.GetComponent<playermovement>().climbingSpeed = speed;
 						//playerGravity = objectplayer.GetComponent<Rigidbody2D>().gravityScale;
 						//objectplayer.GetComponent<Rigidbody2D>().gravityScale = 0f;
@@ -117,19 +171,26 @@ public class Climbing : MonoBehaviour {
 			//}
 		}
 	}
-    void OnTriggerExit2D(Collider2D other)
-    {
-			/*if(other.gameObject == null || objectplayer == null)
-			{
-				return;
-			}*/
-        if (other.gameObject.name == "Rogue_01")
+    void OnTriggerExit2D(Collider2D other){
+        //Debug.Log("exit");
+        //Debug.Log(other.gameObject.name);
+        /*if(other.gameObject == null || objectplayer == null)
         {
-					  other.gameObject.GetComponent<playermovement>().climbingMode = false;
-						//objectplayer.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
-						objectplayer = null;
-            climb = false;
-						postClimb = false;
-        }
+            return;
+        }*/
+        //if (other.gameObject.name == "Rogue_01")
+        //{
+        //			  other.gameObject.GetComponent<playermovement>().climbingMode = false;
+        //				//objectplayer.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
+        //				objectplayer = null;
+        //    climb = false;
+        //				postClimb = false;
+        //}
+        //if (other.gameObject.tag == "Player"){
+            //Debug.Log("Something");
+            //endClimb = true;
+			//startTime = Time.time;
+            //startClimb = false;
+		//}
     }
 }

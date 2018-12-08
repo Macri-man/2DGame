@@ -81,6 +81,8 @@ public class playermovement : MonoBehaviour {
           {
             //Debug.Log("Downward Move attempted while on ground.");
             //verticalMove = 0f;
+            print ("translate called");
+            transform.Translate(Vector3.up * 5 * Time.deltaTime);
           }
           //animate.SetFloat("speed", Mathf.Abs(verticalMove));
       }
@@ -178,7 +180,7 @@ public class playermovement : MonoBehaviour {
     }
 
     public bool compareWeapon(){
-        return true; 
+        return true;
     }
     void FixedUpdate()
     {

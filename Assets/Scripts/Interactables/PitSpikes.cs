@@ -22,14 +22,7 @@ public class PitSpikes : MonoBehaviour {
 		{
 			case "Player":
 				other.gameObject.GetComponent<playermovement>().death();
-				if(null != HitSound)
-				{
-					//HitSound.PlaySound();
-				}
 			break;
-            case "Enemy":
-                Destroy(other.gameObject);
-                break;
 			default:
 								//HitSound.PlaySound();
 								//Destroy(this.gameObject);

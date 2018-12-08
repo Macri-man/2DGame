@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour {
 
-	public Transform target;
 	Vector3 offset;
 	public float smoothing = 0.125f;
 
@@ -26,7 +25,7 @@ public class CameraBehaviour : MonoBehaviour {
 
 	void Update () {
 
-		Vector3 desiredPosition = target.position + offset;
+		Vector3 desiredPosition = playerCharacter.transform.position + offset;
 		Vector3 smoothPosition = Vector3.Lerp(transform.position,
 																					new Vector3(desiredPosition.x,desiredPosition.y,transform.position.z),
 																					(smoothing*Time.deltaTime));

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+    public SoundTrigger deathSound;
     enum states {throws=1, idle=2, chase=3, patrol=4};
-
     states state;
-
 	public Transform[] points;
 	public Transform targetPoint;
     public Animator animate;
@@ -15,38 +15,60 @@ public class EnemyController : MonoBehaviour {
     public Transform weapon;
     public float interval;
 	bool turn = false;
-
     //[Range(0f,1f)]
 	public float patrolSpeed;
     //[Range(0f, 1f)]
     public float chaseSpeed;
-
     Vector3 changeInPosition;
-
 	int position = 0;
-
     int sign;
-
 	Rigidbody2D rb;
     public bool doesChase;
     public float throwInterval;
     public float turnAroundInterval;
     float timeStamp;
-
-	 
+    public int health;
+    int rockhits = 0;
+    public float threshold;
+    int layerMask;
+    public float distance;
+    public Transform startpoint;
 
 	// Use this for initialization
 	void Start () {
 		if(points.Length < 0){
         	Debug.LogWarning("Need Points");
 		}
+        animate = GetComponent<Animator>();
         state = states.patrol;
         turnAround();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+
+        layerMask = LayerMask.GetMask("Foreground","Characters");
 	}
+	void Update() {
+        animate.SetInteger("State", (int)state);
+    }
 	
-	// Update is called once per frame
 	void FixedUpdate(){
+        //animate.SetInteger("State",(int)state);
+        Vector2 temp = this.targetPoint.position - this.startpoint.position;
+        temp.Normalize();
+        RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
+        Debug.DrawRay(startpoint.position, temp * distance, Color.blue, 1);
+        Debug.DrawRay(startpoint.position, temp * hit.distance, Color.red, 1);
+
+        if(hit.collider != null){
+            if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
+                Debug.Log("something");
+                hitDistances(hit);
+            }
+        }else{
+            if(state == states.throws ||  state == states.chase){
+                state = states.patrol;
+            }
+        }
+        //Debug.Log(state);
         switch(state){
             case states.idle:
                 if ((Time.time - timeStamp) > turnAroundInterval){
@@ -56,34 +78,57 @@ public class EnemyController : MonoBehaviour {
                 }
             break;
             case states.chase:
-                rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, 10 * rb.velocity.y * Time.fixedDeltaTime);
-                break;
+                rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, rb.velocity.y);
+            break;
             case states.throws:
-                if ((Time.time - timeStamp) > turnAroundInterval){
-                    timeStamp =  Time.time;
-                    Vector3 temp = this.targetPoint.transform.position - this.transform.position;
-                    temp.Normalize();
-                    GameObject throwObject = (GameObject)Instantiate(shuriken, weapon.position,
-                    Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
+                Debug.Log((Time.time - timeStamp));
+                if ((Time.time - timeStamp) > throwInterval){
+                    timeStamp = Time.time; 
+                    Debug.Log("Throw");
+                    animate.SetTrigger("throw");
                 }
-                break;
+            break;
             case states.patrol:
-                rb.velocity = new Vector2(sign * patrolSpeed * Time.fixedDeltaTime, 10 * rb.velocity.y * Time.fixedDeltaTime);
+                rb.velocity = new Vector2(sign * patrolSpeed * Time.fixedDeltaTime, rb.velocity.y);
+                //Debug.Log(rb.velocity);
+                /* (Mathf.Abs(points[position].transform.position.x - this.transform.position.x) < threshold){
+                    position = (position + 1) % points.Length;
+                    timeStamp = Time.time;
+                    state = states.idle;
+                } */
                 break;
         }
 	}
 
-    void Flip(){
-        //sign = (Vector2.Dot((Vector2)this.transform.right, (Vector2)points[position].transform.position) > 0) ? 1 : -1;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+    void hitDistances(RaycastHit2D hitter){
+        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.position) > 0) ? -1 : 1;
+        if(sign != (int)(transform.localScale.x * 10)){
+            return;
+        }
+        Debug.Log("hello");
+
+        if(doesChase){
+            state = states.chase;
+            timeStamp = Time.time;
+        }else{
+            //turnAroundTarget();
+            state = states.throws;
+            timeStamp = Time.time;
+            animate.SetTrigger("throw");
+            animate.Play("Idle");
+        }
     }
 
-
-    bool doesTurnAround(){
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)points[position].transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
-        return sign != transform.localScale.x * 10;
+    void onThrow(){
+        //Debug.Log("resetting Trigger");
+        timeStamp = Time.time;
+        Vector2 temp = this.targetPoint.position - this.transform.position;
+        temp.Normalize();
+        GameObject kill = Instantiate(shuriken, weapon.position,
+        Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
+        Debug.Log(kill);
+        animate.ResetTrigger("throw");
+        animate.Play("Idle");
     }
 
     void turnAround(){
@@ -96,7 +141,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
         if (sign != (int)(transform.localScale.x * 10)){
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
@@ -104,32 +149,36 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
-	void OnTriggerEnter2D(Collider2D other) {
-		switch(other.gameObject.tag){
-			case "Player":
-                targetPoint = other.gameObject.transform;
-                turnAroundTarget();
-                timeStamp = Time.time;
-                if(doesChase){
-                    state = states.chase;
-                }else{
-                    state = states.throws;
-                }
-			break;
-            case "PatrolPoints":
-            if(points[position].gameObject == other.gameObject && targetPoint == null){
-                position = (position + 1) % points.Length;
-                timeStamp = Time.time;
-                state = states.idle;
-            }
-            break;
-		}
-	}
-
-    void OnTriggerExit2D(Collider2D other){
-        if (other.gameObject.tag == "Player"){
-            targetPoint = null;
-            state = states.patrol;
+    public void hitByRock(){
+        rockhits++;
+        if(rockhits == health){
+            death();
         }
+    }
+
+    public void death(){
+        deathSound.PlaySound();
+        Destroy(this.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        switch(other.gameObject.tag){
+            case "Player":
+                other.gameObject.GetComponent<PlayerCharacterController>().death();
+                state = states.patrol;
+                turnAround();
+            break;
+            case "PatrolPoints":
+                if (points[position].gameObject == other.gameObject){
+                    position = (position + 1) % points.Length;
+                    timeStamp = Time.time;
+                    state = states.idle;
+                }
+            break;
+            case "Spikes":
+                death();
+            break;
+        }
+        
     }
 }
