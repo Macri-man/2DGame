@@ -17,7 +17,7 @@ public class PlayerCharacterController : MonoBehaviour {
     [HideInInspector]
     public Weapons item;
 	float horizontalMove = 0f;
-    public float runSpeed = 10f;
+    public float runSpeed;
 	public Animator animate;
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }

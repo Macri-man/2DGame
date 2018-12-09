@@ -27,8 +27,8 @@ public class CameraBehaviour : MonoBehaviour {
 
 		Vector3 desiredPosition = playerCharacter.transform.position + offset;
 		Vector3 smoothPosition = Vector3.Lerp(transform.position,
-																					new Vector3(desiredPosition.x,desiredPosition.y,transform.position.z),
-																					(smoothing*Time.deltaTime));
+									new Vector3(desiredPosition.x,desiredPosition.y,transform.position.z),
+									(smoothing*Time.deltaTime));
 		transform.position = smoothPosition;
 	}
 }

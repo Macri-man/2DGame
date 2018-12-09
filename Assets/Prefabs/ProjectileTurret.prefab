@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58560661869276560}
   - component: {fileID: 114805331831808470}
   m_Layer: 12
-  m_Name: IN_TurretCannonball0
+  m_Name: ProjectileTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
