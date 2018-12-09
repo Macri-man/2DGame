@@ -152,7 +152,6 @@ public class PlayerCharacterController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log(other.gameObject.tag);
         Debug.Log(other.gameObject);
-
         switch(other.gameObject.tag){
             case "Log":
                 log = other.gameObject;
@@ -160,10 +159,8 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
-
             break;
         }
-
     }
 
     void OnTriggerExit2D(Collider2D other){
