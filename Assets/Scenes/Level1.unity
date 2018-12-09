@@ -29354,7 +29354,7 @@ Prefab:
     - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
         type: 2}
       propertyPath: runSpeed
-      value: 85
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1920795064972604, guid: f9692d0832c4e4d2f9de45c87b352a7d, type: 2}
       propertyPath: m_Name

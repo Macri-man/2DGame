@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour {
     enum states {throws=1, idle=2, chase=3, patrol=4};
     states state;
 	public Transform[] points;
-	public Transform targetPoint;
+	public GameObject targetPoint;
     public Animator animate;
     public GameObject shuriken;
     public Transform weapon;
@@ -45,6 +45,8 @@ public class EnemyController : MonoBehaviour {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
         layerMask = LayerMask.GetMask("Foreground","Characters");
+
+        targetPoint = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
         animate.SetInteger("State", (int)state);
@@ -52,7 +54,7 @@ public class EnemyController : MonoBehaviour {
 	
 	void FixedUpdate(){
         //animate.SetInteger("State",(int)state);
-        Vector2 temp = this.targetPoint.position - this.startpoint.position;
+        Vector2 temp = this.targetPoint.transform.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
         Debug.DrawRay(startpoint.position, temp * distance, Color.blue, 1);
@@ -60,7 +62,7 @@ public class EnemyController : MonoBehaviour {
 
         if(hit.collider != null){
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
-                Debug.Log("something");
+                //Debug.Log("something");
                 hitDistances(hit);
             }
         }else{
@@ -101,11 +103,11 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void hitDistances(RaycastHit2D hitter){
-        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.position) > 0) ? -1 : 1;
+        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.transform.position) > 0) ? -1 : 1;
         if(sign != (int)(transform.localScale.x * 10)){
             return;
         }
-        Debug.Log("hello");
+        //Debug.Log("hello");
 
         if(doesChase){
             state = states.chase;
@@ -122,7 +124,7 @@ public class EnemyController : MonoBehaviour {
     void onThrow(){
         //Debug.Log("resetting Trigger");
         timeStamp = Time.time;
-        Vector2 temp = this.targetPoint.position - this.transform.position;
+        Vector2 temp = this.targetPoint.transform.position - this.transform.position;
         temp.Normalize();
         GameObject kill = Instantiate(shuriken, weapon.position,
         Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
@@ -141,7 +143,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
         if (sign != (int)(transform.localScale.x * 10)){
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
@@ -163,11 +165,6 @@ public class EnemyController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         switch(other.gameObject.tag){
-            case "Player":
-                other.gameObject.GetComponent<PlayerCharacterController>().death();
-                state = states.patrol;
-                turnAround();
-            break;
             case "PatrolPoints":
                 if (points[position].gameObject == other.gameObject){
                     position = (position + 1) % points.Length;

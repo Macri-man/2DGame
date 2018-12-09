@@ -10,11 +10,13 @@ public class Projectile : MonoBehaviour {
 	public float speed;
 
 	private Rigidbody2D rb;
+    public bool hitsGround;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
 	}
+
 
 	// Update is called once per frame
 	void Update () {
@@ -37,8 +39,10 @@ public class Projectile : MonoBehaviour {
 				Destroy(this.gameObject);
 			break;
             case "Ground":
-                HitGround.PlaySound();
-                Destroy(this.gameObject);
+			if(hitsGround){
+					HitGround.PlaySound();
+                    Destroy(this.gameObject);
+			}
                 break;
 			default:
                 //HitSound.PlaySound();

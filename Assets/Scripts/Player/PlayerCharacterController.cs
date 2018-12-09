@@ -38,6 +38,9 @@ public class PlayerCharacterController : MonoBehaviour {
     [HideInInspector]
     public Climbing climbingwall;
 
+    [HideInInspector]
+    public GameObject enemy;
+
     GameObject log;
 
     void Awake(){
@@ -147,6 +150,12 @@ public class PlayerCharacterController : MonoBehaviour {
         if(log != null){
             log.GetComponent<LogMovement>().moveLog = true;
         }
+
+        if(enemy != null){
+            if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
+                enemy.GetComponent<EnemyController>().death();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -160,6 +169,9 @@ public class PlayerCharacterController : MonoBehaviour {
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
             break;
+            case "Enemy":
+                enemy = other.gameObject;
+            break;
         }
     }
 
@@ -171,6 +183,8 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 //climbingwall = other.gameObject.GetComponent<Climbing>();
                 //climbingwall.objectplayer = this.gameObject;
+            case "Enemy":
+                enemy = null;
             break;
         }
     }
@@ -193,8 +207,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("Collision: " + other.gameObject);
-        Debug.Log("Collision: " + other.gameObject.tag);
+        //Debug.Log("Collision: " + other.gameObject);
+        //Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
             case "Ground":
                 grounded = true;

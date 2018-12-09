@@ -16,7 +16,7 @@ public class turrets : MonoBehaviour {
 
     private float timeCount = 0.0f;
 
-	public float rateOfFire = 1f;
+	public float rateOfFire;
 
 	public float speedTurn = 2;
 	private bool enterZone;
@@ -33,7 +33,11 @@ public class turrets : MonoBehaviour {
 
     bool switches = false;
 
-    public float interval;
+    //public float interval;
+
+    public bool projectileHitGround;
+
+    public float withinRange;
 
 	// Use this for initialization
 	void Start () {
@@ -84,7 +88,7 @@ public class turrets : MonoBehaviour {
             //Debug.Log(withinThreshold(2));
             //Debug.Log((Time.time - timeStamp));
             //Debug.Log(((Time.time - timeStamp) > interval));
-            if(withinThreshold(5) && ((Time.time - timeStamp) > interval)){ 
+            if(withinThreshold(withinRange) && ((Time.time - timeStamp) > rateOfFire)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");
                 timeStamp = Time.time;
@@ -92,6 +96,7 @@ public class turrets : MonoBehaviour {
                 FireSound.PlaySound();
                 if(this.gameObject.tag == "TinyTurret"){
                     bullets.GetComponent<Projectile>().setLocalScale();
+                    bullets.GetComponent<Projectile>().hitsGround = projectileHitGround;
                 }
 			}
 		}

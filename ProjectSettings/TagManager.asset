@@ -16,6 +16,7 @@ TagManager:
   - Enemy
   - Log
   - Climb
+  - CompleteLevelMenu
   layers:
   - Default
   - TransparentFX

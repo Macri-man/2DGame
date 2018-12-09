@@ -12,6 +12,8 @@ public class CheckPoints : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        completeLevelMenu = GameObject.FindGameObjectWithTag("CompleteLevelMenu");
 		orb = this.transform.GetChild(0);
         if(EndLevel){
             orb.GetComponent<SpriteRenderer>().color = new Color(0f, 0.65f, 1f, 0.7f);

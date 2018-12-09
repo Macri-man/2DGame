@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114209349368686022}
   m_Layer: 13
   m_Name: ClimbFacilitator
-  m_TagString: Untagged
+  m_TagString: Climb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727052533381534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 2.58, z: 0}
+  m_LocalPosition: {x: 1.37, y: 5.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4751675899795356}
@@ -93,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894198629964630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: -1.4, z: 0.17217743}
+  m_LocalPosition: {x: 0.16, y: -1.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4751675899795356}
@@ -106,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1937931293367984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 2.89, z: 0.17217743}
+  m_LocalPosition: {x: 0.27, y: 5.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4751675899795356}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1007735322090182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.53, y: 4.4136963, z: -0.037411816}
+  m_LocalPosition: {x: 55.33, y: 9.24, z: -0.037411816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4325681923466560}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.65050507, y: 0.9539809}
+  m_Offset: {x: 0.9245291, y: 0.5040803}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73796463, y: 4.6844416}
+  m_Size: {x: 1.2860126, y: 3.7846403}
   m_EdgeRadius: 0
 --- !u!114 &114209349368686022
 MonoBehaviour:
@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fa56eec63c44eb09dec2a5f6d0631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startClimbPoint: {fileID: 4325681923466560}
   endClimbPoint: {fileID: 4389072712897736}
   endMovePoint: {fileID: 4144488473066290}
-  speed: 0.5
+  apexPushForce: 1
+  objectplayer: {fileID: 0}
+  speed: 0.1
