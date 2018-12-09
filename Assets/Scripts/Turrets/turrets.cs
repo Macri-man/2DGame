@@ -47,21 +47,20 @@ public class turrets : MonoBehaviour {
         	direct = target.transform.position - this.BarrelTurret.transform.position;
 			direct.Normalize();
 			rotateAmount = Vector3.Cross(direct,this.BarrelTurret.transform.up).z;
-        	angle = Mathf.Atan2(direct.y,direct.x) * Mathf.Rad2Deg;
-            angle2 = AngleBetweenVector2(this.BarrelTurret.transform.up, direct);
-            Vector2 vec1Rotated90 = new Vector2(-this.BarrelTurret.transform.up.y, this.BarrelTurret.transform.up.x);
-            float sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
+        	//angle = Mathf.Atan2(direct.y,direct.x) * Mathf.Rad2Deg;
+            //angle2 = AngleBetweenVector2(this.BarrelTurret.transform.up, direct);
+            //Vector2 vec1Rotated90 = new Vector2(-this.BarrelTurret.transform.up.y, this.BarrelTurret.transform.up.x);
+            //float sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
             Debug.DrawLine((Vector2)this.BarrelTurret.transform.position, (Vector2)target.transform.position, Color.black, 200f);
             Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, direct, Color.red, 200f);
             Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, this.BarrelTurret.transform.up, Color.blue, 200f);
             //Debug.Log(rotateAmount);
             //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
-            rotate = Quaternion.AngleAxis(angle,Vector3.forward);
+            //rotate = Quaternion.AngleAxis(angle,Vector3.forward);
             //Debug.Log(rotate.eulerAngles);
-            rotate = Quaternion.AngleAxis(angle2, Vector3.forward);
+            //rotate = Quaternion.AngleAxis(angle2, Vector3.forward);
             //Debug.Log(rotate.eulerAngles);
             //Debug.Log(Quaternion.Euler(0,0,this.BarrelTurret.transform.rotation.z + -rotateAmount * speedTurn * Time.deltaTime).eulerAngles);
-
             //this.BarrelTurret.transform.rotation = Quaternion.Euler(0, 0, this.BarrelTurret.transform.rotation.z + -rotateAmount * speedTurn * Time.deltaTime);
             this.BarrelTurret.transform.RotateAround(this.BarrelTurret.transform.position, new Vector3(0f, 0f, 1f), -rotateAmount * speedTurn * Time.deltaTime);
             //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
@@ -85,7 +84,7 @@ public class turrets : MonoBehaviour {
             //Debug.Log(withinThreshold(2));
             //Debug.Log((Time.time - timeStamp));
             //Debug.Log(((Time.time - timeStamp) > interval));
-            if(withinThreshold(2) && ((Time.time - timeStamp) > interval)){ 
+            if(withinThreshold(5) && ((Time.time - timeStamp) > interval)){ 
                 //FireSound.PlaySound();
                 //StartCoroutine("Shoot");
                 timeStamp = Time.time;

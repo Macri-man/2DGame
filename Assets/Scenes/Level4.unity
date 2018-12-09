@@ -30138,7 +30138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4694059878010646, guid: ba38ed42534294be79853398f7f814ac, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.0042124
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 4694059878010646, guid: ba38ed42534294be79853398f7f814ac, type: 2}
       propertyPath: m_LocalPosition.z
@@ -30228,6 +30228,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c3bc38f1f211d4e882f603d9ab8b75, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &652633735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1449579420659550, guid: f9692d0832c4e4d2f9de45c87b352a7d,
+    type: 2}
+  m_PrefabInternal: {fileID: 234624037}
 --- !u!1001 &670683409
 Prefab:
   m_ObjectHideFlags: 0
@@ -87032,7 +87037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothing: 0.3
   mainCamera: {fileID: 1817643694}
-  playerCharacter: {fileID: 0}
+  playerCharacter: {fileID: 652633735}
 --- !u!114 &1817643692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87077,7 +87082,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -87265,7 +87270,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4613857276745362, guid: 561a6e5f26604478ca1814b26223a620, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42.7484
+      value: 42.92
       objectReference: {fileID: 0}
     - target: {fileID: 4613857276745362, guid: 561a6e5f26604478ca1814b26223a620, type: 2}
       propertyPath: m_LocalPosition.y
