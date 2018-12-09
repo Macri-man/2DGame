@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114675270301953660}
   m_Layer: 13
   m_Name: Log_TriggerBox
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 50979580291454456}
   m_Layer: 2
   m_Name: InteractableLog02
-  m_TagString: InteractableLog
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 50994539962555912}
   m_Layer: 2
   m_Name: InteractableLog01
-  m_TagString: InteractableLog
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821527828945146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.93, y: 1.97, z: 0}
+  m_LocalPosition: {x: 17.7, y: 1.9340103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4962314705472972}
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1296931250025110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 0.41, z: 0}
+  m_LocalPosition: {x: 2.43, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4613857276745362}
@@ -313,6 +313,7 @@ MonoBehaviour:
   endPoint: {fileID: 4648085289908116}
   rotateSpeed: 1
   triggers: {fileID: 11400000, guid: cc8aeaaf9cf1544fe877922cbadd8fcf, type: 2}
+  moveLog: 0
 --- !u!212 &212501548217748914
 SpriteRenderer:
   m_ObjectHideFlags: 1

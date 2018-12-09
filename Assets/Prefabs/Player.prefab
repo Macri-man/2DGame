@@ -889,7 +889,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1449579420659550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.607998, y: 5.983485, z: 0}
+  m_LocalPosition: {x: 1.785594, y: 2.3041518, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4248557810693886}
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   - {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   weaponsObjects: []
   item: 3
-  runSpeed: 40
+  runSpeed: 85
   animate: {fileID: 95333522365803562}
   OnInputEvent:
     m_PersistentCalls:
@@ -1213,6 +1213,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: PlayerCharacterController+StringEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  checkPoint: {fileID: 0}
   mainCamera: {fileID: 0}
   throwPosition: {fileID: 4585383683354782}
   throwObject: {fileID: 1583059653076166, guid: a0d8f3fc91bba434881286322e58bba9,

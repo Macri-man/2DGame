@@ -193,6 +193,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("Collision: " + other.gameObject);
+        Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
             case "Ground":
                 grounded = true;
@@ -206,7 +208,7 @@ public class PlayerCharacterController : MonoBehaviour {
     void OnCollisionExit2D(Collision2D other){
         switch(other.gameObject.tag){
             case "Ground":
-            grounded = false;
+                grounded = false;
             break;
             case "Log":
                 grounded = false;

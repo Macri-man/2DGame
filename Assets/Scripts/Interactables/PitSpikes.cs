@@ -18,10 +18,12 @@ public class PitSpikes : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		switch(other.gameObject.tag)
-		{
+		switch(other.gameObject.tag){
 			case "Player":
 				other.gameObject.GetComponent<PlayerCharacterController>().death();
+			break;
+			case "Enemy":
+				other.gameObject.GetComponent<EnemyController>().death();
 			break;
 			default:
 								//HitSound.PlaySound();
