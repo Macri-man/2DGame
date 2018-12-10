@@ -9,7 +9,6 @@ public class PlayerCharacterController : MonoBehaviour {
 
     enum states { throws = 1, idle = 2, chase = 3, patrol = 4 };
     states state;
-
 	public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
@@ -30,7 +29,7 @@ public class PlayerCharacterController : MonoBehaviour {
     private bool climbing;
     private bool canClimb;
     [HideInInspector]
-    public bool isDying;
+    public bool notDead = true;
     public Camera mainCamera;
     public Transform throwPosition;
     public GameObject throwObject;
@@ -39,10 +38,8 @@ public class PlayerCharacterController : MonoBehaviour {
     float moveSmooth = .05f;
     [HideInInspector]
     public Climbing climbingwall;
-
     [HideInInspector]
     public GameObject enemy;
-
     GameObject log;
 
     void Awake(){
@@ -50,43 +47,42 @@ public class PlayerCharacterController : MonoBehaviour {
             OnInputEvent = new StringEvent();
     }
 
-	// Use this for initialization
-	void Start () {
+	void Start(){
         this.startPosition = this.transform.position;
         rb = GetComponent<Rigidbody2D>();
 	}
 
+    public void switchItem(Object newItem){
+        switch (newItem.name){
+            case "Hammer":
+                item = Weapons.Hammer;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
+                //weapon = weaponObjects[0];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Rock":
+                item = Weapons.Rock;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
+                //weapon = weaponObjects[1];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Fist":
+                item = Weapons.Fist;
+                weapon.GetComponent<SpriteRenderer>().sprite = null;
+                //weapon = null;
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+        }
+    }
 
-  public void selectHammer()
-  {
-    item = Weapons.Hammer;
-    weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
-    //weapon = weaponObjects[0];
-    OnInputEvent.Invoke(Input.inputString);
-  }
-  public void selectRock()
-  {
-    item = Weapons.Rock;
-    weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
-    //weapon = weaponObjects[1];
-    OnInputEvent.Invoke(Input.inputString);
-  }
-  public void selectFist()
-  {
-    item = Weapons.Fist;
-    weapon.GetComponent<SpriteRenderer>().sprite = null;
-    //weapon = null;
-    OnInputEvent.Invoke(Input.inputString);
-  }
-	// Update is called once per frame
-	void Update () {
-
-        if(climbing || isDying){
+	void Update(){
+        if(climbing){
             return;
         }
 
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
+        /*
         switch (Input.inputString){
             case "1":
                 item = Weapons.Hammer;
@@ -107,6 +103,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
+        */
 
         if(Mathf.Sign(transform.localScale.x) != Mathf.Sign(horizontalMove) && horizontalMove != 0){
             Flip();
@@ -138,7 +135,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-      if(climbing || isDying){
+      if(climbing){
           return;
       }
         if (Input.GetButtonDown("Jump") && grounded){
@@ -159,17 +156,15 @@ public class PlayerCharacterController : MonoBehaviour {
 
     public void death(){
       //this if-statement prevents the player being killed while dying :)
-        if(isDying){
-            return;
+        if (notDead){
+            deathSound.PlaySound();
+            animate.SetTrigger("Death");
+            notDead = false;
         }
-        deathSound.PlaySound();
-        isDying = true;
-        animate.Play("PlayerDeath");
     }
 
     public void onDeathFinished(){
-        animate.Play("PlayerIdle");
-        isDying = false;
+        notDead = true;
         if (checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
@@ -190,7 +185,9 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if(enemy != null){
+            Debug.Log("hits1");
             if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
+                Debug.Log("hits");
                 enemy.GetComponent<EnemyController>().death();
             }
         }
@@ -245,10 +242,6 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if(isDying)
-        {
-          return;
-        }
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
@@ -262,10 +255,6 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
     void OnCollisionExit2D(Collision2D other){
-      if(isDying)
-      {
-        return;
-      }
         switch(other.gameObject.tag){
             case "Ground":
                 grounded = false;

@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour {
     int sign;
 	Rigidbody2D rb;
     public bool doesChase;
-    private bool isDying;
+    public bool notDead = true;
     public float throwInterval;
     public float turnAroundInterval;
     float timeStamp;
@@ -50,17 +50,11 @@ public class EnemyController : MonoBehaviour {
         targetPoint = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
-    if(isDying){
-        return;
-    }
         animate.SetInteger("State", (int)state);
     }
 
 	void FixedUpdate(){
         //animate.SetInteger("State",(int)state);
-        if(isDying){
-            return;
-        }
         Vector2 temp = this.targetPoint.transform.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
@@ -90,7 +84,7 @@ public class EnemyController : MonoBehaviour {
                 rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, rb.velocity.y);
             break;
             case states.throws:
-                Debug.Log((Time.time - timeStamp));
+                //Debug.Log((Time.time - timeStamp));
                 if ((Time.time - timeStamp) > throwInterval){
                     timeStamp = Time.time;
                     Debug.Log("Throw");
@@ -110,15 +104,11 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void hitDistances(RaycastHit2D hitter){
-      if(isDying){
-          return;
-      }
         int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.transform.position) > 0) ? -1 : 1;
         if(sign != (int)(transform.localScale.x * 10)){
             return;
         }
         //Debug.Log("hello");
-
         if(doesChase){
             state = states.chase;
             timeStamp = Time.time;
@@ -127,7 +117,7 @@ public class EnemyController : MonoBehaviour {
             state = states.throws;
             timeStamp = Time.time;
             animate.SetTrigger("throw");
-            animate.Play("Idle");
+            //animate.Play("Idle");
         }
     }
 
@@ -138,7 +128,6 @@ public class EnemyController : MonoBehaviour {
         temp.Normalize();
         GameObject kill = Instantiate(shuriken, weapon.position,
         Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
-        Debug.Log(kill);
         animate.ResetTrigger("throw");
         animate.Play("Idle");
     }
@@ -153,11 +142,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-      if(isDying){
-          return;
-      }
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
-        if (sign != (int)(transform.localScale.x * 10)){
+        //sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        //if (sign != (int)(transform.localScale.x * 10)){
+        if (Mathf.Sign(transform.localScale.x) != Mathf.Sign(this.targetPoint.transform.localScale.x)){
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
@@ -166,28 +153,30 @@ public class EnemyController : MonoBehaviour {
 
     public void hitByRock(){
         rockhits++;
+        animate.SetTrigger("Hit");
+        turnAroundTarget();
         if(rockhits == health){
             death();
         }
     }
 
     public void death(){
-        deathSound.PlaySound();
-        isDying = true;
-        //animate.SetTrigger("Death");
-        animate.Play("EnemyDeath");
+        if (notDead){
+            deathSound.PlaySound();
+            //isDying = true;
+            animate.SetTrigger("Death");
+            notDead = false;
+        }
+        
+        //animate.Play("EnemyDeath");
         //Destroy(this.gameObject);
     }
 
-    void onDeathFinished()
-    {
+    void onDeathFinished(){
       Destroy(this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-      if(isDying){
-          return;
-      }
         switch(other.gameObject.tag){
             case "PatrolPoints":
                 if (points[position].gameObject == other.gameObject){

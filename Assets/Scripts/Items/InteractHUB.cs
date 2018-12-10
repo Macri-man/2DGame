@@ -27,7 +27,11 @@ public class InteractHUB : MonoBehaviour {
 		*/
     }
 
-	public void PressedKey(string input){
+    public void PressedKeyMenu(){
+        
+    }
+
+    public void PressedKey(string input){
         if (input == item.key){
             //Debug.Log("clicked " + item.name);
             panel.color = Color.gray;
