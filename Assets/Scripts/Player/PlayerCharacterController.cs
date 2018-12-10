@@ -17,6 +17,8 @@ public class PlayerCharacterController : MonoBehaviour {
     public Weapons item;
 	float horizontalMove = 0f;
     public float runSpeed;
+    public float walkSpeed;
+    float speed;
 	public Animator animate;
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
@@ -79,8 +81,18 @@ public class PlayerCharacterController : MonoBehaviour {
         if(climbing){
             return;
         }
-
-        horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
+        /*
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runSpeed ;
+        }
+        else
+        {
+            speed = walkSpeed;
+        }
+        */
+        speed = walkSpeed;
+        horizontalMove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
         /*
         switch (Input.inputString){
