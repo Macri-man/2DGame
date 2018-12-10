@@ -89,8 +89,6 @@ public class turrets : MonoBehaviour {
             //Debug.Log((Time.time - timeStamp));
             //Debug.Log(((Time.time - timeStamp) > interval));
             if(withinThreshold(withinRange) && ((Time.time - timeStamp) > rateOfFire)){ 
-                //FireSound.PlaySound();
-                //StartCoroutine("Shoot");
                 timeStamp = Time.time;
                 GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
                 FireSound.PlaySound();
@@ -122,15 +120,12 @@ public class turrets : MonoBehaviour {
         }
         */
     }
-
     public void flipSwitch(bool switchOn){
         switches = switchOn;
     }
-
     bool withinThreshold(float threshold){
         return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
     }
-
 	void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":
@@ -142,8 +137,7 @@ public class turrets : MonoBehaviour {
 		}
 		
 	}
-    float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
-    {
+    float AngleBetweenVector2(Vector2 vec1, Vector2 vec2){
         Vector2 vec1Rotated90 = new Vector2(-vec1.y, vec1.x);
         float sign = (Vector2.Dot(vec1Rotated90, vec2) < 0) ? -1.0f : 1.0f;
         return Vector2.Angle(vec1, vec2) * sign;

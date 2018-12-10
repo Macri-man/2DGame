@@ -171,6 +171,7 @@ public class PlayerCharacterController : MonoBehaviour {
             deathSound.PlaySound();
             animate.SetTrigger("Death");
             notDead = false;
+            climbing = false;
         }
     }
 
