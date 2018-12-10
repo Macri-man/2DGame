@@ -40,6 +40,7 @@ public class EnemyController : MonoBehaviour {
 		if(points.Length < 0){
         	Debug.LogWarning("Need Points");
 		}
+
         animate = GetComponent<Animator>();
         state = states.patrol;
         turnAround();
@@ -63,7 +64,6 @@ public class EnemyController : MonoBehaviour {
 
         if(hit.collider != null){
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
-                //Debug.Log("something");
                 hitDistances(hit);
             }
         }else{
@@ -87,7 +87,7 @@ public class EnemyController : MonoBehaviour {
                 //Debug.Log((Time.time - timeStamp));
                 if ((Time.time - timeStamp) > throwInterval){
                     timeStamp = Time.time;
-                    Debug.Log("Throw");
+                    //Debug.Log("Throw");
                     animate.SetTrigger("throw");
                 }
             break;
@@ -108,7 +108,6 @@ public class EnemyController : MonoBehaviour {
         if(sign != (int)(transform.localScale.x * 10)){
             return;
         }
-        //Debug.Log("hello");
         if(doesChase){
             state = states.chase;
             timeStamp = Time.time;
@@ -142,9 +141,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-        //sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
-        //if (sign != (int)(transform.localScale.x * 10)){
-        if (Mathf.Sign(transform.localScale.x) != Mathf.Sign(this.targetPoint.transform.localScale.x)){
+        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        if (sign != (int)(transform.localScale.x * 10)){
+        //if (Mathf.Sign(transform.localScale.x) != Mathf.Sign(this.targetPoint.transform.localScale.x)){
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
