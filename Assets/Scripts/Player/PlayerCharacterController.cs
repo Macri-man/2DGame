@@ -50,6 +50,17 @@ public class PlayerCharacterController : MonoBehaviour {
 	void Start(){
         this.startPosition = this.transform.position;
         rb = GetComponent<Rigidbody2D>();
+        switch ((int)item){
+            case 1:
+                OnInputEvent.Invoke("1");
+                break;
+            case 2:
+                OnInputEvent.Invoke("2");
+                break;
+            case 3:
+                OnInputEvent.Invoke("3");
+                break;
+        }
 	}
 
     public void switchItem(Object newItem){
@@ -82,7 +93,6 @@ public class PlayerCharacterController : MonoBehaviour {
 
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
-        /*
         switch (Input.inputString){
             case "1":
                 item = Weapons.Hammer;
@@ -103,7 +113,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
-        */
+        
 
         if(Mathf.Sign(transform.localScale.x) != Mathf.Sign(horizontalMove) && horizontalMove != 0){
             Flip();
@@ -123,6 +133,7 @@ public class PlayerCharacterController : MonoBehaviour {
             rb.gravityScale = 0;
             climbing = true;
             climbingwall.climb(this.transform);
+            return;
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist){

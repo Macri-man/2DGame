@@ -12,7 +12,7 @@ public class Climbing : MonoBehaviour {
 	private bool endClimb;
 
 	//public float speed = 0.5f;
-	public float apexPushForce = 1f;
+	//public float apexPushForce = 1f;
 
 	private bool climbs = false;
 	private bool postClimb = false;
@@ -41,9 +41,10 @@ public class Climbing : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		//journey1Length = Vector3.Distance(startClimbPoint.position, endClimbPoint.position);
-		//journey1Length = Vector3.Distance(endClimbPoint.position, endMovePoint.position);
-		//finalJourneyDirectionIsRight = (endClimbPoint.position.x < endMovePoint.position.x)?(true):(false);
+        //journey1Length = Vector3.Distance(startClimbPoint.position, endClimbPoint.position);
+        //journey1Length = Vector3.Distance(endClimbPoint.position, endMovePoint.position);
+        //finalJourneyDirectionIsRight = (endClimbPoint.position.x < endMovePoint.position.x)?(true):(false);
+        //distCovered = 0;
 	}
 
 	// Update is called once per frame
@@ -51,6 +52,7 @@ public class Climbing : MonoBehaviour {
 
         //distCovered = (Time.time - startTime) * speed * Time.deltaTime;
 				distCovered += speed * Time.deltaTime;
+				Debug.Log(distCovered);
 		if(startClimb){
             fracJourney = (1 / journeyLength1) * distCovered;
 						Debug.Log(fracJourney);
@@ -68,7 +70,7 @@ public class Climbing : MonoBehaviour {
 				startClimb = false;
 			}
 		}else if(endClimb){
-            fracJourney = 1 / journeyLength2;
+            fracJourney = (1 / journeyLength2) * distCovered;
             objectplayer.transform.position = Vector2.Lerp(objectplayer.transform.position, endMovePoint.position, fracJourney);
 						Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
             if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.5){
@@ -131,6 +133,7 @@ public class Climbing : MonoBehaviour {
 		journeyLength1 = Vector2.Distance(startClimbPoint.position, endClimbPoint.position);
         journeyLength2 = Vector2.Distance(endClimbPoint.position, endMovePoint.position);
 		startClimb = true;
+        distCovered = 0;
 		Debug.Log(startClimb);
         Debug.Log(journeyLength1);
         Debug.Log(journeyLength2);
