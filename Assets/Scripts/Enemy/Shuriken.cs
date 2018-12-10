@@ -36,8 +36,12 @@ public class Shuriken : MonoBehaviour {
         {
             case "Player":
                 //HitSound.PlaySound();
-				other.gameObject.GetComponent<PlayerCharacterController>().death();
-				Destroy(this.gameObject);
+								//This ensures that the projectile won't be obliterated if the player is already dying
+								if(!(other.gameObject.GetComponent<PlayerCharacterController>().isDying))
+								{
+									other.gameObject.GetComponent<PlayerCharacterController>().death();
+									Destroy(this.gameObject);
+								}
                 break;
             case "Tower":
                 //HitTurret.PlaySound();

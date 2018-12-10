@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: EnemyDeath
   m_EditorClassIdentifier: 
   name: EnemyDeath
-  clip: {fileID: 8300000, guid: 41e5c112fb31b5d47b38051dcfcd8c43, type: 3}
+  clip: {fileID: 8300000, guid: 6e42d2b80f2a218438ef0b2e1c4b1d96, type: 3}
   volume: 0.75
-  pitch: 0
+  pitch: 1
   loop: 0
   source: {fileID: 0}

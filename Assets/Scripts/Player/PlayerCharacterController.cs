@@ -29,6 +29,8 @@ public class PlayerCharacterController : MonoBehaviour {
     private bool grounded;
     private bool climbing;
     private bool canClimb;
+    [HideInInspector]
+    public bool isDying;
     public Camera mainCamera;
     public Transform throwPosition;
     public GameObject throwObject;
@@ -57,7 +59,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(climbing){
+        if(climbing || isDying){
             return;
         }
 
@@ -114,6 +116,9 @@ public class PlayerCharacterController : MonoBehaviour {
 	}
 
     void FixedUpdate(){
+      if(climbing || isDying){
+          return;
+      }
         if (Input.GetButtonDown("Jump") && grounded){
             grounded = false;
             rb.AddForce(new Vector2(0f, forceJump));
@@ -131,7 +136,18 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     public void death(){
+      //this if-statement prevents the player being killed while dying :)
+        if(isDying){
+            return;
+        }
         deathSound.PlaySound();
+        isDying = true;
+        animate.Play("PlayerDeath");
+    }
+
+    public void onDeathFinished(){
+        animate.Play("PlayerIdle");
+        isDying = false;
         if (checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
@@ -207,6 +223,10 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        if(isDying)
+        {
+          return;
+        }
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
@@ -220,6 +240,10 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
     void OnCollisionExit2D(Collision2D other){
+      if(isDying)
+      {
+        return;
+      }
         switch(other.gameObject.tag){
             case "Ground":
                 grounded = false;

@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour {
     int sign;
 	Rigidbody2D rb;
     public bool doesChase;
+    private bool isDying;
     public float throwInterval;
     public float turnAroundInterval;
     float timeStamp;
@@ -49,11 +50,17 @@ public class EnemyController : MonoBehaviour {
         targetPoint = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
+    if(isDying){
+        return;
+    }
         animate.SetInteger("State", (int)state);
     }
-	
+
 	void FixedUpdate(){
         //animate.SetInteger("State",(int)state);
+        if(isDying){
+            return;
+        }
         Vector2 temp = this.targetPoint.transform.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
@@ -85,7 +92,7 @@ public class EnemyController : MonoBehaviour {
             case states.throws:
                 Debug.Log((Time.time - timeStamp));
                 if ((Time.time - timeStamp) > throwInterval){
-                    timeStamp = Time.time; 
+                    timeStamp = Time.time;
                     Debug.Log("Throw");
                     animate.SetTrigger("throw");
                 }
@@ -103,6 +110,9 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void hitDistances(RaycastHit2D hitter){
+      if(isDying){
+          return;
+      }
         int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.transform.position) > 0) ? -1 : 1;
         if(sign != (int)(transform.localScale.x * 10)){
             return;
@@ -143,6 +153,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
+      if(isDying){
+          return;
+      }
         sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
         if (sign != (int)(transform.localScale.x * 10)){
             Vector3 theScale = transform.localScale;
@@ -160,10 +173,21 @@ public class EnemyController : MonoBehaviour {
 
     public void death(){
         deathSound.PlaySound();
-        Destroy(this.gameObject);
+        isDying = true;
+        //animate.SetTrigger("Death");
+        animate.Play("EnemyDeath");
+        //Destroy(this.gameObject);
+    }
+
+    void onDeathFinished()
+    {
+      Destroy(this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+      if(isDying){
+          return;
+      }
         switch(other.gameObject.tag){
             case "PatrolPoints":
                 if (points[position].gameObject == other.gameObject){
@@ -176,6 +200,6 @@ public class EnemyController : MonoBehaviour {
                 death();
             break;
         }
-        
+
     }
 }
