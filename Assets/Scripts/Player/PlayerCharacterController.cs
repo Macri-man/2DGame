@@ -135,7 +135,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-      if(climbing){
+      if(climbing || !notDead){
           return;
       }
         if (Input.GetButtonDown("Jump") && grounded){

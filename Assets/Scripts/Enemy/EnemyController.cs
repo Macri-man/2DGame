@@ -40,6 +40,7 @@ public class EnemyController : MonoBehaviour {
 		if(points.Length < 0){
         	Debug.LogWarning("Need Points");
 		}
+        
         animate = GetComponent<Animator>();
         state = states.patrol;
         turnAround();
