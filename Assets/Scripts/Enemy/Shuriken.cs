@@ -30,18 +30,17 @@ public class Shuriken : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		//Debug.Log(other.gameObject.tag);
+		Debug.Log(other.gameObject.tag);
 
-        switch (other.gameObject.tag)
-        {
+        switch (other.gameObject.tag){
             case "Player":
                 //HitSound.PlaySound();
 								//This ensures that the projectile won't be obliterated if the player is already dying
-								if(!(other.gameObject.GetComponent<PlayerCharacterController>().isDying))
-								{
+								//if(!(other.gameObject.GetComponent<PlayerCharacterController>().isDying))
+								//{
 									other.gameObject.GetComponent<PlayerCharacterController>().death();
 									Destroy(this.gameObject);
-								}
+								//}
                 break;
             case "Tower":
                 //HitTurret.PlaySound();

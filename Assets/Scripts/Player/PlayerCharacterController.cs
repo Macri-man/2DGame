@@ -30,7 +30,7 @@ public class PlayerCharacterController : MonoBehaviour {
     private bool climbing;
     private bool canClimb;
     [HideInInspector]
-    public bool isDying;
+    public bool notDead = true;
     public Camera mainCamera;
     public Transform throwPosition;
     public GameObject throwObject;
@@ -59,7 +59,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(climbing || isDying){
+        if(climbing){
             return;
         }
 
@@ -116,7 +116,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-      if(climbing || isDying){
+      if(climbing){
           return;
       }
         if (Input.GetButtonDown("Jump") && grounded){
@@ -137,17 +137,15 @@ public class PlayerCharacterController : MonoBehaviour {
 
     public void death(){
       //this if-statement prevents the player being killed while dying :)
-        if(isDying){
-            return;
+        if (notDead){
+            deathSound.PlaySound();
+            animate.SetTrigger("Death");
+            notDead = false;
         }
-        deathSound.PlaySound();
-        isDying = true;
-        animate.Play("PlayerDeath");
     }
 
     public void onDeathFinished(){
-        animate.Play("PlayerIdle");
-        isDying = false;
+        notDead = true;
         if (checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
@@ -168,7 +166,9 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if(enemy != null){
+            Debug.Log("hits1");
             if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
+                Debug.Log("hits");
                 enemy.GetComponent<EnemyController>().death();
             }
         }
@@ -223,10 +223,6 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if(isDying)
-        {
-          return;
-        }
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
@@ -240,10 +236,6 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
     void OnCollisionExit2D(Collision2D other){
-      if(isDying)
-      {
-        return;
-      }
         switch(other.gameObject.tag){
             case "Ground":
                 grounded = false;
