@@ -30,7 +30,6 @@ public class Projectile : MonoBehaviour {
         transform.localScale = theScale;
     }
 
-
     void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":

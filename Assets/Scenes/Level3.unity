@@ -12409,7 +12409,7 @@ GameObject:
   - component: {fileID: 776432751}
   m_Layer: 5
   m_Name: CompleteLevelMenuUI
-  m_TagString: Untagged
+  m_TagString: CompleteLevelMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
