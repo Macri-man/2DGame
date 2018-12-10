@@ -142,8 +142,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
-        if (sign != (int)(transform.localScale.x * 10)){
+        //sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        //if (sign != (int)(transform.localScale.x * 10)){
+        if (Mathf.Sign(transform.localScale.x) != Mathf.Sign(this.targetPoint.transform.localScale.x)){
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
@@ -153,6 +154,7 @@ public class EnemyController : MonoBehaviour {
     public void hitByRock(){
         rockhits++;
         animate.SetTrigger("Hit");
+        turnAroundTarget();
         if(rockhits == health){
             death();
         }

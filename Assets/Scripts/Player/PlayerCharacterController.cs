@@ -9,7 +9,6 @@ public class PlayerCharacterController : MonoBehaviour {
 
     enum states { throws = 1, idle = 2, chase = 3, patrol = 4 };
     states state;
-
 	public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
@@ -39,10 +38,8 @@ public class PlayerCharacterController : MonoBehaviour {
     float moveSmooth = .05f;
     [HideInInspector]
     public Climbing climbingwall;
-
     [HideInInspector]
     public GameObject enemy;
-
     GameObject log;
 
     void Awake(){
@@ -50,21 +47,42 @@ public class PlayerCharacterController : MonoBehaviour {
             OnInputEvent = new StringEvent();
     }
 
-	// Use this for initialization
-	void Start () {
+	void Start(){
         this.startPosition = this.transform.position;
         rb = GetComponent<Rigidbody2D>();
 	}
 
-	// Update is called once per frame
-	void Update () {
+    public void switchItem(Object newItem){
+        switch (newItem.name){
+            case "Hammer":
+                item = Weapons.Hammer;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
+                //weapon = weaponObjects[0];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Rock":
+                item = Weapons.Rock;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
+                //weapon = weaponObjects[1];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Fist":
+                item = Weapons.Fist;
+                weapon.GetComponent<SpriteRenderer>().sprite = null;
+                //weapon = null;
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+        }
+    }
 
+	void Update(){
         if(climbing){
             return;
         }
 
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
+        /*
         switch (Input.inputString){
             case "1":
                 item = Weapons.Hammer;
@@ -85,6 +103,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
+        */
 
         if(Mathf.Sign(transform.localScale.x) != Mathf.Sign(horizontalMove) && horizontalMove != 0){
             Flip();
