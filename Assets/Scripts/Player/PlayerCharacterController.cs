@@ -171,6 +171,8 @@ public class PlayerCharacterController : MonoBehaviour {
             deathSound.PlaySound();
             animate.SetTrigger("Death");
             notDead = false;
+            climbingwall.objectplayer = null;
+            climbingwall = null;
             climbing = false;
         }
     }
@@ -228,8 +230,11 @@ public class PlayerCharacterController : MonoBehaviour {
                 log = null;
                 break;
             case "Climb":
+                //climbingwall.objectplayer = null;
+                //climbingwall = null;
                 //climbingwall = other.gameObject.GetComponent<Climbing>();
                 //climbingwall.objectplayer = this.gameObject;
+                break;
             case "Enemy":
                 enemy = null;
             break;

@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completeLevelMenu: {fileID: 0}
-  EndLevel: 1
+  EndLevel: 0
 --- !u!212 &212083207980688320
 SpriteRenderer:
   m_ObjectHideFlags: 1
