@@ -56,6 +56,28 @@ public class PlayerCharacterController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 	}
 
+
+  public void selectHammer()
+  {
+    item = Weapons.Hammer;
+    weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
+    //weapon = weaponObjects[0];
+    OnInputEvent.Invoke(Input.inputString);
+  }
+  public void selectRock()
+  {
+    item = Weapons.Rock;
+    weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
+    //weapon = weaponObjects[1];
+    OnInputEvent.Invoke(Input.inputString);
+  }
+  public void selectFist()
+  {
+    item = Weapons.Fist;
+    weapon.GetComponent<SpriteRenderer>().sprite = null;
+    //weapon = null;
+    OnInputEvent.Invoke(Input.inputString);
+  }
 	// Update is called once per frame
 	void Update () {
 
