@@ -10,12 +10,14 @@ public class Projectile : MonoBehaviour {
 	public float speed;
 
 	private Rigidbody2D rb;
+    public bool hitsGround;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		this.transform.position += this.transform.up * speed * Time.deltaTime;
@@ -32,13 +34,15 @@ public class Projectile : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 			case "Player":
-				other.gameObject.GetComponent<playermovement>().death();
+				other.gameObject.GetComponent<PlayerCharacterController>().death();
                 //HitSound.PlaySound();
 				Destroy(this.gameObject);
 			break;
             case "Ground":
-                HitGround.PlaySound();
-                Destroy(this.gameObject);
+			if(hitsGround){
+					HitGround.PlaySound();
+                    Destroy(this.gameObject);
+			}
                 break;
 			default:
                 //HitSound.PlaySound();

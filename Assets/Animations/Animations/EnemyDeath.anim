@@ -55,7 +55,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01
+    path: Enemy_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -116,7 +116,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -159,7 +159,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -220,7 +220,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -263,7 +263,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -324,7 +324,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -376,7 +376,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -437,7 +437,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -471,7 +471,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -505,7 +505,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -566,7 +566,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -600,7 +600,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -634,7 +634,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -687,7 +687,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01
+    path: Enemy_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -730,7 +730,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -773,7 +773,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -816,7 +816,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -859,7 +859,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -902,7 +902,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -936,7 +936,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -970,7 +970,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1004,7 +1004,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1038,7 +1038,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1072,7 +1072,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1106,7 +1106,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -1118,175 +1118,175 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1885683851
+      path: 2963796485
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2189198488
+      path: 1386783320
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 918099919
+      path: 3391782751
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 851092532
+      path: 1699300811
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2135021345
+      path: 1030632377
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1828692149
+      path: 1643695086
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1885683851
+      path: 2963796485
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2189198488
+      path: 1386783320
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 918099919
+      path: 3391782751
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 851092532
+      path: 1699300811
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2135021345
+      path: 1030632377
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1828692149
+      path: 1643695086
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1089277833
+      path: 3753049413
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3699392158
+      path: 4179604143
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1726211105
+      path: 4190372562
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1816534578
+      path: 3472774460
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1309596369
+      path: 4002071897
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3699392158
+      path: 4179604143
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1726211105
+      path: 4190372562
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3590333956
+      path: 4267607050
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1816534578
+      path: 3472774460
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1309596369
+      path: 4002071897
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1743655361
+      path: 2574811169
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3590333956
+      path: 4267607050
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1743655361
+      path: 2574811169
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -1298,7 +1298,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.81666666
+    m_StopTime: 0.9166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -1366,7 +1366,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1421,7 +1421,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1476,7 +1476,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1522,7 +1522,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1568,7 +1568,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1614,7 +1614,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1660,7 +1660,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1706,7 +1706,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1752,7 +1752,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1816,7 +1816,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1880,7 +1880,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1944,7 +1944,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1990,7 +1990,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2036,7 +2036,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2082,7 +2082,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2128,7 +2128,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2174,7 +2174,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2220,7 +2220,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2266,7 +2266,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2312,7 +2312,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2358,7 +2358,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2422,7 +2422,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2486,7 +2486,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2550,7 +2550,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2596,7 +2596,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2642,7 +2642,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2688,7 +2688,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2734,7 +2734,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2780,7 +2780,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2826,7 +2826,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2872,7 +2872,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2918,7 +2918,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2964,7 +2964,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3028,7 +3028,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3092,7 +3092,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3156,7 +3156,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3211,7 +3211,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3266,7 +3266,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3321,7 +3321,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3358,7 +3358,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3395,7 +3395,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3432,7 +3432,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3496,7 +3496,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3560,7 +3560,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3624,7 +3624,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3661,7 +3661,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3698,7 +3698,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3735,7 +3735,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3772,7 +3772,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3809,7 +3809,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3846,7 +3846,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3883,7 +3883,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3920,7 +3920,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3957,7 +3957,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3994,7 +3994,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4031,7 +4031,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4068,7 +4068,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4105,7 +4105,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4142,7 +4142,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4179,7 +4179,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4243,7 +4243,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4307,7 +4307,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4371,7 +4371,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4408,7 +4408,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4445,7 +4445,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4482,7 +4482,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4519,7 +4519,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4556,7 +4556,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4593,7 +4593,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4630,7 +4630,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4667,7 +4667,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4704,7 +4704,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4741,7 +4741,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4778,7 +4778,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4815,7 +4815,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -4825,8 +4825,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01
+    attribute: m_LocalEulerAngles.z
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4836,17 +4836,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4856,17 +4846,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4876,7 +4856,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01
+    path: Enemy_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4886,17 +4876,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4906,7 +4886,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_leg_L_01/Rogue_boot_L_01
+    path: Enemy_Group/Enemy_leg_L_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4916,17 +4906,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4936,7 +4916,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4946,17 +4936,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_L_Group/Enemy_boot_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4966,7 +4946,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_leg_R_01/Rogue_boot_R_01
+    path: Enemy_Group/Enemy_leg_R_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4976,17 +4966,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_leg_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4996,7 +4976,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5006,17 +4996,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_leg_R_Group/Enemy_boot_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5026,7 +5006,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_head_01
+    path: Enemy_Group/Enemy_Torso_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5036,17 +5026,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5056,7 +5036,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5066,17 +5056,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_head_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5086,7 +5066,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5096,17 +5086,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5116,7 +5096,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_L_01/Rogue_elbow_L_01/Rogue_wrist_L_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5126,17 +5116,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5146,7 +5126,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5156,17 +5146,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_L_Group/Enemy_elbow_L_Group/Enemy_wrist_L_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5176,7 +5156,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5186,7 +5176,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5196,7 +5196,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5206,10 +5206,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Rogue_pelvis_01/Rogue_torso_01/Rogue_shoulder_R_01/Rogue_elbow_R_01/Rogue_wrist_R_01
+    path: Enemy_Group/Enemy_Torso_Group/Enemy_shoulder_R_Group/Enemy_elbow_R_Group/Enemy_wrist_R_Group
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.9166667
+    functionName: onDeathFinished
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

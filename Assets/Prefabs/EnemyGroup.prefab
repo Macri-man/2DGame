@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792647462441124}
   m_Layer: 15
-  m_Name: Enemy_torso
+  m_Name: Enemy_Torso_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885620131966964}
   m_Layer: 15
-  m_Name: Enemy_elbow_R
+  m_Name: Enemy_elbow_R_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136369046372962}
   m_Layer: 15
-  m_Name: Enemy_shoulder_R
+  m_Name: Enemy_shoulder_R_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4096304350081494}
   m_Layer: 15
-  m_Name: Enemy_boot_R
+  m_Name: Enemy_boot_R_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4378443329879510}
   m_Layer: 15
-  m_Name: Enemy_shoulder_L
+  m_Name: Enemy_shoulder_L_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611979164420742}
   m_Layer: 15
-  m_Name: Enemy_boot_L
+  m_Name: Enemy_boot_L_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4984716292550976}
   m_Layer: 15
-  m_Name: Enemy_elbow_L
+  m_Name: Enemy_elbow_L_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237882776372062}
   m_Layer: 15
-  m_Name: Enemy_leg_L
+  m_Name: Enemy_leg_L_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989911094494912}
   m_Layer: 15
-  m_Name: Enemy_leg_R
+  m_Name: Enemy_leg_R_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +596,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386037862357812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100.45, y: 18.52, z: 0}
+  m_LocalPosition: {x: 97.89, y: 18.52, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4319185535763636}
@@ -794,7 +794,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904410956974378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.7642975, y: 3.61, z: 0}
+  m_LocalPosition: {x: -89.07, y: -16.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745050854005000}
@@ -1122,7 +1122,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 4.383793}

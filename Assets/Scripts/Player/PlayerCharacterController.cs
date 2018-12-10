@@ -9,7 +9,6 @@ public class PlayerCharacterController : MonoBehaviour {
 
     enum states { throws = 1, idle = 2, chase = 3, patrol = 4 };
     states state;
-
 	public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
@@ -17,18 +16,20 @@ public class PlayerCharacterController : MonoBehaviour {
     [HideInInspector]
     public Weapons item;
 	float horizontalMove = 0f;
-    public float runSpeed = 10f;
+    public float runSpeed;
 	public Animator animate;
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
     public StringEvent OnInputEvent;
 	Vector3 startPosition;
-	Vector3 checkPoint;
+	public GameObject checkPoint;
     Rigidbody2D rb;
     float forceJump = 200f;
     private bool grounded;
     private bool climbing;
     private bool canClimb;
+    [HideInInspector]
+    public bool notDead = true;
     public Camera mainCamera;
     public Transform throwPosition;
     public GameObject throwObject;
@@ -37,7 +38,8 @@ public class PlayerCharacterController : MonoBehaviour {
     float moveSmooth = .05f;
     [HideInInspector]
     public Climbing climbingwall;
-
+    [HideInInspector]
+    public GameObject enemy;
     GameObject log;
 
     void Awake(){
@@ -45,21 +47,42 @@ public class PlayerCharacterController : MonoBehaviour {
             OnInputEvent = new StringEvent();
     }
 
-	// Use this for initialization
-	void Start () {
+	void Start(){
         this.startPosition = this.transform.position;
         rb = GetComponent<Rigidbody2D>();
 	}
 
-	// Update is called once per frame
-	void Update () {
+    public void switchItem(Object newItem){
+        switch (newItem.name){
+            case "Hammer":
+                item = Weapons.Hammer;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
+                //weapon = weaponObjects[0];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Rock":
+                item = Weapons.Rock;
+                weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
+                //weapon = weaponObjects[1];
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+            case "Fist":
+                item = Weapons.Fist;
+                weapon.GetComponent<SpriteRenderer>().sprite = null;
+                //weapon = null;
+                //OnInputEvent.Invoke(Input.inputString);
+                break;
+        }
+    }
 
+	void Update(){
         if(climbing){
             return;
         }
 
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
 
+        /*
         switch (Input.inputString){
             case "1":
                 item = Weapons.Hammer;
@@ -80,6 +103,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
+        */
 
         if(Mathf.Sign(transform.localScale.x) != Mathf.Sign(horizontalMove) && horizontalMove != 0){
             Flip();
@@ -95,6 +119,8 @@ public class PlayerCharacterController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
             animate.SetBool("Climb",true);
+            rb.velocity= new Vector2(0,0);
+            rb.gravityScale = 0;
             climbing = true;
             climbingwall.climb(this.transform);
         }
@@ -109,6 +135,9 @@ public class PlayerCharacterController : MonoBehaviour {
 	}
 
     void FixedUpdate(){
+      if(climbing){
+          return;
+      }
         if (Input.GetButtonDown("Jump") && grounded){
             grounded = false;
             rb.AddForce(new Vector2(0f, forceJump));
@@ -126,16 +155,26 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     public void death(){
-        deathSound.PlaySound();
+      //this if-statement prevents the player being killed while dying :)
+        if (notDead){
+            deathSound.PlaySound();
+            animate.SetTrigger("Death");
+            notDead = false;
+        }
+    }
+
+    public void onDeathFinished(){
+        notDead = true;
         if (checkPoint == null){
             this.transform.position = this.startPosition;
         }else{
-            this.transform.position = checkPoint;
+            this.transform.position = checkPoint.transform.position;
         }
     }
 
     public void climb(){
         climbing = !climbing;
+        rb.gravityScale = 1;
         animate.SetBool("Climb",false);
     }
 
@@ -144,12 +183,19 @@ public class PlayerCharacterController : MonoBehaviour {
         if(log != null){
             log.GetComponent<LogMovement>().moveLog = true;
         }
+
+        if(enemy != null){
+            Debug.Log("hits1");
+            if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
+                Debug.Log("hits");
+                enemy.GetComponent<EnemyController>().death();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log(other.gameObject.tag);
         Debug.Log(other.gameObject);
-
         switch(other.gameObject.tag){
             case "Log":
                 log = other.gameObject;
@@ -157,12 +203,13 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
-                rb.velocity= new Vector2(0,0);
+            break;
+            case "Enemy":
+                enemy = other.gameObject;
             break;
         }
-        
     }
-    
+
     void OnTriggerExit2D(Collider2D other){
         switch (other.gameObject.tag){
             case "Log":
@@ -171,6 +218,8 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 //climbingwall = other.gameObject.GetComponent<Climbing>();
                 //climbingwall.objectplayer = this.gameObject;
+            case "Enemy":
+                enemy = null;
             break;
         }
     }
@@ -193,6 +242,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        //Debug.Log("Collision: " + other.gameObject);
+        //Debug.Log("Collision: " + other.gameObject.tag);
         switch (other.gameObject.tag){
             case "Ground":
                 grounded = true;
@@ -206,7 +257,7 @@ public class PlayerCharacterController : MonoBehaviour {
     void OnCollisionExit2D(Collision2D other){
         switch(other.gameObject.tag){
             case "Ground":
-            grounded = false;
+                grounded = false;
             break;
             case "Log":
                 grounded = false;
