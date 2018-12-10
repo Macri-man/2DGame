@@ -76,7 +76,7 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
 	void Update(){
-        if(climbing){
+        if(climbing || !notDead){
             return;
         }
 
