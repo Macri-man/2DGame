@@ -10,15 +10,15 @@ public class CompleteLevelMenu : MonoBehaviour {
 	// Update is called once per frame
 
 	void Awake() {
-		if(completeLevelUI == null){
-			Debug.LogError("Need CompleteLevelMenu");
-		}
-        completeLevelUI.SetActive(false);
+		
         //Resume();
 	}
 
 	void Start() {
-
+        if (completeLevelUI == null){
+            Debug.LogError("Need CompleteLevelMenu");
+        }
+        completeLevelUI.SetActive(false);
 	}
 
 	void Update() {

@@ -6,7 +6,7 @@ public class CheckPoints : MonoBehaviour {
 
 	private Transform orb;
 
-    public GameObject completeLevelMenu;
+    private GameObject completeLevelMenu;
 
     public bool EndLevel;
 
@@ -14,6 +14,7 @@ public class CheckPoints : MonoBehaviour {
 	void Start () {
 
         completeLevelMenu = GameObject.FindGameObjectWithTag("CompleteLevelMenu");
+        Debug.Log(completeLevelMenu);
 		orb = this.transform.GetChild(0);
         if(EndLevel){
             orb.GetComponent<SpriteRenderer>().color = new Color(0f, 0.65f, 1f, 0.7f);
@@ -31,13 +32,13 @@ public class CheckPoints : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.tag == "Player" && orb.GetComponent<SpriteRenderer>().color.a < 0.8){
-            other.gameObject.GetComponent<PlayerCharacterController>().checkPoint = this.gameObject;
-            orb.GetComponent<SpriteRenderer>().color += new Color(0,0,0,0.8f);
-        }else if(other.gameObject.tag == "Player" && EndLevel){
+        if (other.gameObject.tag == "Player" && EndLevel){
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
             completeLevelMenu.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0; 
+        }else if(other.gameObject.tag == "Player"){
+            other.gameObject.GetComponent<PlayerCharacterController>().checkPoint = this.gameObject;
+            orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
         }
     }
 }
