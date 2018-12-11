@@ -135,12 +135,20 @@ public class PlayerCharacterController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall == null) {
             animate.SetTrigger("PullLever");
         }
+
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
-            animate.SetBool("Climb",true);
-            rb.velocity= new Vector2(0,0);
-            rb.gravityScale = 0;
-            climbing = true;
-            climbingwall.climb(this.transform);
+            int sign = (Vector2.Dot(this.transform.right, (Vector2)climbingwall.endClimbPoint.transform.position) > 0) ? -1 : 1;
+            if (sign != (int)(transform.localScale.x * 10)){
+                Debug.Log("Can Climb");
+                animate.SetBool("Climb", true);
+                rb.velocity = new Vector2(0, 0);
+                rb.gravityScale = 0;
+                climbing = true;
+                climbingwall.climb(this.transform);
+            }else{
+                Debug.Log("Cannot Climb Climb");
+            }
+           
             //return;
         }
 

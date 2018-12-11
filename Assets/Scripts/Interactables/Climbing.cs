@@ -52,7 +52,7 @@ public class Climbing : MonoBehaviour {
 
         //distCovered = (Time.time - startTime) * speed * Time.deltaTime;
 				distCovered += speed * Time.deltaTime;
-				Debug.Log(distCovered);
+				//Debug.Log(distCovered);
 		if(startClimb){
             fracJourney = (1 / journeyLength1) * distCovered;
 						//Debug.Log(fracJourney);
@@ -72,7 +72,7 @@ public class Climbing : MonoBehaviour {
 		}else if(endClimb){
             fracJourney = (1 / journeyLength2) * distCovered;
             objectplayer.transform.position = Vector2.Lerp(objectplayer.transform.position, endMovePoint.position, fracJourney);
-						Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
+						//Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
             if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.5){
                 endClimb = false;
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
@@ -134,16 +134,16 @@ public class Climbing : MonoBehaviour {
 	}
 
 	public void climb(Transform position){
-		Debug.Log("Hello");
+		//Debug.Log("Hello");
 		startTime = Time.time;
         startClimbPoint = position;
 		journeyLength1 = Vector2.Distance(startClimbPoint.position, endClimbPoint.position);
         journeyLength2 = Vector2.Distance(endClimbPoint.position, endMovePoint.position);
 		startClimb = true;
         distCovered = 0;
-		Debug.Log(startClimb);
-        Debug.Log(journeyLength1);
-        Debug.Log(journeyLength2);
+		//Debug.Log(startClimb);
+        //Debug.Log(journeyLength1);
+        //Debug.Log(journeyLength2);
 	}
     void OnMouseDown()
     {
