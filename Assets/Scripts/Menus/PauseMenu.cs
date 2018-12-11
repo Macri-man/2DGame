@@ -13,11 +13,6 @@ public class PauseMenu : MonoBehaviour {
 
 	void Awake() {
 
-		
-
-
-		//pauseUI.SetActive(false);
-        //Resume();
 	}
 
 	void Start() {
@@ -26,7 +21,7 @@ public class PauseMenu : MonoBehaviour {
             Debug.LogError("Need PauseMenu");
         }
         pauseUI.SetActive(false);
-        Resume();
+        //Resume();
 	}
 
 	void Update () {
@@ -48,19 +43,23 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void howToPlay(){
+        Debug.Log("howtoplay");
         Time.timeScale = 0;
         SceneManager.LoadSceneAsync("HowToPlay",LoadSceneMode.Additive);
+        pauseUI.SetActive(false);
 	}
 
 	void Pause(){
-		//Debug.Log("PAUSE");
+		Debug.Log("PAUSE");
         pauseUI.SetActive(true);
 		Time.timeScale = 0;
 		isPaused = true;
 	}
 
 	public void loadMenu(){
-		SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        Debug.Log("load");
+        SceneManager.LoadScene("Menu",LoadSceneMode.Single);
 	}
 
 	public void quitGame(){

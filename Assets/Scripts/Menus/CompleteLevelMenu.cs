@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CompleteLevelMenu : MonoBehaviour {
 
-	public GameObject completeLevelUI;
+	private GameObject completeLevelUI;
 	
 	// Update is called once per frame
 
@@ -15,6 +15,8 @@ public class CompleteLevelMenu : MonoBehaviour {
 	}
 
 	void Start() {
+
+        completeLevelUI = GameObject.FindGameObjectWithTag("CompleteLevelMenu");
         if (completeLevelUI == null){
             Debug.LogError("Need CompleteLevelMenu");
         }
