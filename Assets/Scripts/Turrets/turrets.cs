@@ -95,9 +95,10 @@ public class turrets : MonoBehaviour {
                 FireSound.PlaySound();
                 if(this.gameObject.tag == "TinyTurret"){
                     bullets.GetComponent<Projectile>().setLocalScale();
-                    bullets.GetComponent<Projectile>().hitsGround = projectileHitGround;
-                    bullets.GetComponent<Projectile>().speed = SpeedOfProjectile;
+                   
                 }
+                bullets.GetComponent<Projectile>().hitsGround = projectileHitGround;
+                bullets.GetComponent<Projectile>().speed = SpeedOfProjectile;
 			}
 		}
     }
