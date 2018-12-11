@@ -23,7 +23,7 @@ public class Switches : MonoBehaviour {
 	void Start () {
         startposition = Lever.transform;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -41,7 +41,7 @@ public class Switches : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown() {
+	public void leverPulled() {
 		if(OnInputEvent != null){
             timeStamp = Time.time;
             switchesOn = !switchesOn;
@@ -51,6 +51,6 @@ public class Switches : MonoBehaviour {
 		}else{
 			Debug.LogWarning("No Turret On Switch");
 		}
-		
+
 	}
 }

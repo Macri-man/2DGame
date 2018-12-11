@@ -18,6 +18,7 @@ TagManager:
   - Climb
   - CompleteLevelMenu
   - PauseMenu
+  - Lever
   layers:
   - Default
   - TransparentFX

@@ -41,6 +41,7 @@ public class PlayerCharacterController : MonoBehaviour {
     [HideInInspector]
     public GameObject enemy;
     GameObject log;
+    GameObject lever;
 
     void Awake(){
         if (OnInputEvent == null)
@@ -127,17 +128,16 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("Hammer");
         }
 
+        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall == null) {
+            animate.SetTrigger("PullLever");
+        }
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
             animate.SetBool("Climb",true);
             rb.velocity= new Vector2(0,0);
             rb.gravityScale = 0;
             climbing = true;
             climbingwall.climb(this.transform);
-            return;
-        }
-
-        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist){
-            animate.SetTrigger("PullLever");
+            //return;
         }
 
         //Debug.Log(Mathf.Abs(horizontalMove));
@@ -165,17 +165,22 @@ public class PlayerCharacterController : MonoBehaviour {
         rock.GetComponent<Rigidbody2D>().AddForce(directon * throwForce);
     }
 
+
     public void death(){
       //this if-statement prevents the player being killed while dying :)
         if (notDead){
             deathSound.PlaySound();
+            animate.SetBool("Climb",false);
             animate.SetTrigger("Death");
             notDead = false;
-            climbingwall.objectplayer = null;
-            climbingwall = null;
+            if(climbingwall)
+            {
+              climbingwall.killClimbValues();
+              climbingwall.objectplayer = null;
+              climbingwall = null;
+            }
             climbing = false;
             rb.gravityScale = 1;
-            animate.SetBool("Climb",false);
         }
     }
 
@@ -209,13 +214,24 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
 
+    public void pullLever()
+    {
+      if(lever != null)
+      {
+          lever.GetComponent<Switches>().leverPulled();
+      }
+    }
+
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log(other.gameObject.tag);
         Debug.Log(other.gameObject);
         switch(other.gameObject.tag){
-            case "Log":
-                log = other.gameObject;
-            break;
+          case "Log":
+              log = other.gameObject;
+          break;
+          case "Lever":
+              lever = other.gameObject;
+          break;
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
@@ -230,6 +246,9 @@ public class PlayerCharacterController : MonoBehaviour {
         switch (other.gameObject.tag){
             case "Log":
                 log = null;
+                break;
+            case "Lever":
+                lever = null;
                 break;
             case "Climb":
                 //climbingwall.objectplayer = null;
