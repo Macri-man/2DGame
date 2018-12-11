@@ -185,8 +185,7 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetBool("Climb",false);
             animate.SetTrigger("Death");
             notDead = false;
-            if(climbingwall != null)
-            {
+            if(climbingwall != null){
               climbingwall.killClimbValues();
               climbingwall.objectplayer = null;
               climbingwall = null;
@@ -212,24 +211,22 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void onHammerHit(){
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
         if(log != null){
             log.GetComponent<LogMovement>().moveLog = true;
         }
 
         if(enemy != null){
-            Debug.Log("hits1");
+            //Debug.Log("hits1");
             if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
-                Debug.Log("hits");
+                //Debug.Log("hits");
                 enemy.GetComponent<EnemyController>().death();
             }
         }
     }
 
-    public void pullLever()
-    {
-      if(lever != null)
-      {
+    public void pullLever(){
+      if(lever != null){
           lever.GetComponent<Switches>().leverPulled();
       }
     }

@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour {
     int sign;
 	Rigidbody2D rb;
     public bool doesChase;
-    public bool notDead = true;
+    public bool Dead;
     public float throwInterval;
     public float turnAroundInterval;
     float timeStamp;
@@ -48,14 +48,24 @@ public class EnemyController : MonoBehaviour {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
         layerMask = LayerMask.GetMask("Foreground","Characters");
-
+        
         targetPoint = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
+
+        if(Dead){
+            return;
+        }
         animate.SetInteger("State", (int)state);
+        
     }
 
 	void FixedUpdate(){
+
+        if (Dead){
+            return;
+        }
+        
         //animate.SetInteger("State",(int)state);
         Vector2 temp = this.targetPoint.transform.position - this.startpoint.position;
         temp.Normalize();
@@ -155,17 +165,25 @@ public class EnemyController : MonoBehaviour {
         rockhits++;
         animate.SetTrigger("Hit");
         turnAroundTarget();
+        if (doesChase){
+            state = states.chase;
+            timeStamp = Time.time;
+        }else{
+            state = states.throws;
+            timeStamp = Time.time;
+            animate.SetTrigger("throw");
+        }
         if(rockhits == health){
             death();
         }
     }
 
     public void death(){
-        if (notDead){
+        if (!Dead){
             deathSound.PlaySound();
             //isDying = true;
             animate.SetTrigger("Death");
-            notDead = false;
+            Dead = true;
         }
         
         //animate.Play("EnemyDeath");
@@ -177,6 +195,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        if(Dead){
+            return;
+        }
         switch(other.gameObject.tag){
             case "PatrolPoints":
                 if (points[position].gameObject == other.gameObject){
