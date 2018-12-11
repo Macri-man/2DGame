@@ -96233,7 +96233,22 @@ Prefab:
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
       propertyPath: rateOfFire
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: speedTurn
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c37961b7ccba421986646d40d73e522, type: 2}
