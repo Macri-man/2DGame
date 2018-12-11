@@ -7,10 +7,10 @@ public class HowToPlay : MonoBehaviour {
 
 
 	public void PlayGame(){
-		SceneManager.LoadSceneAsync("Level1");
+		SceneManager.LoadScene("Level1");
 	}
 	public void BackToMenu(){
-		SceneManager.LoadSceneAsync("Menu");
+		SceneManager.LoadScene("Menu");
 	}
 	public void QuitGame(){
 		Debug.Log("QUITING");
