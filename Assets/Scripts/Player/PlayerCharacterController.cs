@@ -173,7 +173,7 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetBool("Climb",false);
             animate.SetTrigger("Death");
             notDead = false;
-            if(climbingwall)
+            if(climbingwall != null)
             {
               climbingwall.killClimbValues();
               climbingwall.objectplayer = null;
