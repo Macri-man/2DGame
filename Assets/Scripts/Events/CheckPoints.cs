@@ -27,11 +27,6 @@ public class CheckPoints : MonoBehaviour {
 		//Debug.Log(orb.GetComponent<SpriteRenderer>().color);
 	}
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-
     void OnTriggerEnter2D(Collider2D other){
 
         if (other.gameObject.tag == "Player" && EndLevel){
