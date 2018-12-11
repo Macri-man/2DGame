@@ -10,6 +10,8 @@ public class CheckPoints : MonoBehaviour {
 
     public bool EndLevel;
 
+    private bool notHit = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -32,11 +34,13 @@ public class CheckPoints : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other){
+
         if (other.gameObject.tag == "Player" && EndLevel){
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
             completeLevelMenu.SetActive(true);
-            Time.timeScale = 0; 
-        }else if(other.gameObject.tag == "Player"){
+            Time.timeScale = 0;
+        }else if(other.gameObject.tag == "Player" && notHit){
+            notHit = false;
             other.gameObject.GetComponent<PlayerCharacterController>().checkPoint = this.gameObject;
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
         }
