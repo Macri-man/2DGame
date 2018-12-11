@@ -55,13 +55,13 @@ public class Climbing : MonoBehaviour {
 				Debug.Log(distCovered);
 		if(startClimb){
             fracJourney = (1 / journeyLength1) * distCovered;
-						Debug.Log(fracJourney);
+						//Debug.Log(fracJourney);
             objectplayer.transform.position = Vector2.Lerp(startClimbPoint.position, endClimbPoint.position, fracJourney);
 						//startClimbPoint.position
-			Debug.Log(objectplayer.transform.position);
-            Debug.Log(fracJourney);
-            Debug.Log(endClimbPoint.position);
-			Debug.Log((objectplayer.transform.position - endClimbPoint.position).magnitude);
+			//Debug.Log(objectplayer.transform.position);
+            //Debug.Log(fracJourney);
+            //Debug.Log(endClimbPoint.position);
+			//Debug.Log((objectplayer.transform.position - endClimbPoint.position).magnitude);
 			//if(fracJourney > 1){
 			if((objectplayer.transform.position - endClimbPoint.position).magnitude <= 0.5){
 				endClimb = true;
@@ -124,6 +124,13 @@ public class Climbing : MonoBehaviour {
 
 			//}
 		}*/
+	}
+
+	public void killClimbValues()
+	{
+		startClimb = false;
+		endClimb = false;
+		journeyLength1 = journeyLength2 = 0;
 	}
 
 	public void climb(Transform position){
