@@ -113,7 +113,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 OnInputEvent.Invoke(Input.inputString);
                 break;
         }
-        
+
 
         if(Mathf.Sign(transform.localScale.x) != Mathf.Sign(horizontalMove) && horizontalMove != 0){
             Flip();
@@ -174,6 +174,8 @@ public class PlayerCharacterController : MonoBehaviour {
             climbingwall.objectplayer = null;
             climbingwall = null;
             climbing = false;
+            rb.gravityScale = 1;
+            animate.SetBool("Climb",false);
         }
     }
 
