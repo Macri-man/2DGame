@@ -12,6 +12,8 @@ public class CameraBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
     //now check that there is a mainCamera set
+	mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+	playerCharacter = GameObject.FindGameObjectWithTag("Player");
 		if(mainCamera == null)
 		{
 			Debug.LogError("CameraBehaviour: No mainCamera instance set");
