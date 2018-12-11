@@ -46,6 +46,10 @@ public class PlayerCharacterController : MonoBehaviour {
     void Awake(){
         if (OnInputEvent == null)
             OnInputEvent = new StringEvent();
+
+        if(Time.timeScale == 0){
+            Time.timeScale = 1;
+        }
     }
 
 	void Start(){
