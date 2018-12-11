@@ -18,7 +18,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	float horizontalMove = 0f;
     public float runSpeed;
     public float walkSpeed;
-    float speed;
+    float speed;// speed of the player character
 	public Animator animate;
     [System.Serializable]
     public class StringEvent : UnityEvent<string> { }
@@ -27,6 +27,8 @@ public class PlayerCharacterController : MonoBehaviour {
 	public GameObject checkPoint;
     Rigidbody2D rb;
     float forceJump = 200f;
+    float maxJumps = 2;
+    float jumpsMade = 0;
     private bool grounded;
     private bool climbing;
     private bool canClimb;
@@ -81,7 +83,7 @@ public class PlayerCharacterController : MonoBehaviour {
         if(climbing){
             return;
         }
-        /*
+        //this is to make the character faster when left shift button is pressed 
         if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed ;
@@ -90,8 +92,8 @@ public class PlayerCharacterController : MonoBehaviour {
         {
             speed = walkSpeed;
         }
-        */
-        speed = walkSpeed;
+        
+        
         horizontalMove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
         /*
@@ -150,12 +152,36 @@ public class PlayerCharacterController : MonoBehaviour {
       if(climbing){
           return;
       }
-        if (Input.GetButtonDown("Jump") && grounded){
-            grounded = false;
-            rb.AddForce(new Vector2(0f, forceJump));
+        if (Input.GetButtonDown("Jump")){
+            jump();
         }
     }
+    void jump()
+    {
+        if (jumpsMade <= maxJumps)
+        {
+            goUp();// if the number of jumps is equal to or less than 2 go up  
+        }
+        else
+        {
+            return;//else do nothing
+        }
+    }
+    void goUpwards()
+    {
+        grounded = false;
+        rb.AddForce(new Vector2(0f, forceJump));
+        jumpsMade = jumpMade + 1;
+    }
 
+    void onCollisionEnter2D(Collision2D collide)
+    {
+        // Just have to add tags to the tiles 
+        if (collide.gameObject.tag == "ground")
+        {
+            jumpsMade = 0; 
+        }
+    }
     void throwRock(){
         Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouse.z = 0;
