@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour {
     int layerMask;
     public float distance;
     public Transform startpoint;
+    public float SpeedofShuriken;
 
 	// Use this for initialization
 	void Start () {
@@ -125,8 +126,8 @@ public class EnemyController : MonoBehaviour {
         timeStamp = Time.time;
         Vector2 temp = this.targetPoint.transform.position - this.transform.position;
         temp.Normalize();
-        GameObject kill = Instantiate(shuriken, weapon.position,
-        Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
+        GameObject shurikenObject = Instantiate(shuriken, weapon.position,Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
+        shurikenObject.GetComponent<Shuriken>().speed = SpeedofShuriken;
         animate.ResetTrigger("throw");
         animate.Play("Idle");
     }
