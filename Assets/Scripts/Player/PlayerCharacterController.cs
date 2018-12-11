@@ -50,6 +50,7 @@ public class PlayerCharacterController : MonoBehaviour {
         if(Time.timeScale == 0){
             Time.timeScale = 1;
         }
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
     }
 
 	void Start(){

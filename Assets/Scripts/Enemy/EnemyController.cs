@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
     public SoundTrigger deathSound;
-    enum states {throws=1, idle=2, chase=3, patrol=4};
+    enum states {throws=1, idle, chase, patrol, nothing};
     states state;
 	public Transform[] points;
 	public GameObject targetPoint;
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour {
     float timeStamp;
     public int health;
     int rockhits = 0;
-    public float threshold;
+    //public float threshold;
     int layerMask;
     public float distance;
     public Transform startpoint;
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
         layerMask = LayerMask.GetMask("Foreground","Characters");
-        
+
         targetPoint = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
@@ -162,9 +162,29 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void hitByRock(){
+        if(Dead){
+            return;
+        }
+        Debug.Log("Rock Hit");
         rockhits++;
         animate.SetTrigger("Hit");
+        state = states.nothing;
+        //turnAroundTarget();
+    }
+
+    public void EndofRockHit(){
         turnAroundTarget();
+        if (Dead){
+            return;
+        }
+        if (rockhits == health){
+            death();
+        }
+
+        if(state == states.chase || state == states.throws){
+            return;
+        }
+
         if (doesChase){
             state = states.chase;
             timeStamp = Time.time;
@@ -173,17 +193,16 @@ public class EnemyController : MonoBehaviour {
             timeStamp = Time.time;
             animate.SetTrigger("throw");
         }
-        if(rockhits == health){
-            death();
-        }
     }
 
     public void death(){
         if (!Dead){
+            Debug.Log("has died");
             deathSound.PlaySound();
             //isDying = true;
             animate.SetTrigger("Death");
             Dead = true;
+            //Destroy(this.gameObject);
         }
         
         //animate.Play("EnemyDeath");
@@ -191,7 +210,8 @@ public class EnemyController : MonoBehaviour {
     }
 
     void onDeathFinished(){
-      Destroy(this.gameObject);
+        Debug.Log("dead");
+        Destroy(this.gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
