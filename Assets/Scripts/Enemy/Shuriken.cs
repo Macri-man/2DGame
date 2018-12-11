@@ -30,7 +30,7 @@ public class Shuriken : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		Debug.Log(other.gameObject.tag);
+		//Debug.Log(other.gameObject.tag);
 
         switch (other.gameObject.tag){
             case "Player":
@@ -48,7 +48,7 @@ public class Shuriken : MonoBehaviour {
                 break;
             case "Ground":
                 //HitGround.PlaySound();
-                //Destroy(this.gameObject);
+                Destroy(this.gameObject);
                 break;
             default:
                 //HitSound.PlaySound();

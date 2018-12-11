@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour {
 
     public SoundTrigger HitGround;
     public SoundTrigger HitTurret;
+	[HideInInspector]
 	public float speed;
 
 	private Rigidbody2D rb;
