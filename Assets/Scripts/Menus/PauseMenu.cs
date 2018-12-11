@@ -5,21 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
-	public static bool isPaused = false;
+	private static bool isPaused = false;
 
-	public GameObject pauseUI;
+	private GameObject pauseUI;
 	
 	// Update is called once per frame
 
 	void Awake() {
-		if(pauseUI == null){
-			Debug.LogError("Need PauseMenu");
-		}
-		pauseUI.SetActive(false);
+
+		
+
+
+		//pauseUI.SetActive(false);
         //Resume();
 	}
 
 	void Start() {
+        pauseUI = GameObject.FindGameObjectWithTag("PauseMenu");
+        if (pauseUI == null){
+            Debug.LogError("Need PauseMenu");
+        }
+        pauseUI.SetActive(false);
         Resume();
 	}
 
@@ -41,6 +47,11 @@ public class PauseMenu : MonoBehaviour {
         isPaused = false;
 	}
 
+	public void howToPlay(){
+        Time.timeScale = 0;
+        SceneManager.LoadSceneAsync("HowToPlay",LoadSceneMode.Additive);
+	}
+
 	void Pause(){
 		//Debug.Log("PAUSE");
         pauseUI.SetActive(true);
@@ -49,7 +60,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void loadMenu(){
-		SceneManager.LoadScene("Menu");
+		SceneManager.LoadSceneAsync("Menu");
 	}
 
 	public void quitGame(){

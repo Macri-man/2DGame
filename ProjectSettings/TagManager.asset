@@ -17,6 +17,7 @@ TagManager:
   - Log
   - Climb
   - CompleteLevelMenu
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

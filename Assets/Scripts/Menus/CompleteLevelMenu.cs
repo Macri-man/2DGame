@@ -27,12 +27,12 @@ public class CompleteLevelMenu : MonoBehaviour {
 
 	public void Continue(){
 		if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
 
 	public void loadMenu(){
-		SceneManager.LoadScene("Menu");
+		SceneManager.LoadSceneAsync("Menu");
 	}
 
 	public void quitGame(){
