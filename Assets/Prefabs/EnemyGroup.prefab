@@ -794,7 +794,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904410956974378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87.455315, y: 17.545431, z: 0}
+  m_LocalPosition: {x: -89.07, y: -16.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745050854005000}
@@ -810,7 +810,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036406375788866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95, y: 18.98, z: 0}
+  m_LocalPosition: {x: 96.07, y: 18.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4583867380052574}
@@ -889,7 +889,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996695533200400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.5, y: 18.99, z: 0}
+  m_LocalPosition: {x: 100.7, y: 18.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4583867380052574}
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   points:
   - {fileID: 4745050854005000}
   - {fileID: 4598709185912804}
-  targetPoint: {fileID: 0}
+  player: {fileID: 0}
   animate: {fileID: 95065138869177862}
   shuriken: {fileID: 1240139982184166, guid: c4e15ecd9e6de4ede9794871f5f7b425, type: 2}
   weapon: {fileID: 4727705562938476}
@@ -1229,14 +1229,13 @@ MonoBehaviour:
   patrolSpeed: 20
   chaseSpeed: 40
   doesChase: 0
-  notDead: 1
-  throwInterval: 1
+  Dead: 0
+  throwInterval: 2
   turnAroundInterval: 5
-  health: 4
-  threshold: 0.1
-  distance: 2.5
+  health: 3
+  distance: 5
   startpoint: {fileID: 4259840183639134}
-  SpeedofShuriken: 0
+  SpeedofShuriken: 2
 --- !u!212 &212245613899886882
 SpriteRenderer:
   m_ObjectHideFlags: 1

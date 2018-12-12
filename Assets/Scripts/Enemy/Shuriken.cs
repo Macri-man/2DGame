@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Shuriken : MonoBehaviour {
 
+    public SoundTrigger HitMetal;
+
 	public float rotateSpeed;
+    [HideInInspector]
 	public float speed;
 
     public GameObject shuriken;
@@ -22,11 +25,16 @@ public class Shuriken : MonoBehaviour {
         shuriken.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime, Space.Self);
         //Debug.Log(rb.velocity);
         //Debug.Log(this.transform.right * speed * Time.deltaTime);
-        rb.velocity = this.transform.right * speed * Time.deltaTime;
+        //rb.velocity = this.transform.right * speed * Time.deltaTime;
         //rb.MovePosition(this.transform.position += this.transform.right * speed * Time.deltaTime);
 		//this.transform.Rotate(0,0,angle * Time.deltaTime, Space.Self);
 		//this.transform.position += this.transform.right * speed * Time.deltaTime;
 	}
+
+    void FixedUpdate() {
+        Debug.Log(rb.velocity);
+        rb.velocity = this.transform.right * speed * Time.deltaTime;
+    }
 
 	void OnTriggerEnter2D(Collider2D other) {
 
@@ -48,6 +56,10 @@ public class Shuriken : MonoBehaviour {
                 break;
             case "Ground":
                 //HitGround.PlaySound();
+                Destroy(this.gameObject);
+                break;
+            case "Rocks":
+                HitMetal.PlaySound();
                 Destroy(this.gameObject);
                 break;
             default:

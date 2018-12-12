@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114109090410213726}
   m_Layer: 14
   m_Name: Shuriken
-  m_TagString: Untagged
+  m_TagString: Shuriken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80c209ad5ec946deb0f41c100574de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitMetal: {fileID: 11400000, guid: e28d7c31e9d754051b538b1be2531c20, type: 2}
   rotateSpeed: 45
   speed: 10
   shuriken: {fileID: 1812487774098032}

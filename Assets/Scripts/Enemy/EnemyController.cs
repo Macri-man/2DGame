@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour {
     enum states {throws=1, idle, chase, patrol, nothing};
     states state;
 	public Transform[] points;
-	public GameObject targetPoint;
+    [HideInInspector]
+	public GameObject player;
     public Animator animate;
     public GameObject shuriken;
     public Transform weapon;
@@ -49,7 +50,7 @@ public class EnemyController : MonoBehaviour {
 
         layerMask = LayerMask.GetMask("Foreground","Characters");
 
-        targetPoint = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
 
@@ -67,7 +68,7 @@ public class EnemyController : MonoBehaviour {
         }
         
         //animate.SetInteger("State",(int)state);
-        Vector2 temp = this.targetPoint.transform.position - this.startpoint.position;
+        Vector2 temp = this.player.transform.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
         Debug.DrawRay(startpoint.position, temp * distance, Color.blue, 1);
@@ -115,7 +116,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void hitDistances(RaycastHit2D hitter){
-        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.targetPoint.transform.position) > 0) ? -1 : 1;
+        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.player.transform.position) > 0) ? -1 : 1;
         if(sign != (int)(transform.localScale.x * 10)){
             return;
         }
@@ -134,7 +135,7 @@ public class EnemyController : MonoBehaviour {
     void onThrow(){
         //Debug.Log("resetting Trigger");
         timeStamp = Time.time;
-        Vector2 temp = this.targetPoint.transform.position - this.transform.position;
+        Vector2 temp = this.player.transform.position - this.transform.position;
         temp.Normalize();
         GameObject shurikenObject = Instantiate(shuriken, weapon.position,Quaternion.AngleAxis(Mathf.Atan2(temp.y, temp.x) * Mathf.Rad2Deg, Vector3.forward));
         shurikenObject.GetComponent<Shuriken>().speed = SpeedofShuriken;
@@ -152,7 +153,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     void turnAroundTarget(){
-        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.targetPoint.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
+        sign = (Vector2.Dot((Vector2)this.transform.position - (Vector2)this.player.transform.position, (Vector2)points[position].transform.position) > 0) ? -1 : 1;
         if (sign != (int)(transform.localScale.x * 10)){
         //if (Mathf.Sign(transform.localScale.x) != Mathf.Sign(this.targetPoint.transform.localScale.x)){
             Vector3 theScale = transform.localScale;

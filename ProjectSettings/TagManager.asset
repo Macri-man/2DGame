@@ -19,6 +19,7 @@ TagManager:
   - CompleteLevelMenu
   - PauseMenu
   - Lever
+  - Shuriken
   layers:
   - Default
   - TransparentFX

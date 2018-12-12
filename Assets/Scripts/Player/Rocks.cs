@@ -37,6 +37,11 @@ public class Rocks : MonoBehaviour {
                 other.gameObject.GetComponent<EnemyController>().hitByRock();
                 Destroy(this.gameObject);
                 break;
+            case "Shuriken":
+                HitGround.PlaySound();
+                other.gameObject.GetComponent<EnemyController>().hitByRock();
+                Destroy(this.gameObject);
+                break;
 			default:
                 //HitSound.PlaySound();
                 //Destroy(this.gameObject);
