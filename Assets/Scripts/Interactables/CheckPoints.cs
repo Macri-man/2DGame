@@ -32,18 +32,17 @@ public class CheckPoints : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other){
-
-			Debug.Log("End...?");
+        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Player" && EndLevel){
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
-            completeLevelMenu.SetActive(true);
-						Debug.Log("End...");
             if(this.gameObject.tag == "Finish"){
-							Debug.Log("End?");
+                Debug.Log(endOfGame.nameOfSound);
                 endOfGame.PlaySound();
             }else{
                 endOfLevel.PlaySound();
             }
+            completeLevelMenu.SetActive(true);
             Time.timeScale = 0;
         }else if(other.gameObject.tag == "Player" && notHit){
 					Debug.Log("End?!");

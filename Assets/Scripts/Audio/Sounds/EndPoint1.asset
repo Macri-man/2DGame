@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: EndPoint1
   m_EditorClassIdentifier: 
   name: EndPoint1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 0d160743aad924146969164b4bc618c5, type: 3}
   volume: 0.75
   pitch: 1
   loop: 0

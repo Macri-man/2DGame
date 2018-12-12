@@ -29685,50 +29685,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
         type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PressedKey
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PressedKey
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PressedKey
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: runSpeed
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920795064972604, guid: f9692d0832c4e4d2f9de45c87b352a7d, type: 2}
-      propertyPath: m_Name
-      value: Player_elbow_L_Group
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
-      propertyPath: throwForce
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114502350585347680, guid: f9692d0832c4e4d2f9de45c87b352a7d,
-        type: 2}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}

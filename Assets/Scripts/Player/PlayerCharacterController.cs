@@ -27,7 +27,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	Vector3 startPosition;
 	public GameObject checkPoint;
     Rigidbody2D rb;
-    float forceJump = 200f;
+    public float forceJump;
     private bool grounded;
     private bool climbing;
     private bool canClimb;
@@ -178,7 +178,7 @@ public class PlayerCharacterController : MonoBehaviour {
       if(climbing || !notDead){
           return;
       }
-        if (Input.GetButtonDown("Jump") && grounded){
+        if (Input.GetButton("Jump") && grounded){
             grounded = false;
             rb.AddForce(new Vector2(0f, forceJump));
             jumpSound.PlaySound();
