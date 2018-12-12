@@ -4,7 +4,7 @@
 ### Log
 ### Climbing Wall
 
-##Projectiles
+## Projectiles
 ### Turret Cannon Ball
 ### Shuriken
 ### Rock
@@ -17,6 +17,10 @@
 ### Main Menu
 ### How to Play
 ### Pause Menu
+
+## Sounds
+
+## Animations
 
 ## Level 1
 ## Level 2
