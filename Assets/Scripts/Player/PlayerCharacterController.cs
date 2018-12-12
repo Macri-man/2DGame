@@ -236,9 +236,9 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if(enemy != null){
-            Debug.Log("hits1");
+            //Debug.Log("hits1");
             //if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
-                Debug.Log("hits");
+                //Debug.Log("hits");
                 enemy.GetComponent<EnemyController>().death();
             //}
         }
