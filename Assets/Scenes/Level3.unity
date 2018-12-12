@@ -46450,7 +46450,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
