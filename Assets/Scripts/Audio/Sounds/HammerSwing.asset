@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ed406ff2bc74a018934e8a7382a51c, type: 3}
   m_Name: HammerSwing
   m_EditorClassIdentifier: 
-  name: 
+  name: HammerSwing
   clip: {fileID: 8300000, guid: c65b7c526f6ba784794fe927a5aaa8a5, type: 3}
   volume: 0.75
   pitch: 1

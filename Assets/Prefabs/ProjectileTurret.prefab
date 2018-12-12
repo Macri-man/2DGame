@@ -89,9 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1580f7d5ad12a4d22b708c84d472293e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitGround: {fileID: 11400000, guid: ad9d2038c9e9f4dfb8245d81bf216d4b, type: 2}
+  HitGround: {fileID: 11400000, guid: 73b7b7be8bd18324fb400a7d73c0f058, type: 2}
   HitTurret: {fileID: 11400000, guid: a6db6aeebf67449af9c4ce8700ce2ddb, type: 2}
   speed: 5
+  hitsGround: 0
 --- !u!212 &212505003913585180
 SpriteRenderer:
   m_ObjectHideFlags: 1

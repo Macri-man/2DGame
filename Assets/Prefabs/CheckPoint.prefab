@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbdab348b9d448d38bb550529470bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeLevelMenu: {fileID: 0}
+  audioCheckPointPassed: {fileID: 11400000, guid: d8bd88591b3ce164883e2b586503e5fb,
+    type: 2}
   EndLevel: 0
 --- !u!212 &212083207980688320
 SpriteRenderer:

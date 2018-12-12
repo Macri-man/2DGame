@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour {
     {
         Sounding s = Array.Find(sounds, audio => audio.name == sound);
         if (s == null){
-            Debug.LogWarning("Sound: " + name + " not found!");
+            Debug.LogWarning("Sound: " + sound + " not found!");
             return;
         }else{
             s.source.volume = s.volume;// * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));

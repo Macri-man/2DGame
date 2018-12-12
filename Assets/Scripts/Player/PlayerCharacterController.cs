@@ -9,7 +9,10 @@ public class PlayerCharacterController : MonoBehaviour {
 
     enum states { throws = 1, idle = 2, chase = 3, patrol = 4 };
     states state;
-	public SoundTrigger deathSound;
+    public SoundTrigger jumpSound;
+    public SoundTrigger hammerSwingSound;
+    public SoundTrigger hammerHitLogSound;
+    public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
     public List<GameObject> weaponsObjects;
@@ -134,6 +137,7 @@ public class PlayerCharacterController : MonoBehaviour {
 
         if(Input.GetMouseButtonDown(0) && item == Weapons.Hammer){
             animate.SetTrigger("Hammer");
+            hammerSwingSound.PlaySound();
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall == null) {
@@ -162,7 +166,7 @@ public class PlayerCharacterController : MonoBehaviour {
             }else{
                 Debug.Log("Cannot Climb Climb");
             }
-           
+
             //return;
         }
 
@@ -178,6 +182,7 @@ public class PlayerCharacterController : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && grounded){
             grounded = false;
             rb.AddForce(new Vector2(0f, forceJump));
+            jumpSound.PlaySound();
         }
     }
 
@@ -225,7 +230,10 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void onHammerHit(){
         //Debug.Log("Hit");
-        if(log != null){
+        if(log != null)
+        {
+            hammerHitLogSound.PlaySound();
+            log.GetComponent<LogMovement>().fallSound.PlaySound();
             log.GetComponent<LogMovement>().moveLog = true;
         }
 

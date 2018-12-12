@@ -1157,6 +1157,11 @@ Prefab:
       propertyPath: chaseSpeed
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -18697,6 +18702,11 @@ Prefab:
         type: 2}
       propertyPath: doesChase
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}

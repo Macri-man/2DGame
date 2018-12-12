@@ -8,7 +8,7 @@ public class LogMovement : MonoBehaviour {
 	public float rotateSpeed = 1f;
     float angle2 = 0;
 
-    public SoundTrigger triggers;
+    public SoundTrigger fallSound;
     private bool clicked = false;
 
     public bool moveLog = false;
