@@ -301,6 +301,19 @@ public class PlayerCharacterController : MonoBehaviour {
         weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
     }
 
+    void OnCollisionStay2D(Collision2D other) {
+        switch (other.gameObject.tag){
+            case "Ground":
+                grounded = true;
+                //rb.velocity = new Vector2(rb.velocity.x,0);
+                break;
+            case "Log":
+                grounded = true;
+                break;
+        }
+    }
+
+    /* 
     void OnCollisionEnter2D(Collision2D other) {
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
@@ -314,6 +327,7 @@ public class PlayerCharacterController : MonoBehaviour {
             break;
         }
     }
+    */
     void OnCollisionExit2D(Collision2D other){
         switch(other.gameObject.tag){
             case "Ground":

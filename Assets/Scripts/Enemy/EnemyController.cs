@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour {
         turnAround();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
-        layerMask = LayerMask.GetMask("Foreground","Characters");
+        layerMask = LayerMask.GetMask("Ground","Characters");
 
         player = GameObject.FindGameObjectWithTag("Player");
 	}
