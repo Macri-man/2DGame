@@ -79668,7 +79668,7 @@ GameObject:
   - component: {fileID: 1196827401}
   - component: {fileID: 1196827400}
   - component: {fileID: 1196827402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tilemap_Foreground
   m_TagString: Ground
   m_Icon: {fileID: 0}

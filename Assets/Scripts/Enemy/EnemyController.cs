@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour {
         turnAround();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
-        layerMask = LayerMask.GetMask("Ground","Characters");
+        layerMask = LayerMask.GetMask("Foreground","Characters");
 
         player = GameObject.FindGameObjectWithTag("Player");
 	}
@@ -75,6 +75,7 @@ public class EnemyController : MonoBehaviour {
         Debug.DrawRay(startpoint.position, temp * hit.distance, Color.red, 1);
 
         if(hit.collider != null){
+            Debug.Log(hit.collider.tag);
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
                 hitDistances(hit);
             }

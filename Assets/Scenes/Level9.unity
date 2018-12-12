@@ -73692,6 +73692,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 94.12
       objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: patrolSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -74551,7 +74561,7 @@ GameObject:
   - component: {fileID: 1196827401}
   - component: {fileID: 1196827400}
   - component: {fileID: 1196827402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tilemap_Foreground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -112968,6 +112978,11 @@ Prefab:
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 101.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: patrolSpeed
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}

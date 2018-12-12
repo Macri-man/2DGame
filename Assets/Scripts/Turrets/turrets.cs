@@ -56,9 +56,9 @@ public class turrets : MonoBehaviour {
             //angle2 = AngleBetweenVector2(this.BarrelTurret.transform.up, direct);
             //Vector2 vec1Rotated90 = new Vector2(-this.BarrelTurret.transform.up.y, this.BarrelTurret.transform.up.x);
             //float sign = (Vector2.Dot(vec1Rotated90, direct) < 0) ? -1.0f : 1.0f;
-            Debug.DrawLine((Vector2)this.BarrelTurret.transform.position, (Vector2)target.transform.position, Color.black, 200f);
-            Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, direct, Color.red, 200f);
-            Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, this.BarrelTurret.transform.up, Color.blue, 200f);
+            //Debug.DrawLine((Vector2)this.BarrelTurret.transform.position, (Vector2)target.transform.position, Color.black, 200f);
+            //Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, direct, Color.red, 200f);
+            //Debug.DrawRay((Vector2)this.BarrelTurret.transform.position, this.BarrelTurret.transform.up, Color.blue, 200f);
             //Debug.Log(rotateAmount);
             //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
             //rotate = Quaternion.AngleAxis(angle,Vector3.forward);

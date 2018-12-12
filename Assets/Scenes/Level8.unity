@@ -18846,7 +18846,7 @@ RectTransform:
   - {fileID: 1131645440}
   - {fileID: 2021609659}
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -90894,7 +90894,7 @@ GameObject:
   - component: {fileID: 1196827401}
   - component: {fileID: 1196827400}
   - component: {fileID: 1196827402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tilemap_Foreground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -121480,7 +121480,7 @@ Transform:
   - {fileID: 1052859099}
   - {fileID: 1196827399}
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1391174071
 GameObject:
