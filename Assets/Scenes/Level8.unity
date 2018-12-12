@@ -168,7 +168,12 @@ Prefab:
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: chaseSpeed
-      value: 50
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -882,6 +887,11 @@ Prefab:
       propertyPath: withinRangetoFire
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: accuracy
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
   m_IsPrefabAsset: 0
@@ -1003,6 +1013,16 @@ Prefab:
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 96.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -1253,7 +1273,7 @@ Prefab:
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: chaseSpeed
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -1325,6 +1345,11 @@ Prefab:
         type: 2}
       propertyPath: rateOfFire
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: accuracy
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -1521,6 +1546,11 @@ Prefab:
         type: 2}
       propertyPath: speedTurn
       value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: accuracy
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -18864,6 +18894,11 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: withinRangetoFire
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: accuracy
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -74596,6 +74631,11 @@ Prefab:
       propertyPath: withinRangetoFire
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: accuracy
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
   m_IsPrefabAsset: 0
@@ -122041,6 +122081,11 @@ Prefab:
         type: 2}
       propertyPath: rateOfFire
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: accuracy
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c37961b7ccba421986646d40d73e522, type: 2}

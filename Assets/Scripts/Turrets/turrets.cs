@@ -38,7 +38,7 @@ public class turrets : MonoBehaviour {
     public bool projectileHitGround;
     public float SpeedOfProjectile;
 
-    public float withinRangetoFire;
+    public float accuracy;
 
 	// Use this for initialization
 	void Start () {
@@ -89,7 +89,7 @@ public class turrets : MonoBehaviour {
             //Debug.Log(withinThreshold(2));
             //Debug.Log((Time.time - timeStamp));
             //Debug.Log(((Time.time - timeStamp) > interval));
-            if(withinThreshold(withinRangetoFire) && ((Time.time - timeStamp) > rateOfFire)){ 
+            if(withinThreshold(accuracy) && ((Time.time - timeStamp) > rateOfFire)){ 
                 timeStamp = Time.time;
                 GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
                 FireSound.PlaySound();

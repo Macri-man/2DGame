@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114109090410213726}
   m_Layer: 14
   m_Name: Shuriken
-  m_TagString: Shuriken
+  m_TagString: Shurikens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
