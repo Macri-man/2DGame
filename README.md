@@ -56,8 +56,13 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 
 ## Menus
 ### Main Menu
+    The main menu has to splash screen an a option to see the how to play screen as well as an option to quit the game.
 ### How to Play
+    The how to play screen just shows a screen for playing the game. Then there are button to go back to title screen, play game or quit game.
 ### Pause Menu
+    The pause menu can be accessed by pressing escape. The pause menu allows the player to display the how to play screen. Also, resuming the game and quitting the game.
+### Complete Level Menu
+    The complete level menu shows whe the player reaches the last checkpoint of the level. 
 
 ## Sounds
 
