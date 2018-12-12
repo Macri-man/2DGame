@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ed406ff2bc74a018934e8a7382a51c, type: 3}
   m_Name: TurretDeactivate
   m_EditorClassIdentifier: 
-  name: 
+  name: TurretDeactivate
   clip: {fileID: 8300000, guid: fdefaf09d585e1c478683a7425367df1, type: 3}
   volume: 0.75
   pitch: 1

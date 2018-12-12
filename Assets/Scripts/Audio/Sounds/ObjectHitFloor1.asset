@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ed406ff2bc74a018934e8a7382a51c, type: 3}
   m_Name: ObjectHitFloor1
   m_EditorClassIdentifier: 
-  name: 
+  name: ObjectHitFloor1
   clip: {fileID: 8300000, guid: 5bc7841823cb73545b905d4c2c032521, type: 3}
   volume: 0.75
   pitch: 1

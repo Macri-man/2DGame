@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 4648085289908116}
   rotateSpeed: 2
-  triggers: {fileID: 11400000, guid: cc8aeaaf9cf1544fe877922cbadd8fcf, type: 2}
+  fallSound: {fileID: 11400000, guid: cc8aeaaf9cf1544fe877922cbadd8fcf, type: 2}
   moveLog: 0
 --- !u!212 &212501548217748914
 SpriteRenderer:

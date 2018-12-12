@@ -42,10 +42,10 @@ public class turrets : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 		//Debug.Log(this.gameObject.name);
 	}
-	
+
 	// Update is called once per frame
 	void Update(){
 		if(enterZone && !switches){
@@ -71,10 +71,10 @@ public class turrets : MonoBehaviour {
             //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
             //this.BarrelTurret.transform.rotation = Quaternion.Slerp(transform.rotation, rotate, -rotateAmount * speedTurn * Time.deltaTime);
             //Debug.Log(this.BarrelTurret.transform.rotation.eulerAngles);
-            
+
             //this.BarrelTurret.transform.RotateAround(this.BarrelTurret.transform.position,new Vector3(0,0,1), -rotateAmount * speedTurn * Time.deltaTime);
             //this.BarrelTurret.transform.rotation = Quaternion.Euler(0, 0, this.BarrelTurret.transform.rotation.z + sign * speedTurn * Time.deltaTime);
-            //this.transform.rotation = Quaternion.Euler(0,0,Mathf.Clamp(this.transform.rotation.z,0,180)); 
+            //this.transform.rotation = Quaternion.Euler(0,0,Mathf.Clamp(this.transform.rotation.z,0,180));
             //withinBounds(230,310);
 
             //Debug.Log(sign * speedTurn * Time.deltaTime);
@@ -89,13 +89,13 @@ public class turrets : MonoBehaviour {
             //Debug.Log(withinThreshold(2));
             //Debug.Log((Time.time - timeStamp));
             //Debug.Log(((Time.time - timeStamp) > interval));
-            if(withinThreshold(withinRangetoFire) && ((Time.time - timeStamp) > rateOfFire)){ 
+            if(withinThreshold(withinRangetoFire) && ((Time.time - timeStamp) > rateOfFire)){
                 timeStamp = Time.time;
                 GameObject bullets = (GameObject)Instantiate(projectile, spawnBullets.position, spawnBullets.rotation);
                 FireSound.PlaySound();
                 if(this.gameObject.tag == "TinyTurret"){
                     bullets.GetComponent<Projectile>().setLocalScale();
-                   
+
                 }
                 bullets.GetComponent<Projectile>().hitsGround = projectileHitGround;
                 bullets.GetComponent<Projectile>().speed = SpeedOfProjectile;
@@ -113,7 +113,7 @@ public class turrets : MonoBehaviour {
                 transform.rotation = Quaternion.Euler(0, 0, boundLeft);
             }
         }
-        /* 
+        /*
         if (boundLeft - transform.rotation.eulerAngles.z <= 0){
             transform.rotation = Quaternion.Euler(0, 0, boundLeft);
         }else if (transform.rotation.eulerAngles.z <= boundRight){
@@ -125,6 +125,14 @@ public class turrets : MonoBehaviour {
     }
     public void flipSwitch(bool switchOn){
         switches = switchOn;
+        if(switchOn == true)
+        {
+          SwitchedOffSound.PlaySound();
+        }
+        else
+        {
+          //need a "reactivate" sound here?
+        }
     }
     bool withinThreshold(float threshold){
         return (transform.rotation.eulerAngles.z <= (rotate.eulerAngles.z + threshold)) && (transform.rotation.eulerAngles.z >= (rotate.eulerAngles.z - threshold));
@@ -138,7 +146,7 @@ public class turrets : MonoBehaviour {
 			default:
 			break;
 		}
-		
+
 	}
     float AngleBetweenVector2(Vector2 vec1, Vector2 vec2){
         Vector2 vec1Rotated90 = new Vector2(-vec1.y, vec1.x);

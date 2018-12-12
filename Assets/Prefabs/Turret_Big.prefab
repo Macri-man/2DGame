@@ -861,14 +861,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireSound: {fileID: 11400000, guid: 6875c2a49edb44176b2a632c6c5f328e, type: 2}
-  SwitchedOffSound: {fileID: 0}
+  SwitchedOffSound: {fileID: 11400000, guid: 8a02312d963956a42bc4cd6f497fe75d, type: 2}
   GettingHitSound: {fileID: 0}
   spawnBullets: {fileID: 4015589900611336}
   BarrelTurret: {fileID: 4160227714331318}
   projectile: {fileID: 1728441293551240, guid: b88870706e7174f8590618ccac3d2f8d, type: 2}
   rateOfFire: 1
   speedTurn: 300
-  interval: 1
+  projectileHitGround: 0
+  SpeedOfProjectile: 0
+  withinRangetoFire: 0
 --- !u!212 &212061530263685030
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ed406ff2bc74a018934e8a7382a51c, type: 3}
   m_Name: LeverPull
   m_EditorClassIdentifier: 
-  name: Level
+  name: Lever
   clip: {fileID: 8300000, guid: 81973a4cf27ce9b4a99f7bb202d5096f, type: 3}
   volume: 0.75
   pitch: 1

@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireSound: {fileID: 11400000, guid: 90589daa86f78d842b416efa56ae91ed, type: 2}
-  SwitchedOffSound: {fileID: 0}
+  SwitchedOffSound: {fileID: 11400000, guid: 8a02312d963956a42bc4cd6f497fe75d, type: 2}
   GettingHitSound: {fileID: 0}
   spawnBullets: {fileID: 4419824523303586}
   BarrelTurret: {fileID: 4391768878614020}
