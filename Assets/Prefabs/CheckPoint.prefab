@@ -139,6 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioCheckPointPassed: {fileID: 11400000, guid: d8bd88591b3ce164883e2b586503e5fb,
     type: 2}
+  endOfLevel: {fileID: 11400000, guid: 2a9a9d683e8812348904fadfff29898c, type: 2}
+  endOfGame: {fileID: 11400000, guid: 458fadb204f4ee040b5e054b62d1a057, type: 2}
   EndLevel: 0
 --- !u!212 &212083207980688320
 SpriteRenderer:
