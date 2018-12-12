@@ -45,7 +45,7 @@ public class PlayerCharacterController : MonoBehaviour {
     public GameObject enemy;
     GameObject log;
     GameObject lever;
-    Vector3 mouse;
+    Vector2 mouse;
 
    void Awake(){
         if (OnInputEvent == null)
@@ -130,8 +130,7 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Rock){
-            mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            mouse.z = 0;
+            mouse = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
             animate.SetTrigger("Throw");
         }
 
@@ -185,17 +184,6 @@ public class PlayerCharacterController : MonoBehaviour {
             jumpSound.PlaySound();
         }
     }
-
-    void throwRock(){
-        //Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        //mouse.z = 0;
-        Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
-        float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
-        //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
-        GameObject rock = Instantiate(throwObject, throwPosition.position, Quaternion.identity);
-        rock.GetComponent<Rigidbody2D>().AddForce(directon * throwForce);
-    }
-
 
     public void death(){
       //this if-statement prevents the player being killed while dying :)
@@ -291,10 +279,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void onThrow(){
-        //Debug.Log("Throw");
-        mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouse.z = 0;
-        Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
+        Vector2 directon = (mouse - (Vector2)this.throwPosition.transform.position);
+        directon.Normalize();
         float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
         //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
         GameObject rock = Instantiate(throwObject, throwPosition.position, Quaternion.identity);

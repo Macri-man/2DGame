@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour {
 	public GameObject player;
     public Animator animate;
     public GameObject shuriken;
+    public GameObject HealthNotify;
     public Transform weapon;
     //public float interval;
 	bool turn = false;
@@ -169,6 +170,7 @@ public class EnemyController : MonoBehaviour {
         Debug.Log("Rock Hit");
         rockhits++;
         animate.SetTrigger("Hit");
+        HealthNotify.GetComponent<SpriteRenderer>().color += new Color(0.3f,-0.3f,0.0f,-0.2f);
         state = states.nothing;
         //turnAroundTarget();
     }
