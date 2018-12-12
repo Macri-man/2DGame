@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour {
     public Animator animate;
     public GameObject shuriken;
     public Transform weapon;
-    public float interval;
+    //public float interval;
 	bool turn = false;
     //[Range(0f,1f)]
 	public float patrolSpeed;
@@ -48,12 +48,11 @@ public class EnemyController : MonoBehaviour {
         turnAround();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
-        layerMask = LayerMask.GetMask("Foreground","Characters");
+        layerMask = LayerMask.GetMask("Ground","Characters");
 
         player = GameObject.FindGameObjectWithTag("Player");
 	}
 	void Update() {
-
         if(Dead){
             return;
         }
@@ -80,6 +79,7 @@ public class EnemyController : MonoBehaviour {
             }
         }else{
             if(state == states.throws ||  state == states.chase){
+                turnAround();
                 state = states.patrol;
             }
         }
@@ -201,6 +201,7 @@ public class EnemyController : MonoBehaviour {
             Debug.Log("has died");
             deathSound.PlaySound();
             //isDying = true;
+            state = states.nothing;
             animate.SetTrigger("Death");
             Dead = true;
             //Destroy(this.gameObject);
@@ -211,7 +212,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     void onDeathFinished(){
-        Debug.Log("dead");
+        //Debug.Log("dead");
         Destroy(this.gameObject);
     }
 
@@ -225,6 +226,14 @@ public class EnemyController : MonoBehaviour {
                     position = (position + 1) % points.Length;
                     timeStamp = Time.time;
                     state = states.idle;
+                }
+            break;
+            case "Player":
+                if(state == states.chase){
+                    other.gameObject.GetComponent<PlayerCharacterController>().death();
+                    turnAround();
+                    state = states.patrol;
+                    animate.SetInteger("State", (int)state);
                 }
             break;
             case "Spikes":

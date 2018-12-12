@@ -32,8 +32,8 @@ public class Shuriken : MonoBehaviour {
 	}
 
     void FixedUpdate() {
-        Debug.Log(rb.velocity);
-        rb.velocity = this.transform.right * speed * Time.deltaTime;
+        //Debug.Log(rb.velocity);
+        rb.velocity = this.transform.right * speed * Time.fixedDeltaTime;
     }
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -55,7 +55,7 @@ public class Shuriken : MonoBehaviour {
                 //Destroy(this.gameObject);
                 break;
             case "Ground":
-                //HitGround.PlaySound();
+                HitMetal.PlaySound();
                 Destroy(this.gameObject);
                 break;
             case "Rocks":

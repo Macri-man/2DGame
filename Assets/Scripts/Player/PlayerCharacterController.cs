@@ -45,8 +45,9 @@ public class PlayerCharacterController : MonoBehaviour {
     public GameObject enemy;
     GameObject log;
     GameObject lever;
+    Vector3 mouse;
 
-    void Awake(){
+   void Awake(){
         if (OnInputEvent == null)
             OnInputEvent = new StringEvent();
 
@@ -129,6 +130,8 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Rock){
+            mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            mouse.z = 0;
             animate.SetTrigger("Throw");
         }
 
@@ -142,8 +145,18 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
-            int sign = (Vector2.Dot(this.transform.right, (Vector2)climbingwall.endClimbPoint.transform.position) > 0) ? -1 : 1;
-            if (sign != (int)(transform.localScale.x * 10)){
+           
+            //Debug.Log((Vector2)this.transform.right);
+            //Debug.Log((Vector2)climbingwall.endClimbPoint.transform.position);
+            Vector2 temp = (Vector2)this.transform.position - (Vector2)climbingwall.endClimbPoint.transform.position;
+            temp.Normalize();
+            int sign = (Vector2.Dot((Vector2)this.transform.right,temp) > 0) ? -1 : 1;
+            //Debug.Log((Vector2)this.transform.position - (Vector2)climbingwall.endClimbPoint.transform.position);
+            //Debug.Log((Vector2.Dot((Vector2)this.transform.right, temp) > 0) ? -1 : 1);
+            //Debug.Log(Vector2.Dot(this.transform.right, (Vector2)climbingwall.endClimbPoint.transform.position));
+            //Debug.Log(sign);
+            //Debug.Log((int)(transform.localScale.x * 10));
+            if (sign == (int)(transform.localScale.x * 10)){
                 Debug.Log("Can Climb");
                 animate.SetBool("Climb", true);
                 rb.velocity = new Vector2(0, 0);
@@ -174,8 +187,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void throwRock(){
-        Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouse.z = 0;
+        //Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        //mouse.z = 0;
         Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
         float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
         //Quaternion rotate = Quaternion.AngleAxis(angle,Vector3.forward);
@@ -209,7 +222,6 @@ public class PlayerCharacterController : MonoBehaviour {
             this.transform.position = checkPoint.transform.position;
         }
     }
-
     public void climb(){
         climbing = !climbing;
         rb.gravityScale = 1;
@@ -218,19 +230,17 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void onHammerHit(){
         //Debug.Log("Hit");
-        if(log != null)
-        {
+        if(log != null){
             hammerHitLogSound.PlaySound();
-            log.GetComponent<LogMovement>().fallSound.PlaySound();
-            log.GetComponent<LogMovement>().moveLog = true;
+            log.GetComponent<LogMovement>().fallSounds();
         }
 
         if(enemy != null){
             //Debug.Log("hits1");
-            if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
+            //if(Mathf.Sign(enemy.transform.localScale.x) == Mathf.Sign(transform.localScale.x)){
                 //Debug.Log("hits");
                 enemy.GetComponent<EnemyController>().death();
-            }
+            //}
         }
     }
 
@@ -282,7 +292,7 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void onThrow(){
         //Debug.Log("Throw");
-        Vector3 mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouse = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouse.z = 0;
         Vector3 directon = (mouse - this.throwPosition.transform.position).normalized;
         float angle = Mathf.Atan2(directon.y, directon.x) * Mathf.Rad2Deg;
@@ -297,6 +307,19 @@ public class PlayerCharacterController : MonoBehaviour {
         weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
     }
 
+    void OnCollisionStay2D(Collision2D other) {
+        switch (other.gameObject.tag){
+            case "Ground":
+                grounded = true;
+                //rb.velocity = new Vector2(rb.velocity.x,0);
+                break;
+            case "Log":
+                grounded = true;
+                break;
+        }
+    }
+
+    /* 
     void OnCollisionEnter2D(Collision2D other) {
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
@@ -310,6 +333,7 @@ public class PlayerCharacterController : MonoBehaviour {
             break;
         }
     }
+    */
     void OnCollisionExit2D(Collision2D other){
         switch(other.gameObject.tag){
             case "Ground":

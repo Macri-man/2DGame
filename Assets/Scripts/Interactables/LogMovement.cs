@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LogMovement : MonoBehaviour {
 
+
+
 	public Transform endPoint;
 	public float rotateSpeed = 1f;
     float angle2 = 0;
@@ -52,6 +54,11 @@ public class LogMovement : MonoBehaviour {
             this.transform.rotation = Quaternion.Lerp(this.transform.rotation, end, Time.deltaTime * rotateSpeed);
         }
 	}
+
+    public void fallSounds(){
+        fallSound.PlaySound();
+        moveLog = true;
+    }
 
     void OnTriggerStay2D(Collider2D other){
         //Debug.Log(other.gameObject.name);
