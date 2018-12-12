@@ -230,11 +230,9 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void onHammerHit(){
         //Debug.Log("Hit");
-        if(log != null)
-        {
+        if(log != null){
             hammerHitLogSound.PlaySound();
-            log.GetComponent<LogMovement>().fallSound.PlaySound();
-            log.GetComponent<LogMovement>().moveLog = true;
+            log.GetComponent<LogMovement>().fallSounds();
         }
 
         if(enemy != null){
