@@ -6154,12 +6154,12 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: rateOfFire
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
@@ -6169,7 +6169,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: accuracy
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -23499,6 +23499,16 @@ Prefab:
     - target: {fileID: 4694059878010646, guid: ba38ed42534294be79853398f7f814ac, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114517934983208136, guid: ba38ed42534294be79853398f7f814ac,
+        type: 2}
+      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1923247091}
+    - target: {fileID: 114517934983208136, guid: ba38ed42534294be79853398f7f814ac,
+        type: 2}
+      propertyPath: OnInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: flipSwitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba38ed42534294be79853398f7f814ac, type: 2}
@@ -78735,7 +78745,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
@@ -97267,6 +97277,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c37961b7ccba421986646d40d73e522, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1923247091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923247090}
+  m_Script: {fileID: 11500000, guid: 8c86bc48240b147878735f4c06ccd5a4, type: 3}
 --- !u!1001 &1942404203
 Prefab:
   m_ObjectHideFlags: 0
