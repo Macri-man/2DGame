@@ -9,6 +9,8 @@ public class CheckPoints : MonoBehaviour {
     private GameObject completeLevelMenu;
 
     public SoundTrigger audioCheckPointPassed;
+    public SoundTrigger endOfLevel;
+    public SoundTrigger endOfGame;
 
     public bool EndLevel;
 
@@ -34,6 +36,11 @@ public class CheckPoints : MonoBehaviour {
         if (other.gameObject.tag == "Player" && EndLevel){
             orb.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 0.8f);
             completeLevelMenu.SetActive(true);
+            if(this.name == "End"){
+                endOfGame.PlaySound();
+            }else{
+                endOfLevel.PlaySound();
+            }
             Time.timeScale = 0;
         }else if(other.gameObject.tag == "Player" && notHit){
 			audioCheckPointPassed.PlaySound();

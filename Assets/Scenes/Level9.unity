@@ -73686,32 +73686,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 99.55
+      value: 99.1
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 95.71
+      value: 94.12
       objectReference: {fileID: 0}
-    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
-        type: 2}
-      propertyPath: doesChase
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
-        type: 2}
-      propertyPath: chaseSpeed
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
-        type: 2}
-      propertyPath: distance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
-        type: 2}
-      propertyPath: HealthNotify
-      value: 
-      objectReference: {fileID: 1890486231}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -114582,11 +114562,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1878971610}
   m_CullTransparentMesh: 0
---- !u!1 &1890486231 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1912695854973906, guid: 85bbe74b8707d49db8862cbaeba5a83b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1026995832}
 --- !u!1001 &1927756640
 Prefab:
   m_ObjectHideFlags: 0
