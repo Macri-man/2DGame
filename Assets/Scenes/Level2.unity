@@ -446,7 +446,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 0.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
@@ -14609,7 +14609,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: bd4c10fa293c31a4dbd4042f2e0d8f97, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: d3a41a4657f710e4599cee0903eff6e5, type: 2}
+    m_Data: {fileID: 11400000, guid: 0411f28df6ee8e54d824dcf03c2ca73c, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b2e7c17fbaa745643873f9a75fede272, type: 2}
   - m_RefCount: 1
@@ -14718,7 +14718,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 21300122, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300202, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
+    m_Data: {fileID: 21300250, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300130, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - m_RefCount: 6
@@ -36994,7 +36994,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 61644196557927426, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
