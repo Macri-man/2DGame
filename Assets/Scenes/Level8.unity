@@ -159,11 +159,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 100.4
+      value: 100.78
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 96.05
+      value: 95.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -451,7 +456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 98.72
+      value: 99.41
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -477,6 +482,16 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -613,7 +628,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4502255685443878, guid: a44c18355e8d548faaa81510c7ff2c62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 66.16395
+      value: 65.25
       objectReference: {fileID: 0}
     - target: {fileID: 4502255685443878, guid: a44c18355e8d548faaa81510c7ff2c62, type: 2}
       propertyPath: m_LocalPosition.y
@@ -721,6 +736,16 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -846,6 +871,16 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 16.198734
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -1097,6 +1132,11 @@ Prefab:
       propertyPath: doesChase
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -1205,6 +1245,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 93.23
       objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: doesChase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -1260,6 +1310,21 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 15.899935
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: rateOfFire
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -1335,6 +1400,16 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -1431,6 +1506,21 @@ Prefab:
     - target: {fileID: 1611829670470576, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
       propertyPath: m_Name
       value: Turret_Big (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: speedTurn
+      value: 310
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -18181,6 +18271,11 @@ Prefab:
       propertyPath: doesChase
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -18555,6 +18650,24 @@ Prefab:
       propertyPath: m_Name
       value: EnemyGroup (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 104.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 95.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: chaseSpeed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: doesChase
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
   m_IsPrefabAsset: 0
@@ -18801,7 +18914,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 101.5
+      value: 107.71
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -18827,6 +18940,21 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: throwInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -120679,7 +120807,7 @@ Prefab:
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: doesChase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -120696,6 +120824,21 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: throwInterval
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -121038,6 +121181,26 @@ Prefab:
       propertyPath: projectileHitGround
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: speedTurn
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
+        type: 2}
+      propertyPath: rateOfFire
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c37961b7ccba421986646d40d73e522, type: 2}
   m_IsPrefabAsset: 0
@@ -121195,7 +121358,7 @@ Prefab:
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: doesChase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -121212,6 +121375,16 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: throwInterval
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -122372,7 +122545,7 @@ Prefab:
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: doesChase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -122389,6 +122562,21 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: throwInterval
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -122442,7 +122630,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 99.76
+      value: 101.41
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -122451,6 +122639,16 @@ Prefab:
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 95.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -122798,16 +122996,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 98.72
+      value: 99.14
       objectReference: {fileID: 0}
     - target: {fileID: 4598709185912804, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 96.88
+      value: 96.42
       objectReference: {fileID: 0}
     - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
         type: 2}
       propertyPath: doesChase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745050854005000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -122824,6 +123022,21 @@ Prefab:
     - target: {fileID: 4128161557878318, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: SpeedofShuriken
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: throwInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258384293440248, guid: 85bbe74b8707d49db8862cbaeba5a83b,
+        type: 2}
+      propertyPath: distance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85bbe74b8707d49db8862cbaeba5a83b, type: 2}
@@ -123343,6 +123556,26 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 14.522881
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: SpeedOfProjectile
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: withinRangetoFire
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: speedTurn
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
+        type: 2}
+      propertyPath: rateOfFire
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
