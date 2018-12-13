@@ -17,7 +17,7 @@ public class PlayerCharacterController : MonoBehaviour {
     public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
-    public List<GameObject> weaponsObjects;
+    //public List<GameObject> weaponsObjects;
     [HideInInspector]
     public Weapons item;
 	float horizontalMove = 0f;
@@ -52,7 +52,7 @@ public class PlayerCharacterController : MonoBehaviour {
    void Awake(){
         if (OnInputEvent == null)
             OnInputEvent = new StringEvent();
-            
+
         if(Time.timeScale == 0){
             Time.timeScale = 1;
         }
@@ -149,8 +149,7 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("PullLever");
         }
 
-        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
-
+        if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null && canClimb){
             //Debug.Log((Vector2)this.transform.right);
             //Debug.Log((Vector2)climbingwall.endClimbPoint.transform.position);
             Vector2 temp = (Vector2)this.transform.position - (Vector2)climbingwall.endMovePoint.transform.position;
@@ -188,6 +187,7 @@ public class PlayerCharacterController : MonoBehaviour {
             grounded = false;
             rb.AddForce(new Vector2(0f, forceJump));
             jumpSound.PlaySound();
+            grounded = false;
         }
     }
 
@@ -199,7 +199,7 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("Death");
             notDead = false;
             if(climbingwall != null){
-            Debug.Log("Wall");
+            //Debug.Log("Wall");
               climbingwall.killClimbValues();
               climbingwall.objectplayer = null;
               climbingwall = null;
@@ -218,11 +218,11 @@ public class PlayerCharacterController : MonoBehaviour {
             this.transform.position = checkPoint.transform.position;
         }
         if (climbingwall != null){
-            Debug.Log("Wall");
+            //Debug.Log("Wall");
             climbingwall.killClimbValues();
             climbingwall.objectplayer = null;
             climbingwall = null;
-            Debug.Log(climbingwall);
+            //Debug.Log(climbingwall);
         }
     }
     public void endClimb(){
@@ -266,6 +266,7 @@ public class PlayerCharacterController : MonoBehaviour {
             case "Climb":
                 climbingwall = other.gameObject.GetComponent<Climbing>();
                 climbingwall.objectplayer = this.gameObject;
+                canClimb = true;
             break;
             case "Enemy":
                 enemy = other.gameObject;
@@ -286,6 +287,7 @@ public class PlayerCharacterController : MonoBehaviour {
                 //climbingwall = null;
                 //climbingwall = other.gameObject.GetComponent<Climbing>();
                 //climbingwall.objectplayer = this.gameObject;
+                canClimb = false;
                 break;
             case "Enemy":
                 enemy = null;
@@ -308,6 +310,7 @@ public class PlayerCharacterController : MonoBehaviour {
         weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
     }
 
+    /* 
     void OnCollisionStay2D(Collision2D other) {
         switch (other.gameObject.tag){
             case "Ground":
@@ -319,8 +322,8 @@ public class PlayerCharacterController : MonoBehaviour {
                 break;
         }
     }
+    */
 
-    /*
     void OnCollisionEnter2D(Collision2D other) {
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);
@@ -334,7 +337,7 @@ public class PlayerCharacterController : MonoBehaviour {
             break;
         }
     }
-    */
+
     void OnCollisionExit2D(Collision2D other){
         switch(other.gameObject.tag){
             case "Ground":

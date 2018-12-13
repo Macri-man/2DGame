@@ -61,7 +61,14 @@ public class EnemyController : MonoBehaviour {
         if(Dead){
             return;
         }
+        
+        if ((state == states.chase) && (rb.velocity.y < -0.01f)){
+            state = states.nothing;
+        }
+
         animate.SetInteger("State", (int)state);
+
+        
 
     }
 
@@ -71,7 +78,7 @@ public class EnemyController : MonoBehaviour {
             return;
         }
 
-        if((state == states.chase) && (rb.velocity.y < -0.1f)){
+        if((state == states.chase) && (rb.velocity.y < -0.01f)){
             state = states.nothing;
         }
         //Debug.Log(rb.velocity.y);
