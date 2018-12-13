@@ -159,8 +159,8 @@ public class PlayerCharacterController : MonoBehaviour {
             //Debug.Log((Vector2)this.transform.position - (Vector2)climbingwall.endClimbPoint.transform.position);
             //Debug.Log((Vector2.Dot((Vector2)this.transform.right, temp) > 0) ? -1 : 1);
             //Debug.Log(Vector2.Dot(this.transform.right, (Vector2)climbingwall.endClimbPoint.transform.position));
-            Debug.Log(sign);
-            Debug.Log((int)(transform.localScale.x * 10));
+            //Debug.Log(sign);
+            //Debug.Log((int)(transform.localScale.x * 10));
             if (sign == (int)(transform.localScale.x * 10)){
                 Debug.Log("Can Climb");
                 animate.SetBool("Climb", true);
@@ -216,6 +216,13 @@ public class PlayerCharacterController : MonoBehaviour {
             this.transform.position = this.startPosition;
         }else{
             this.transform.position = checkPoint.transform.position;
+        }
+        if (climbingwall != null){
+            Debug.Log("Wall");
+            climbingwall.killClimbValues();
+            climbingwall.objectplayer = null;
+            climbingwall = null;
+            Debug.Log(climbingwall);
         }
     }
     public void endClimb(){

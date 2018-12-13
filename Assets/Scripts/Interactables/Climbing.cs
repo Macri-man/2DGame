@@ -63,7 +63,7 @@ public class Climbing : MonoBehaviour {
             //Debug.Log(endClimbPoint.position);
 			//Debug.Log((objectplayer.transform.position - endClimbPoint.position).magnitude);
 			//if(fracJourney > 1){
-			if((objectplayer.transform.position - endClimbPoint.position).magnitude <= 0.5){
+			if((objectplayer.transform.position - endClimbPoint.position).magnitude <= 0.4){
 				endClimb = true;
                 startTime = Time.time;
 				distCovered = 0;
@@ -73,7 +73,7 @@ public class Climbing : MonoBehaviour {
             fracJourney = (1 / journeyLength2) * distCovered;
             objectplayer.transform.position = Vector2.Lerp(objectplayer.transform.position, endMovePoint.position, fracJourney);
 						//Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
-            if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.5){
+            if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.4){
                 endClimb = false;
                 startClimb = false;
                 journeyLength1 = journeyLength2 = 0;

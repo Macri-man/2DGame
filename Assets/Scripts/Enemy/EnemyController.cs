@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour {
             return;
         }
 
-        if(state == states.chase && rb.velocity.y > 0.001){
+        if((state == states.chase) && (rb.velocity.y < -0.1f)){
             state = states.nothing;
         }
         //Debug.Log(rb.velocity.y);
@@ -86,8 +86,10 @@ public class EnemyController : MonoBehaviour {
         if(hit.collider != null){
             //Debug.Log(hit.collider.tag);
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
-                hitDistances(hit);
-                spotPlayerSound.PlaySound();
+                if(hit.collider.gameObject.GetComponent<PlayerCharacterController>().notDead){
+                    hitDistances(hit);
+                    spotPlayerSound.PlaySound();
+                }
             }else if(hit.collider.tag == "Ground" && (state == states.throws || state == states.chase)) {
                 turnAround();
                 state = states.patrol;
