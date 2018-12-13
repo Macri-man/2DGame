@@ -6148,7 +6148,7 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: rateOfFire
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
@@ -103042,17 +103042,17 @@ Prefab:
     - target: {fileID: 61644196557927426, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: m_Offset.x
-      value: -2.629202
+      value: -2.4673424
       objectReference: {fileID: 0}
     - target: {fileID: 61644196557927426, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: m_Size.x
-      value: 10.858196
+      value: 12.314934
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
@@ -103067,12 +103067,12 @@ Prefab:
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: accuracy
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114574304273552032, guid: f0192758f24ee4ae9a66977711b2d0f1,
         type: 2}
       propertyPath: speedTurn
-      value: 290
+      value: 210
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0192758f24ee4ae9a66977711b2d0f1, type: 2}
@@ -138618,7 +138618,7 @@ Prefab:
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
       propertyPath: speedTurn
-      value: 230
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
@@ -138628,7 +138628,7 @@ Prefab:
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}

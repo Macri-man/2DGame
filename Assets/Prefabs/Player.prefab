@@ -1183,7 +1183,8 @@ MonoBehaviour:
   OnInputEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114107229514812472, guid: e9a379d9023b347beb36402363d7251c,
+          type: 2}
         m_MethodName: PressedKey
         m_Mode: 0
         m_Arguments:
@@ -1194,7 +1195,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114293325132615502, guid: d4a09d9f74a824a4595d8b5313b4aa11,
+          type: 2}
         m_MethodName: PressedKey
         m_Mode: 0
         m_Arguments:
@@ -1205,7 +1207,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114983124788604816, guid: 64bc2d458f837403c978de4a45c141be,
+          type: 2}
         m_MethodName: PressedKey
         m_Mode: 0
         m_Arguments:

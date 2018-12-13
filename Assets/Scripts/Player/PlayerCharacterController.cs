@@ -52,7 +52,7 @@ public class PlayerCharacterController : MonoBehaviour {
    void Awake(){
         if (OnInputEvent == null)
             OnInputEvent = new StringEvent();
-
+            
         if(Time.timeScale == 0){
             Time.timeScale = 1;
         }
@@ -64,13 +64,13 @@ public class PlayerCharacterController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         switch ((int)item){
             case 1:
-                OnInputEvent.Invoke("1");
+                //OnInputEvent.Invoke("1");
                 break;
             case 2:
-                OnInputEvent.Invoke("2");
+                //OnInputEvent.Invoke("2");
                 break;
             case 3:
-                OnInputEvent.Invoke("3");
+                //OnInputEvent.Invoke("3");
                 break;
         }
 	}
@@ -110,21 +110,21 @@ public class PlayerCharacterController : MonoBehaviour {
                 item = Weapons.Hammer;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
                 //weapon = weaponObjects[0];
-                OnInputEvent.Invoke(Input.inputString);
+                //OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
             case "2":
                 item = Weapons.Rock;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
                 //weapon = weaponObjects[1];
-                OnInputEvent.Invoke(Input.inputString);
+                //OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
             case "3":
                 item = Weapons.Fist;
                 weapon.GetComponent<SpriteRenderer>().sprite = null;
                 //weapon = null;
-                OnInputEvent.Invoke(Input.inputString);
+                //OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
         }

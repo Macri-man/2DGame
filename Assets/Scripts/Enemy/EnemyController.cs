@@ -263,9 +263,10 @@ public class EnemyController : MonoBehaviour {
                 }
             break;
             case "Player":
-                if(state == states.chase){
+                //int sign = (Vector2.Dot((Vector2)this.transform.right, temp) > 0) ? -1 : 1;
+                if(state == states.chase){//} && sign == (int)(transform.localScale.x * 10)){
                     other.gameObject.GetComponent<PlayerCharacterController>().death();
-                    turnAroundTarget();
+                    turnAround();
                     state = states.patrol;
                     animate.SetInteger("State", (int)state);
                 }

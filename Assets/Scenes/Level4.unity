@@ -101504,7 +101504,7 @@ Prefab:
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
       propertyPath: SpeedOfProjectile
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114203823289878632, guid: 8c37961b7ccba421986646d40d73e522,
         type: 2}
