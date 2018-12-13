@@ -79,8 +79,9 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 ## Level 5
 ## Level 6
 ## Level 7
-    This level is a further extension to the previous level with more turrets and and spikes.
+    This level is a introduces the two different enemies. There is the first obstacle a turret which the player already knows. Then introduces one shuriken enemy. Then the next obstacle is a chasing enemy. Then the player is meet with more turrets. Then another enemy. Then a log obstacle. Then reaching the fourth checkpoint the player has an option to choose two different paths. The paths that is lower should be harder and is a shortcut. The upper is easier and has more obstacles. The idea is to give player choice to the game and experiment with more complex layouts. 
 ## Level 8
+    This level tries to encompass majority of the obstacle in an interesting layout. 
 ## Level 9
 ## Final Level
 
