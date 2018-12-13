@@ -1176,7 +1176,6 @@ MonoBehaviour:
   weaponsSprites:
   - {fileID: 21300140, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
   - {fileID: 21300138, guid: 0a43274dcc17bf64b9ea8a02759ee415, type: 3}
-  weaponsObjects: []
   item: 3
   runSpeed: 120
   animate: {fileID: 95333522365803562}
@@ -1222,7 +1221,7 @@ MonoBehaviour:
     m_TypeName: PlayerCharacterController+StringEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   checkPoint: {fileID: 0}
-  forceJump: 100
+  forceJump: 200
   notDead: 1
   mainCamera: {fileID: 0}
   throwPosition: {fileID: 4585383683354782}
