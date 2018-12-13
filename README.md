@@ -9,14 +9,18 @@ The player has several animations PlayerIdle, PlayerWalk, PlayerClimb, PlayerDea
 The variables that are adjusted are the throwforce, and forcejump which determine the force the rock is thrown and the height of the player's jump respectively. 
 
 ## Interatable Objects
+
 ### Log
     The Log is uses to go over chasms or over spikes. The player uses an item in order to knock the log over. The hammer is used to accomplish this. 
+
 ### Climbing Wall
     A wall with a yellowish color is used to climb on. The are used in conjunction with spike so the player need to just to then climb onto the wall to increase the difficulty. The fists need to be equipped in order to use the climbing wall. 
+
 ### Lever
     A lever the player can pull to de-activate a turret. This is used for the player to us timing and tactics to de-activate the turret and move in the time the turret is de-activated. The player needs to equip fists in order to use the lever. 
 
 ## Enemies
+
 ### Enemy
     The enemy has several animations; EnemyChase, EnemyHit, EnemyIdle, EnemyPatrol, EnemyThrow, and EnemyDeath. The animation Controller called Enemy is used to make the transitions from each animations in conjunction with the EnemyController. The EnemyThrow, EnemyDeath, EnemyHit animations have animation events so the event of the action is tied to the length of the animation. Also unlike the Player's animation controller has a state machine to determine which state the Enemy is in. This is to have a AI since the Player is not controlling the enemies.  
 
@@ -87,11 +91,11 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 ## Final Level
 
 ## Bugs/Problems
-The climbing sometimes does not work properly. 
-The enemies animations as well as timing of death is off when you kill the enemy with a rock. 
-The animations for the player when throwing does not have feet movement.
+* The climbing sometimes does not work properly. 
+* The enemies animations as well as timing of death is off when you kill the enemy with a rock. 
+* The animations for the player when throwing does not have feet movement.
 
 ## Future Works
-Fixing the movement of the enemy so the player cannot push the enemy as well as fix the timing of the animations.
-Make a better and easier climbing wall so the player does not have an gliches. Also have climbing wall change the players speed. 
+* Fixing the movement of the enemy so the player cannot push the enemy as well as fix the timing of the animations.
+* Make a better and easier climbing wall so the player does not have an gliches. Also have climbing wall change the players speed. 
 
