@@ -12,15 +12,15 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 
 ## Interatable Objects
 
-## Log
+1. Log
 
     The Log is uses to go over chasms or over spikes. The player uses an item in order to knock the log over. The hammer is used to accomplish this. 
 
-## Climbing Wall
+2. Climbing Wall
 
     A wall with a yellowish color is used to climb on. The are used in conjunction with spike so the player need to just to then climb onto the wall to increase the difficulty. The fists need to be equipped in order to use the climbing wall. 
 
-### Lever
+3. Lever
 
     A lever the player can pull to de-activate a turret. This is used for the player to us timing and tactics to de-activate the turret and move in the time the turret is de-activated. The player needs to equip fists in order to use the lever. 
 
