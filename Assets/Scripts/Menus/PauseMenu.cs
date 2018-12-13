@@ -43,15 +43,15 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void howToPlay(){
-        Debug.Log("howtoplay");
-        Time.timeScale = 0;
-        SceneManager.LoadSceneAsync("HowToPlay",LoadSceneMode.Additive);
-        pauseUI.SetActive(false);
+        	Debug.Log("howtoplay");
+        	Time.timeScale = 0;
+        	SceneManager.LoadSceneAsync("HowToPlay",LoadSceneMode.Additive);
+        	pauseUI.SetActive(false);
 	}
 
 	void Pause(){
 		Debug.Log("PAUSE");
-        pauseUI.SetActive(true);
+        	pauseUI.SetActive(true);
 		Time.timeScale = 0;
 		isPaused = true;
 	}
