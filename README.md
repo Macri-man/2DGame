@@ -79,16 +79,19 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 ## Level 5
 ## Level 6
 ## Level 7
-    This level is a introduces the two different enemies. There is the first obstacle a turret which the player already knows. Then introduces one shuriken enemy. Then the next obstacle is a chasing enemy. Then the player is meet with more turrets. Then another enemy. Then a log obstacle. Then reaching the fourth checkpoint the player has an option to choose two different paths. The paths that is lower should be harder and is a shortcut with a secret path at the end. The upper is easier and has more obstacles. The idea is to give player choice to the game and experiment with more complex layouts. 
+    This level is a introduces the two different enemies. There is the first obstacle a turret which the player already knows. Then introduces one shuriken enemy. Then the next obstacle is a chasing enemy. Then the player is meet with more turrets. Then another enemy. Then a log obstacle. Then reaching the fourth checkpoint the player has an option to choose two different paths. The paths that is lower should be harder and is a shortcut with a secret path at the end. The upper is easier but has more obstacles. The idea is to give player choice to the game and experiment with more complex layouts. 
 ## Level 8
-    This level tries to encompass majority of the obstacle in an interesting layout. There are three branching paths one is the semi secret root in the beginning right before the second checkpoint. The player can choose to go past the enemy. At the fourth checkpoint there is another branch. The lower root is harder which has more enemies. The upper root has spikes with turrets and climbing wall. 
+    This level tries to encompass majority of the obstacles in an interesting layout. There are three branching paths one is the semi secret root in the beginning right before the second checkpoint. The player can choose to go past the shuriken enemy. At the fourth checkpoint there is another branch. The lower root is harder which has more enemies. The upper root has spikes with turrets and climbing wall. The player has pull the lever to continue or if the player want to make thing harder they can opt not to pull the lever.
 ## Level 9
+    This level is a speed level where the object is to have the player move past the obstacles with high speed. There are a lot of turrets to give the player a sense of fear when going through the level.
 ## Final Level
 
 ## Bugs/Problems
-The climbing sometimes does not work properly.
+The climbing sometimes does not work properly. 
 The enemies animations as well as timing of death is off when you kill the enemy with a rock. 
 The animations for the player when throwing does not have feet movement.
 
 ## Future Works
-The
+Fixing the movement of the enemy so the player cannot push the enemy as well as fix the timing of the animations.
+Make a better and easier climbing wall so the player does not have an gliches. Also have climbing wall change the players speed. 
+

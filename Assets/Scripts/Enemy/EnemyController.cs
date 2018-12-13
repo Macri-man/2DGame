@@ -61,7 +61,6 @@ public class EnemyController : MonoBehaviour {
         if(Dead){
             return;
         }
-        
         if ((state == states.chase) && (rb.velocity.y < -0.01f)){
             state = states.nothing;
         }
