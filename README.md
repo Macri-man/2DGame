@@ -12,11 +12,11 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 
 ## Interatable Objects
 
-### Log
+## Log
 
     The Log is uses to go over chasms or over spikes. The player uses an item in order to knock the log over. The hammer is used to accomplish this. 
 
-### Climbing Wall
+## Climbing Wall
 
     A wall with a yellowish color is used to climb on. The are used in conjunction with spike so the player need to just to then climb onto the wall to increase the difficulty. The fists need to be equipped in order to use the climbing wall. 
 
@@ -66,6 +66,7 @@ The variables that are adjusted are the throwforce, and forcejump which determin
     The rock is effected by gravity. The player has to angle the throw so the rock can move toward the enemy. The rock does 1 damage / removes one health from the enemy. 
 
 ## Menus
+
 ### Main Menu
     The main menu has to splash screen an a option to see the how to play screen as well as an option to quit the game.
 ### How to Play
