@@ -110,21 +110,21 @@ public class PlayerCharacterController : MonoBehaviour {
                 item = Weapons.Hammer;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
                 //weapon = weaponObjects[0];
-                //OnInputEvent.Invoke(Input.inputString);
+                OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
             case "2":
                 item = Weapons.Rock;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
                 //weapon = weaponObjects[1];
-                //OnInputEvent.Invoke(Input.inputString);
+                OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
             case "3":
                 item = Weapons.Fist;
                 weapon.GetComponent<SpriteRenderer>().sprite = null;
                 //weapon = null;
-                //OnInputEvent.Invoke(Input.inputString);
+                OnInputEvent.Invoke(Input.inputString);
                 itemChangeSound.PlaySound();
                 break;
         }
