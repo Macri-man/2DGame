@@ -147,14 +147,14 @@ public class PlayerCharacterController : MonoBehaviour {
            
             //Debug.Log((Vector2)this.transform.right);
             //Debug.Log((Vector2)climbingwall.endClimbPoint.transform.position);
-            Vector2 temp = (Vector2)this.transform.position - (Vector2)climbingwall.endClimbPoint.transform.position;
+            Vector2 temp = (Vector2)this.transform.position - (Vector2)climbingwall.endMovePoint.transform.position;
             temp.Normalize();
             int sign = (Vector2.Dot((Vector2)this.transform.right,temp) > 0) ? -1 : 1;
             //Debug.Log((Vector2)this.transform.position - (Vector2)climbingwall.endClimbPoint.transform.position);
             //Debug.Log((Vector2.Dot((Vector2)this.transform.right, temp) > 0) ? -1 : 1);
             //Debug.Log(Vector2.Dot(this.transform.right, (Vector2)climbingwall.endClimbPoint.transform.position));
-            //Debug.Log(sign);
-            //Debug.Log((int)(transform.localScale.x * 10));
+            Debug.Log(sign);
+            Debug.Log((int)(transform.localScale.x * 10));
             if (sign == (int)(transform.localScale.x * 10)){
                 Debug.Log("Can Climb");
                 animate.SetBool("Climb", true);
@@ -193,9 +193,11 @@ public class PlayerCharacterController : MonoBehaviour {
             animate.SetTrigger("Death");
             notDead = false;
             if(climbingwall != null){
+            Debug.Log("Wall");
               climbingwall.killClimbValues();
               climbingwall.objectplayer = null;
               climbingwall = null;
+                Debug.Log(climbingwall);
             }
             climbing = false;
             rb.gravityScale = 1;
@@ -210,7 +212,7 @@ public class PlayerCharacterController : MonoBehaviour {
             this.transform.position = checkPoint.transform.position;
         }
     }
-    public void climb(){
+    public void endClimb(){
         climbing = !climbing;
         rb.gravityScale = 1;
         animate.SetBool("Climb",false);
@@ -239,8 +241,8 @@ public class PlayerCharacterController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log(other.gameObject.tag);
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject.tag);
+        //Debug.Log(other.gameObject);
         switch(other.gameObject.tag){
           case "Log":
               log = other.gameObject;

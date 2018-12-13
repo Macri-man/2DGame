@@ -36,7 +36,9 @@ public class EnemyController : MonoBehaviour {
     int layerMask;
     public float distance;
     public Transform startpoint;
+    public Transform endpoint;
     public float SpeedofShuriken;
+    Vector2 temp;
 
 	// Use this for initialization
 	void Start () {
@@ -66,9 +68,14 @@ public class EnemyController : MonoBehaviour {
         if (Dead){
             return;
         }
+
+        if(state == states.chase && rb.velocity.y > 0.001){
+            state = states.nothing;
+        }
+        //Debug.Log(rb.velocity.y);
         
         //animate.SetInteger("State",(int)state);
-        Vector2 temp = this.player.transform.position - this.startpoint.position;
+        temp = this.player.transform.position - this.startpoint.position;
         temp.Normalize();
         RaycastHit2D hit = Physics2D.Raycast(startpoint.position, temp, distance, layerMask); //Physics2D.Linecast(startpoint.position, targetPoint.position,layerMask);
         Debug.DrawRay(startpoint.position, temp * distance, Color.blue, 1);
@@ -78,6 +85,9 @@ public class EnemyController : MonoBehaviour {
             //Debug.Log(hit.collider.tag);
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
                 hitDistances(hit);
+            }else if(hit.collider.tag == "Ground" && (state == states.throws || state == states.chase)) {
+                turnAround();
+                state = states.patrol;
             }
         }else{
             if(state == states.throws ||  state == states.chase){
@@ -88,17 +98,19 @@ public class EnemyController : MonoBehaviour {
         //Debug.Log(state);
         switch(state){
             case states.idle:
+                rb.velocity = new Vector2(0, 0);
                 if ((Time.time - timeStamp) > turnAroundInterval){
                     timeStamp = Time.time;
                     turnAround();
                     state = states.patrol;
+                    animate.SetInteger("State", (int)state);
                 }
             break;
             case states.chase:
+                turnAroundTarget();
                 rb.velocity = new Vector2(sign * chaseSpeed * Time.fixedDeltaTime, rb.velocity.y);
             break;
             case states.throws:
-                //Debug.Log((Time.time - timeStamp));
                 if ((Time.time - timeStamp) > throwInterval){
                     timeStamp = Time.time;
                     //Debug.Log("Throw");
@@ -118,13 +130,20 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void hitDistances(RaycastHit2D hitter){
-        int sign = (Vector2.Dot(this.transform.right, (Vector2)this.player.transform.position) > 0) ? -1 : 1;
-        if(sign != (int)(transform.localScale.x * 10)){
+        //Vector2 temp = this.player.transform.position - this.startpoint.position;
+        //temp.Normalize();
+        int sign = (Vector2.Dot((Vector2)this.transform.right, temp) > 0) ? -1 : 1;
+        //int sign = (Vector2.Dot(this.transform.right, (Vector2)this.player.transform.position) > 0) ? -1 : 1;
+        //Debug.Log(sign);
+        //Debug.Log((int)(transform.localScale.x * 10));
+        if(sign == (int)(transform.localScale.x * 10)){
             return;
         }
         if(doesChase){
             state = states.chase;
-            timeStamp = Time.time;
+            //timeStamp = Time.time;
+            turnAroundTarget();
+            animate.SetInteger("State", (int)state);
         }else{
             //turnAroundTarget();
             state = states.throws;
@@ -170,6 +189,12 @@ public class EnemyController : MonoBehaviour {
         }
         Debug.Log("Rock Hit");
         rockhits++;
+        if (rockhits == health){
+            death();
+            state = states.nothing;
+            HealthNotify.GetComponent<SpriteRenderer>().color += new Color(0.3f, -0.3f, 0.0f, -0.2f);
+            return;
+        }
         animate.SetTrigger("Hit");
         HealthNotify.GetComponent<SpriteRenderer>().color += new Color(0.3f,-0.3f,0.0f,-0.2f);
         state = states.nothing;
@@ -181,9 +206,6 @@ public class EnemyController : MonoBehaviour {
         if (Dead){
             return;
         }
-        if (rockhits == health){
-            death();
-        }
 
         if(state == states.chase || state == states.throws){
             return;
@@ -191,7 +213,8 @@ public class EnemyController : MonoBehaviour {
 
         if (doesChase){
             state = states.chase;
-            timeStamp = Time.time;
+            //timeStamp = Time.time;
+            animate.SetInteger("State", (int)state);
         }else{
             state = states.throws;
             timeStamp = Time.time;
@@ -201,7 +224,7 @@ public class EnemyController : MonoBehaviour {
 
     public void death(){
         if (!Dead){
-            Debug.Log("has died");
+            //Debug.Log("has died");
             deathSound.PlaySound();
             //isDying = true;
             state = states.nothing;
@@ -209,7 +232,6 @@ public class EnemyController : MonoBehaviour {
             Dead = true;
             //Destroy(this.gameObject);
         }
-        
         //animate.Play("EnemyDeath");
         //Destroy(this.gameObject);
     }
@@ -223,18 +245,21 @@ public class EnemyController : MonoBehaviour {
         if(Dead){
             return;
         }
+        
         switch(other.gameObject.tag){
             case "PatrolPoints":
                 if (points[position].gameObject == other.gameObject){
                     position = (position + 1) % points.Length;
                     timeStamp = Time.time;
+                    rb.velocity = new Vector2(0, 0);
                     state = states.idle;
+                    animate.SetInteger("State", (int)state);
                 }
             break;
             case "Player":
                 if(state == states.chase){
                     other.gameObject.GetComponent<PlayerCharacterController>().death();
-                    turnAround();
+                    turnAroundTarget();
                     state = states.patrol;
                     animate.SetInteger("State", (int)state);
                 }
@@ -243,6 +268,5 @@ public class EnemyController : MonoBehaviour {
                 death();
             break;
         }
-
     }
 }

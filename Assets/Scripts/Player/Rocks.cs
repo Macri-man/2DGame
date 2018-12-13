@@ -19,7 +19,7 @@ public class Rocks : MonoBehaviour {
 	
     void OnTriggerEnter2D(Collider2D other) {
 
-		Debug.Log(other.gameObject.tag);
+		
 		switch(other.gameObject.tag){
 			case "Player":
                 //HitSound.PlaySound();
@@ -33,6 +33,7 @@ public class Rocks : MonoBehaviour {
                 Destroy(this.gameObject);
                 break;
             case "Enemy":
+                Debug.Log(other.gameObject.tag);
                 HitGround.PlaySound();
                 other.gameObject.GetComponent<EnemyController>().hitByRock();
                 Destroy(this.gameObject);

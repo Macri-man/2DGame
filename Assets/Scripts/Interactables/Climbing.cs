@@ -75,7 +75,9 @@ public class Climbing : MonoBehaviour {
 						//Debug.Log((objectplayer.transform.position - endMovePoint.position).magnitude);
             if ((objectplayer.transform.position - endMovePoint.position).magnitude <= 0.5){
                 endClimb = false;
-                objectplayer.gameObject.GetComponent<PlayerCharacterController>().climb();
+                startClimb = false;
+                journeyLength1 = journeyLength2 = 0;
+                objectplayer.gameObject.GetComponent<PlayerCharacterController>().endClimb();
                 objectplayer.gameObject.GetComponent<PlayerCharacterController>().climbingwall = null;
 				objectplayer = null;
             }
@@ -130,6 +132,7 @@ public class Climbing : MonoBehaviour {
 	{
 		startClimb = false;
 		endClimb = false;
+		objectplayer = null;
 		journeyLength1 = journeyLength2 = 0;
 	}
 
@@ -145,67 +148,5 @@ public class Climbing : MonoBehaviour {
         //Debug.Log(journeyLength1);
         //Debug.Log(journeyLength2);
 	}
-    void OnMouseDown()
-    {
-			//clicked = true;
-			/*
-				if(objectplayer.GetComponent<playermovement>().item == 3){
-            climb = true;
-						//startTime = Time.time;
-						objectplayer.transform.position = startClimbPoint.position;
-						playerGravity = objectplayer.GetComponent<Rigidbody2D>().gravityScale;
-						objectplayer.GetComponent<Rigidbody2D>().gravityScale = 0f;
-				}*/
-    }
-
-    void OnMouseExit()
-    {
-        //clicked = false;
-    }
-
-	void OnTriggerEnter2D(Collider2D other) {
-		//Debug.Log("Enter");
-        //Debug.Log(other.gameObject.name);
-		if(other.gameObject.tag == "Player"){
-            //Debug.Log(other.gameObject.name);
-            //Debug.Log(other.gameObject.GetComponent<playermovement>().item == 3);
-            //climb = true;
-			//objectplayer = other.gameObject;
-            //Debug.Log(other.gameObject);
-			//Debug.Log(other.gameObject.GetComponent<PlayerCharacterController>());
-            //other.gameObject.GetComponent<PlayerCharacterController>().climbingwall = this;
-            //objectplayer = other.gameObject;
-			//objectplayer.GetComponent<PlayerCharacterController>().climb();
-						//objectplayer.GetComponent<playermovement>().climbingSpeed = speed;
-						//playerGravity = objectplayer.GetComponent<Rigidbody2D>().gravityScale;
-						//objectplayer.GetComponent<Rigidbody2D>().gravityScale = 0f;
-            //if (other.gameObject.GetComponent<playermovement>().item == 3 && clicked){
-			//	Debug.Log("Climb");
-            //   climb = true;
-            //
-			//}
-		}
-	}
-    void OnTriggerExit2D(Collider2D other){
-        //Debug.Log("exit");
-        //Debug.Log(other.gameObject.name);
-        /*if(other.gameObject == null || objectplayer == null)
-        {
-            return;
-        }*/
-        //if (other.gameObject.name == "Rogue_01")
-        //{
-        //			  other.gameObject.GetComponent<playermovement>().climbingMode = false;
-        //				//objectplayer.GetComponent<Rigidbody2D>().gravityScale = playerGravity;
-        //				objectplayer = null;
-        //    climb = false;
-        //				postClimb = false;
-        //}
-        //if (other.gameObject.tag == "Player"){
-            //Debug.Log("Something");
-            //endClimb = true;
-			//startTime = Time.time;
-            //startClimb = false;
-		//}
-    }
+   
 }

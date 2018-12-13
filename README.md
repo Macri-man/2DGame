@@ -73,14 +73,21 @@ The variables that are adjusted are the throwforce, and forcejump which determin
 ## Level 2
     The second level is designed to introduce the ability for the player to use the lever as well as the different kinds of turret the player needs to move past. 
 ## Level 3
+    This level combines the different turrets along the lever. There are spikes and log obstacles to increase the difficulty as well.
 ## Level 4
+    This level is a further extension to the previous level with more turrets and and spikes.
 ## Level 5
 ## Level 6
 ## Level 7
+    This level is a further extension to the previous level with more turrets and and spikes.
 ## Level 8
 ## Level 9
 ## Final Level
 
 ## Bugs/Problems
+The climbing sometimes does not work properly.
+The enemies animations as well as timing of death is off when you kill the enemy with a rock. 
+The animations for the player when throwing does not have feet movement.
 
 ## Future Works
+The

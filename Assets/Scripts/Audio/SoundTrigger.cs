@@ -13,7 +13,7 @@ public class SoundTrigger : ScriptableObject {
 
         manager = FindObjectOfType<AudioManager>();
 		if(manager == null){
-			Debug.LogError("AudioManager not Present");
+			//Debug.LogError("AudioManager not Present");
 			return;
 		}
 		manager.Play(nameOfSound);
