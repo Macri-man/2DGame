@@ -22,7 +22,7 @@ A wall with a yellowish color is used to climb on. The are used in conjunction w
 
 ### Lever
 
-A lever the player can pull to de-activate a turret. This is used for the player to us timing and tactics to de-activate the turret and move in the time the turret is de-activated. The player needs to equip fists in order to use the lever. 
+A lever the player can pull to de-activate a turret. This is used for the player to us timing and tactics to de-activate the turret and move in the time the turret is de-activated. The player needs to equip fists in order to use the lever. The lever has to be paired with one Turrets. The lever has a variable called interval that changes the time the turret is disabled.
 
 ## Enemies
 
@@ -69,8 +69,10 @@ The rock is affected by gravity. The player has to angle the throw so the rock c
 The how to play screen just shows a screen for playing the game with illustration to show what the buttons are doing. Then there are button to go back to title screen, play game or quit game. There is also a button in the pause menu to get to the how to play screen.
 
 ## Sounds
+There isn't any moving sound but there are sound for each action the player makes as well as the action of each of the turrets and enemies. This is because to many sounds going off at once with the background music and footstep can lead to confusion but sounds to action cause the player to pay attention and use these sounds to help them complete the levels.  
 
 ## Levels
+The are several aspects in levels. There are spike pits before a climbing wall with enemies that the player coerce into falling or moving into the spikes. The player can sneak up on enemies by waiting for them to move so the player can hit them from behind. There are several different configurations of turrets that con shoot through the foreground and turrets that cannot shoot through the foreground. There are also enemies with turrets. This variance is to give the player a challenge and think about overcoming the obstacles by using previous encounters with similar obstacles. 
 
 ## Level 1
 
@@ -100,22 +102,26 @@ This level introduces the two different enemies. There is the first obstacle is 
 
 ## Level 8
 
-This level tries to encompass majority of the obstacles in an interesting layout. There are three branching paths one is the semi secret root in the beginning right before the second checkpoint. The player can choose to go past the shuriken enemy. At the fourth checkpoint there is another branch. The lower root is harder which has more enemies. The upper root has spikes with turrets and climbing wall. The player has pull the lever to continue or if the player want to make thing harder they can opt not to pull the lever.
+This level is a continuation of level 8. There are multiple enemies and turrets. The configuration was to provide difficulty but variance in each consecutive challenge. This level tries to encompass majority of the obstacles in an interesting layout. There are three branching paths one is the semi secret root in the beginning right before the second checkpoint. The player can choose to go past the shuriken enemy. At the fourth checkpoint there is another branch. The lower root is harder which has more enemies. The upper root has spikes with turrets and climbing wall. The lower root the player has an option again to go left or right to complete the level.
 
 ## Level 9
 
-This level is a speed level where the object is to have the player move past the obstacles with high speed. There are a lot of turrets to give the player a sense of fear when going through the level. At the end there are two pull levers to git some sort of challenge for the player to think not just dodge bullets. There is an enemy right near the checkpoint.
+This level is a speed level where the object is to have the player move past the obstacles with high speed. There are a lot of turrets to give the player a sense of fear when going through the level. At the end there are two pull levers to git some sort of challenge for the player to think not just dodge bullets. There is an enemy right near the checkpoint. The idea is to use rock or sneak up and use the hammer to kill the enemy before continuing.
 
 ## Final Level
 
-The final level is less intense but has majority of the obstacles. There is a shortcut which difficult ot get too 
+The final level is less intense but has majority of the obstacles. There is a shortcut that is hard to get too to make the player explore the environment. Also, there are a couple of Big Turrets that in previous level do not hit the foreground but in this level they do. This is to create a hesitation as well as to make a challenge based on the players observance of the turrets and assumptions. 
 
 ## Bugs/Problems
 * The climbing sometimes does not work properly. 
 * The enemies animations as well as timing of death is off when you kill the enemy with a rock. 
 * The animations for the player when throwing does not have feet movement.
+* The enemies not turning around when you push them.
+* Enemies sometime get caught on the walls.
+* The player can get stuck on the wall and environment.
 
 ## Future Works
 * Fixing the movement of the enemy so the player cannot push the enemy as well as fix the timing of the animations.
-* Make a better and easier climbing wall so the player does not have an glitches. Also have climbing wall change the players speed. 
+* Make a better and easier climbing wall so the player does not have an glitches. Also have climbing wall change the players speed.
+* Add the Story to the game.
 
