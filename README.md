@@ -2,7 +2,7 @@
 
 ## Items
 
-There are three items the player can equip; a hammer, rock, or fist. The Rock is used to attack the enemies and stop shurikens from hitting the player. 
+There are three items the player can equip; a hammer, rock, or fist. The Rock is used to attack the enemies and stop shurikens from hitting the player. The hammer can be used to kill an enemy. The fist can be used to pull a lever or climb a climbing wall.
 
 ## Player
 
