@@ -9,9 +9,11 @@ public class PlayerCharacterController : MonoBehaviour {
 
     enum states { throws = 1, idle = 2, chase = 3, patrol = 4 };
     states state;
+    public SoundTrigger itemChangeSound;
     public SoundTrigger jumpSound;
     public SoundTrigger hammerSwingSound;
     public SoundTrigger hammerHitLogSound;
+    public SoundTrigger rockThrowSound;
     public SoundTrigger deathSound;
     public GameObject weapon;
     public List<Sprite> weaponsSprites;
@@ -109,18 +111,21 @@ public class PlayerCharacterController : MonoBehaviour {
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[0];
                 //weapon = weaponObjects[0];
                 OnInputEvent.Invoke(Input.inputString);
+                itemChangeSound.PlaySound();
                 break;
             case "2":
                 item = Weapons.Rock;
                 weapon.GetComponent<SpriteRenderer>().sprite = weaponsSprites[1];
                 //weapon = weaponObjects[1];
                 OnInputEvent.Invoke(Input.inputString);
+                itemChangeSound.PlaySound();
                 break;
             case "3":
                 item = Weapons.Fist;
                 weapon.GetComponent<SpriteRenderer>().sprite = null;
                 //weapon = null;
                 OnInputEvent.Invoke(Input.inputString);
+                itemChangeSound.PlaySound();
                 break;
         }
 
@@ -132,6 +137,7 @@ public class PlayerCharacterController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && item == Weapons.Rock){
             mouse = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
             animate.SetTrigger("Throw");
+            rockThrowSound.PlaySound();
         }
 
         if(Input.GetMouseButtonDown(0) && item == Weapons.Hammer){
@@ -144,7 +150,7 @@ public class PlayerCharacterController : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0) && item == Weapons.Fist && climbingwall != null){
-           
+
             //Debug.Log((Vector2)this.transform.right);
             //Debug.Log((Vector2)climbingwall.endClimbPoint.transform.position);
             Vector2 temp = (Vector2)this.transform.position - (Vector2)climbingwall.endMovePoint.transform.position;
@@ -307,7 +313,7 @@ public class PlayerCharacterController : MonoBehaviour {
         }
     }
 
-    /* 
+    /*
     void OnCollisionEnter2D(Collision2D other) {
         //Debug.Log("Collision: " + other.gameObject);
         //Debug.Log("Collision: " + other.gameObject.tag);

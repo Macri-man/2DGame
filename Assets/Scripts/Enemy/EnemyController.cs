@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+  public SoundTrigger spotPlayerSound;
+  public SoundTrigger shurikenThrowSound;
     public SoundTrigger deathSound;
     enum states {throws=1, idle, chase, patrol, nothing};
     states state;
@@ -60,7 +62,7 @@ public class EnemyController : MonoBehaviour {
             return;
         }
         animate.SetInteger("State", (int)state);
-        
+
     }
 
 	void FixedUpdate(){
@@ -85,6 +87,7 @@ public class EnemyController : MonoBehaviour {
             //Debug.Log(hit.collider.tag);
             if(hit.collider.tag == "Player" && (state != states.throws && state != states.chase)){
                 hitDistances(hit);
+                spotPlayerSound.PlaySound();
             }else if(hit.collider.tag == "Ground" && (state == states.throws || state == states.chase)) {
                 turnAround();
                 state = states.patrol;
@@ -115,6 +118,7 @@ public class EnemyController : MonoBehaviour {
                     timeStamp = Time.time;
                     //Debug.Log("Throw");
                     animate.SetTrigger("throw");
+                    shurikenThrowSound.PlaySound();
                 }
             break;
             case states.patrol:

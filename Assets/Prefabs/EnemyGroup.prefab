@@ -1217,6 +1217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e19b1accf3024fb6ac84554e9118ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spotPlayerSound: {fileID: 11400000, guid: 9bb394727437312428f60eee8274b905, type: 2}
+  shurikenThrowSound: {fileID: 11400000, guid: 915e21054f1000b42b6df27cd8ee32b5, type: 2}
   deathSound: {fileID: 11400000, guid: b8887bc0fc8f848089676464ced0417e, type: 2}
   points:
   - {fileID: 4745050854005000}

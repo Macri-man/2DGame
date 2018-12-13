@@ -1166,9 +1166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5e61f1bd07d483bb0f52df3bf1e9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemChangeSound: {fileID: 11400000, guid: e63b4d197e90b364fbead58ed56ceba3, type: 2}
   jumpSound: {fileID: 11400000, guid: 970d0d7a0dfb2174b9b51307f298fae5, type: 2}
   hammerSwingSound: {fileID: 11400000, guid: f4bf8dc41408f7f48bf4d83e00747dba, type: 2}
   hammerHitLogSound: {fileID: 11400000, guid: 86dedc0874c85964dad52d90ffe72e9d, type: 2}
+  rockThrowSound: {fileID: 11400000, guid: 915e21054f1000b42b6df27cd8ee32b5, type: 2}
   deathSound: {fileID: 11400000, guid: 94eb65c4a20b8f24d9633c9cf18caa3f, type: 2}
   weapon: {fileID: 1505276283633054}
   weaponsSprites:
