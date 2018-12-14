@@ -119,6 +119,7 @@ The final level is less intense but has majority of the obstacles. There is a sh
 * The enemies not turning around when you push them.
 * Enemies sometime get caught on the walls.
 * The player can get stuck on the wall and environment, but it is typically easy to break free and resume play.
+* The animations execute when clicking on the options in the how to play menu when paused. 
 
 ## Future Works
 * Fixing the movement of the enemy so the player cannot push the enemy as well as fix the timing of the animations.
